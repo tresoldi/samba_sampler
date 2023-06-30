@@ -18,9 +18,6 @@ from clldutils.path import git_describe
 BASE_PATH = Path(__file__).parent
 ROOT_PATH = BASE_PATH.parent
 
-# Define whether we are in development mode or not
-DEVEL = False
-
 
 def get_glottolog_path(glottolog_path: Optional[Union[Path, str]] = None) -> str:
     if not glottolog_path:
@@ -35,7 +32,7 @@ def get_languoids(glottolog_path: str):
     return glottolog, languoids
 
 
-def process_languoid(languoid, glottocode2name: dict, corrections: dict):
+def process_languoid(languoid, corrections: dict):
     names = process_names(languoid)
     iso, closest_iso = process_iso_codes(languoid)
     latitude, longitude = process_lat_long(languoid)
@@ -60,10 +57,12 @@ def process_languoid(languoid, glottocode2name: dict, corrections: dict):
     }
 
     if languoid.glottocode in corrections:
-        entry.update(corrections[languoid.glottocode])  # overriding the values with corrections
+        entry.update(
+            corrections[languoid.glottocode]
+        )  # overriding the values with corrections
 
-    glottocode2name[entry["glottocode"]] = entry["name"]
     return entry
+
 
 def process_names(languoid):
     if languoid.names:
@@ -81,8 +80,14 @@ def process_iso_codes(languoid):
 
 
 def process_lat_long(languoid):
-    latitude = languoid.latitude if languoid.latitude and languoid.latitude != "None" else ""
-    longitude = languoid.longitude if languoid.longitude and languoid.longitude != "None" else ""
+    latitude = (
+        languoid.latitude if languoid.latitude and languoid.latitude != "None" else ""
+    )
+    longitude = (
+        languoid.longitude
+        if languoid.longitude and languoid.longitude != "None"
+        else ""
+    )
     return latitude, longitude
 
 
@@ -120,16 +125,29 @@ def write_results_to_disk(data, glottolog):
         writer.writeheader()
         writer.writerows(data)
 
+
 def load_corrections():
     corrections = {}
     corrections_path = ROOT_PATH / "etc" / "glottolog.corrections.csv"
     if corrections_path.exists():
-        with open(corrections_path, 'r') as file:
+        with open(corrections_path, "r") as file:
             reader = csv.DictReader(file)
             for row in reader:
-                corrections[row['glottocode']] = {k: v for k, v in row.items() if v} # exclude empty values
+                corrections[row["glottocode"]] = {
+                    k: v for k, v in row.items() if v
+                }  # exclude empty values
 
     return corrections
+
+
+import concurrent.futures
+
+
+def worker(glottocode, glottolog_path, corrections):
+    glottolog = Glottolog(glottolog_path)
+    languoid = glottolog.languoid(glottocode)
+    return process_languoid(languoid, corrections)
+
 
 def get_glottolog(glottolog_path: Optional[Union[Path, str]] = None):
     """
@@ -145,24 +163,27 @@ def get_glottolog(glottolog_path: Optional[Union[Path, str]] = None):
     num_languoids = len(languoids)
 
     corrections = load_corrections()
-    data = []
     glottocode2name = {}
-    for idx, glottocode in enumerate(languoids):
-        if DEVEL and idx > 500:
-            break
+    data = []
 
-        languoid = glottolog.languoid(glottocode)
-        if idx % 100 == 0:
-            logging.info(
-                f"Processing languoid #{idx}/{num_languoids} ({languoid.name})..."
-            )
+    with concurrent.futures.ProcessPoolExecutor() as executor:
+        futures = {
+            executor.submit(worker, glottocode, glottolog_path, corrections): glottocode
+            for glottocode in languoids
+        }
 
-        entry = process_languoid(languoid, glottocode2name, corrections)
-        data.append(entry)
+        for i, future in enumerate(concurrent.futures.as_completed(futures)):
+            data.append(future.result())
+            print(f"Processed {i + 1} out of {num_languoids} entries")
+
+    # Build glottocode2name
+    for row in data:
+        glottocode2name[row["glottocode"]] = row["name"]
 
     process_family(data, glottocode2name)
     data = sorted(data, key=lambda x: x["glottocode"])
     write_results_to_disk(data, glottolog)
+
 
 def main():
     """
@@ -177,8 +198,6 @@ def main():
         get_glottolog()
     else:
         logging.info("Glottolog dump already exists, skipping...")
-
-
 
 
 if __name__ == "__main__":
