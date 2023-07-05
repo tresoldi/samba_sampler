@@ -9,7 +9,6 @@ from pathlib import Path
 import csv
 import glob
 import itertools
-import shutil
 import math
 import gzip
 
@@ -78,7 +77,9 @@ def build_geodistance():
 
     # Grab the path to the latest dump of the Glottolog database and
     # read the data into a dictionary
-    glottolog_path = sorted(glob.glob(str(ROOT_PATH / "etc" / "glottolog.*.tsv")))[-1]
+    glottolog_path = sorted(
+        glob.glob(str(ROOT_PATH / "src" / "samba_sampler" / "etc" / "glottolog.*.tsv"))
+    )[-1]
     with open(glottolog_path, encoding="utf-8") as f:
         # Read the data, filter entries whose `level` is not `language` or `dialect`,
         # filter to remove all entries without coordinates and then convert
@@ -102,13 +103,16 @@ def build_geodistance():
             for k, v in glottolog.items()
         }
 
+    # Extract the glottocodes
+    glottocodes = sorted(glottolog.keys())
+
     # Compute the number of combinations of languages for reporting
     n = len(glottolog)
     n_combinations = n * (n - 1) / 2
 
     # Compute the Haversine distance between all pairs of languages
     dist = {}
-    for idx, (l1, l2) in enumerate(itertools.combinations(sorted(glottolog.keys()), 2)):
+    for idx, (l1, l2) in enumerate(itertools.combinations(glottocodes, 2)):
         if idx % 100000 == 0:
             print(
                 "Computing distance between {} and {} ({:.2f}%)".format(
@@ -126,8 +130,8 @@ def build_geodistance():
     # Build the distance matrix
     print("Building distance matrix")
     matrix = {}
-    for l1 in glottolog.keys():
-        for l2 in glottolog.keys():
+    for l1 in glottocodes:
+        for l2 in glottocodes:
             if l1 == l2:
                 matrix[l2, l1] = 0
             elif (l1, l2) in dist:
@@ -137,11 +141,15 @@ def build_geodistance():
 
     # Write the distance `matrix`` to a file
     print("Writing distance matrix to DST.GZ file")
-    with gzip.open(ROOT_PATH / "etc" / "haversine.dst.gz", "wt") as f:
+    with gzip.open(
+        ROOT_PATH / "src" / "samba_sampler" / "etc" / "haversine.dst.gz",
+        "wt",
+        newline="",
+    ) as f:
         writer = csv.writer(f, delimiter="\t")
-        writer.writerow(["glottocode"] + sorted(glottolog.keys()))
-        for l1 in sorted(glottolog.keys()):
-            writer.writerow([l1] + [matrix[l1, l2] for l2 in sorted(glottolog.keys())])
+        writer.writerow(["glottocode"] + glottocodes)
+        for l1 in glottocodes:
+            writer.writerow([l1] + [matrix[l1, l2] for l2 in glottocodes])
 
 
 def main():

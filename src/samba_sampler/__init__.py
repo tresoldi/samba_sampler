@@ -6,4 +6,9 @@ __version__ = "2.0"  # Remember to update this in setup.py
 __author__ = "Tiago Tresoldi"
 __email__ = "tiago@tresoldi.org"
 
-from .common import dummy
+# Local imports
+from .common import read_splitstree_matrix, read_default_matrix, read_triangle_matrix
+from .sampling import GLED_Sampler
+
+# Expose the functions
+all = ["read_matrix", "read_default_matrix", "read_triangle_matrix", "GLED_Sampler"]

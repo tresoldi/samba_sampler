@@ -120,7 +120,11 @@ def write_results_to_disk(data, glottolog):
         "names",
         "timespan",
     ]
-    with open(ROOT_PATH / "etc" / f"glottolog.{version}.tsv", "w") as f:
+    with open(
+        ROOT_PATH / "src" / "samba_sampler" / "etc" / f"glottolog.{version}.tsv",
+        "w",
+        newline="",
+    ) as f:
         writer = csv.DictWriter(f, delimiter="\t", fieldnames=fields)
         writer.writeheader()
         writer.writerows(data)
@@ -128,8 +132,9 @@ def write_results_to_disk(data, glottolog):
 
 def load_corrections():
     corrections = {}
-    corrections_path = ROOT_PATH / "etc" / "glottolog.corrections.csv"
+    corrections_path = BASE_PATH / "etc" / "glottolog.corrections.csv"
     if corrections_path.exists():
+        logging.info("Loading Glottolog corrections...")
         with open(corrections_path, "r") as file:
             reader = csv.DictReader(file)
             for row in reader:
