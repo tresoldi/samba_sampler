@@ -150,25 +150,7 @@ def tree2matrix(tree):
     leaves = tree.get_leaves()
 
     # Build a dictionary with the leaves as keys and their ancestors as values
-    def ancestors(node):
-        """List of all ancestors of the node."""
-        ancestor_path = [node]
-        print("ANCESTORS for ", node, node.name, node.ancestor)
-
-        while True:
-            anc = ancestor_path[-1].ancestor
-            if anc is None:
-                break
-            ancestor_path.append(anc)
-
-        # Don't include the current node, which was only used to
-        # anchor the loop
-        ancestor_path_name = [anc.name for anc in ancestor_path[1:]]
-
-        return ancestor_path_name
-
-    ancestors = {leaf: ancestors(leaf) for leaf in leaves}
-    print("***", ancestors)
+    ancestors = {leaf: leaf.ancestors for leaf in leaves}
 
     # For each pairwise combination of leaves, get their most recent common ancestor
     distances = {}

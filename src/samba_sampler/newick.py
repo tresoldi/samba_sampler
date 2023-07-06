@@ -196,6 +196,24 @@ class Node(object):
         return cls(**kw)
 
     @property
+    def ancestors(self):
+        """List of all ancestors of the node."""
+
+        ancestor_path = [self]
+        while True:
+            anc = ancestor_path[-1].ancestor
+            if anc is None:
+                break
+            ancestor_path.append(anc)
+
+        # Don't include the current node, which was only used to
+        # anchor the loop; note that the final element will be a None,
+        # representing the root of the tree
+        ancestor_path_name = [anc.name for anc in ancestor_path[1:]]
+
+        return ancestor_path_name
+
+    @property
     def descendants(self):
         return self._descendants
 

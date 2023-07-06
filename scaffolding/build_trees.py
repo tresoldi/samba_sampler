@@ -8,6 +8,7 @@ Build supplementary trees.
 from ete3 import Tree
 import glob
 import csv
+import os
 from pathlib import Path
 
 BASE_PATH = Path(__file__).parent.parent
@@ -43,9 +44,21 @@ global_tree = Tree()
 # add each tree from disk to the global tree
 for tree_file in tree_files:
     t = Tree(tree_file)
-    # Change the leaf labels to just the Glottocode
-    for leaf in t.iter_leaves():
-        leaf.name = leaf.name.split("_")[1]
+
+    # derive a base name for labeling internal nodes
+    base_name = os.path.splitext(os.path.basename(tree_file))[0]
+
+    # counter for unique node names
+    node_counter = 1
+
+    # Change the leaf labels to just the Glottocode and label internal nodes
+    for node in t.traverse():
+        if node.is_leaf():
+            node.name = node.name.split("_")[1]
+        else:  # node is internal
+            node.name = f"__{base_name}_{node_counter}__"
+            node_counter += 1
+
     t.dist = max_branch_length
     global_tree.add_child(t)
 
@@ -55,9 +68,6 @@ for isolate in isolates:
     t.dist = max_branch_length
     global_tree.add_child(t)
 
-# print the global tree
-#print(global_tree)
-
 # count the number of leaves
 num_taxa = len(global_tree.get_leaves())
 
@@ -65,4 +75,4 @@ print(f'The number of taxa in the tree is: {num_taxa}')
 
 # write the global tree to a file
 output = BASE_PATH / "src" / "samba_sampler" / "etc" / "global_tree.gled.newick"
-global_tree.write(outfile=output)
+global_tree.write(outfile=output, format=1)
