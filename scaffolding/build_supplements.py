@@ -9,11 +9,13 @@ from ete3 import Tree
 from pathlib import Path
 import csv
 import glob
-import gzip
 import itertools
 import logging
 import math
 import os
+
+# Import our library to leverage functions and classes
+from samba_sampler import newick, tree2matrix, DistanceMatrix
 
 ROOT_PATH = Path(__file__).parent.parent
 
@@ -113,8 +115,9 @@ def build_geodistance():
     n = len(glottolog)
     n_combinations = n * (n - 1) / 2
 
-    # Compute the Haversine distance between all pairs of languages
-    dist = {}
+    # Compute the Haversine distance between all pairs of languages and build the matrix
+    logging.info("[build_geodistance] Building distance matrix")
+    matrix = DistanceMatrix(glottocodes, datatype="h")  # C signed short type
     for idx, (l1, l2) in enumerate(itertools.combinations(glottocodes, 2)):
         if idx % 100000 == 0:
             logging.info(
@@ -128,31 +131,15 @@ def build_geodistance():
             glottolog[l2]["latitude"],
             glottolog[l2]["longitude"],
         )
-        dist[l1, l2] = d
 
-    # Build the distance matrix
-    logging.info("[build_geodistance] Building distance matrix")
-    matrix = {}
-    for l1 in glottocodes:
-        for l2 in glottocodes:
-            if l1 == l2:
-                matrix[l2, l1] = 0
-            elif (l1, l2) in dist:
-                matrix[l2, l1] = int(dist[l1, l2])
-            else:
-                matrix[l2, l1] = None
+        # Set the value in the distance matrix
+        matrix.set(l1, l2, int(d))
 
     # Write the distance `matrix`` to a file
-    logging.info("[build_geodistance] Writing distance matrix to DST.GZ file")
-    with gzip.open(
-        ROOT_PATH / "src" / "samba_sampler" / "etc" / "haversine.dst.gz",
-        "wt",
-        newline="",
-    ) as f:
-        writer = csv.writer(f, delimiter="\t")
-        writer.writerow(["glottocode"] + glottocodes)
-        for l1 in glottocodes:
-            writer.writerow([l1] + [matrix[l1, l2] for l2 in glottocodes])
+    logging.info("[build_geodistance] Writing distance matrix to MATRIX.BZ2 file")
+    matrix.save_matrix(
+        ROOT_PATH / "src" / "samba_sampler" / "etc" / "haversine.matrix.bz2"
+    )
 
 
 def build_gled_tree():
@@ -233,6 +220,21 @@ def build_gled_tree():
     global_tree.write(outfile=output, format=1)
 
 
+def build_gled_matrix():
+    logging.info("[build_gled_matrix] Building global matrix from the global GLED tree")
+    with open(
+        ROOT_PATH / "src" / "samba_sampler" / "etc" / "global_tree.gled.newick",
+        encoding="utf-8",
+    ) as f:
+        tree = newick.load(f)[0]
+
+    matrix = tree2matrix(tree)
+
+    # Write the matrix to a file
+    logging.info("[build_gled_matrix] Writing global matrix to file")
+    matrix.save_matrix(ROOT_PATH / "src" / "samba_sampler" / "etc" / "gled.matrix.bz2")
+
+
 def main():
     """
     Main function.
@@ -243,6 +245,7 @@ def main():
 
     # Build the GLED tree and matrix
     build_gled_tree()
+    build_gled_matrix()
 
 
 if __name__ == "__main__":

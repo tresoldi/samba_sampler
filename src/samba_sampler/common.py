@@ -183,7 +183,6 @@ def tree2matrix(tree):
     ancestors = {leaf: leaf.ancestors for leaf in leaves}
 
     # For each pairwise combination of leaves, get their most recent common ancestor
-    distances = {}
     num_comb = math.comb(len(leaves), 2)
     for idx, (leaf1, leaf2) in enumerate(itertools.combinations(leaves, 2)):
         if idx % 1000 == 0:
