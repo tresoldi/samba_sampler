@@ -32,7 +32,3 @@ geodistances):
 ```bash
 python build_supplements.py
 ```
-
-```bash
-python build_trees.py
-```

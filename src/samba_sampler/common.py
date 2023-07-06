@@ -176,6 +176,9 @@ def tree2matrix(tree):
     # Get all the leaves of the tree
     leaves = tree.get_leaves()
 
+    # Create the matrix
+    matrix = DistanceMatrix([leaf.name for leaf in leaves])
+
     # Build a dictionary with the leaves as keys and their ancestors as values
     ancestors = {leaf: leaf.ancestors for leaf in leaves}
 
@@ -188,12 +191,11 @@ def tree2matrix(tree):
                 f"Processed {idx} pairs of leaves (at `{leaf1.name},{leaf2.name}`) [{(idx/num_comb)*100:.2f}%]..."
             )
 
-        #if idx == 10000:
-        #    break
+        # Set the value to the matrix
+        matrix.set(leaf1.name, leaf2.name, compute_distance(leaf1, leaf2))
 
-        distances[leaf1.name, leaf2.name] = compute_distance(leaf1, leaf2)
 
-    return distances
+    return matrix
 
 
 def read_splitstree_matrix(filename: Union[Path, str]) -> Dict[str, Dict[str, float]]:

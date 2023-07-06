@@ -12,35 +12,9 @@ from samba_sampler import newick, tree2matrix, DistanceMatrix
 with open("src/samba_sampler/etc/global_tree.gled.newick", encoding="utf-8") as f:
     tree = newick.load(f)[0]
 
-lects = [node.name for node in tree.get_leaves()]
-distances = tree2matrix(tree)
+matrix = tree2matrix(tree)
 
-m = DistanceMatrix(lects)
-for key, value in distances.items():
-    print("***", key, value)
-    lang1, lang2 = key
-    print("*", lang1, lang2, value)
-    m.set(lang1, lang2, value)
-
-m.save_matrix("gled.bz2")
-
-print(m.keys[:20])
-
-exit()
-
-
-print(tree)
-
-distances = newick2matrix(tree)
-print("dist", distances)
-
-exit()
-
-
-print(culina.ancestors)
-print(jama.ancestors)
-
+matrix.save_matrix("gled.bz2")
 
 # import samba_sampler as samba
-
 # sampler = samba.MyLanguageSampler()
