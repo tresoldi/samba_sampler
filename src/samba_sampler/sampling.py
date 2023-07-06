@@ -13,6 +13,47 @@ import random
 # Import from other modules
 from .common import read_splitstree_matrix, read_triangle_matrix, ETC_PATH
 
+class Sampler:
+    def __init__(self, matrices, weights=None, seed=None):
+        """
+        Initialize the sampler.
+        :param matrices:
+        :param weights:
+        """
+
+        # Store the matrices internally
+        self._matrices = matrices
+
+        # If `weights` is not provided, default to 1.0 for every item in `matrices`
+        if not weights:
+            self._weights = [1.0] * len(matrices)
+        else:
+            self._weights = weights
+
+        # Seed the random number generator
+        random.seed(seed)
+
+class MyLanguageSampler(Sampler):
+    def __init__(self):
+        """
+        Initialize the sampler.
+        """
+
+
+        phylomatrix = read_splitstree_matrix(ETC_PATH / "gled_global.dst")
+        print(f"Read {len(phylomatrix)} entries from phylogenetic matrix")
+        print(phylomatrix.keys())
+        print(phylomatrix["Zaparo_zapa1253"].keys())
+
+        print(len(phylomatrix.keys()))
+        print(len(phylomatrix["Zaparo_zapa1253"].keys()))
+
+        #geomatrix = read_triangle_matrix(ETC_PATH / "haversine.dst.gz")
+        #print(f"Read {len(geomatrix)} entries from geographic matrix")
+
+        # Initialize the parent class
+        #super().__init__([phylomatrix, geomatrix])
+
 
 class Language_Sampler:
     """

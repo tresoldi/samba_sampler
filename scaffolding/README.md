@@ -13,22 +13,26 @@ Please note, the `cldfbench catconfig -q` command creates local clones of the re
 This process may take several minutes and can require many gigabytes of storage space.
 
 ```bash
-$ python -m venv env
-$ source env/bin/activate
-$ pip install -U pip setuptools wheel
-$ pip install -r requirements.txt
-$ cldfbench catconfig -q
+python -m venv env
+source env/bin/activate
+pip install -U pip setuptools wheel
+pip install -r requirements.txt
+cldfbench catconfig -q
 ```
 
 Make local copies of the catalogues as stand-alone tabular files:
 
 ```bash
-$ python process_catalogs.py
+python process_catalogs.py
 ```
 
 Build and distribute in the repository supplementary data (such as
 geodistances):
 
 ```bash
-$ python build_supplements.py
+python build_supplements.py
+```
+
+```bash
+python build_trees.py
 ```
