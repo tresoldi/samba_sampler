@@ -18,6 +18,7 @@ import math
 
 ETC_PATH = Path(__file__).parent / "etc"
 
+
 class DistanceMatrix:
     """
     This class represents a symmetric distance matrix in a memory-efficient way.
@@ -26,7 +27,12 @@ class DistanceMatrix:
     mapped to a one-dimensional array.
     """
 
-    def __init__(self, keys: Union[List[str], None] = None, filename: Union[str, None] = None, datatype: str = "f"):
+    def __init__(
+        self,
+        keys: Union[List[str], None] = None,
+        filename: Union[str, None] = None,
+        datatype: str = "f",
+    ):
         """
         Initializes the matrix. The matrix can be initialized in two ways:
 
@@ -42,14 +48,18 @@ class DistanceMatrix:
 
         # Check that exactly one of keys or filename is provided
         if (keys is None) == (filename is None):
-            raise ValueError("Either 'keys' or 'filename' must be provided, but not both.")
+            raise ValueError(
+                "Either 'keys' or 'filename' must be provided, but not both."
+            )
 
         # Initialize the matrix
         if filename is not None:
             self.keys, self.data = self.read_matrix(filename)
         else:
             self.keys = sorted(keys)
-            self.data = array.array(datatype, [0] * (len(self.keys) * (len(self.keys) - 1) // 2))
+            self.data = array.array(
+                datatype, [0] * (len(self.keys) * (len(self.keys) - 1) // 2)
+            )
 
         # Generate indices for quick lookup
         self.indices = {key: i for i, key in enumerate(self.keys)}
@@ -68,7 +78,7 @@ class DistanceMatrix:
         if isinstance(filename, str):
             filename = Path(filename)
 
-        with bz2.open(filename, 'rb') as file:
+        with bz2.open(filename, "rb") as file:
             keys, data = pickle.load(file)
 
         return keys, data
@@ -86,7 +96,7 @@ class DistanceMatrix:
         if isinstance(filename, str):
             filename = Path(filename)
 
-        with bz2.open(filename, 'wb') as file:
+        with bz2.open(filename, "wb") as file:
             pickle.dump((self.keys, self.data), file)
 
     @cache
@@ -131,6 +141,7 @@ class DistanceMatrix:
 
         return self.data[self._get_index(i, j)]
 
+
 def tree2matrix(tree):
     """
     Convert a newick tree to a distance matrix.
@@ -139,12 +150,28 @@ def tree2matrix(tree):
     :return:
     """
 
-    def most_recent_common_ancestor(anc_list1:List[str], anc_list2:List[str])->str:
-        for label in anc_list1:
-            if label in anc_list2:
-                return label
+    def most_recent_common_ancestor(anc_list1, anc_list2):
+        for anc in anc_list1:
+            if anc in anc_list2:
+                return anc
 
         raise ValueError("No common ancestor found")
+
+    @cache
+    def compute_distance(leaf1, leaf2):
+        # Get the most recent common ancestor of the two leaves
+        mrca = most_recent_common_ancestor(ancestors[leaf1], ancestors[leaf2])
+
+        # Sum the lengths between leaves and the mrca, grabbing the nodes by label
+        # with the `get_node` method
+        leaf1_length = sum(
+            [n.length for n in ancestors[leaf1][: ancestors[leaf1].index(mrca)]]
+        )
+        leaf2_length = sum(
+            [n.length for n in ancestors[leaf2][: ancestors[leaf2].index(mrca)]]
+        )
+
+        return leaf1_length + leaf2_length
 
     # Get all the leaves of the tree
     leaves = tree.get_leaves()
@@ -157,22 +184,17 @@ def tree2matrix(tree):
     num_comb = math.comb(len(leaves), 2)
     for idx, (leaf1, leaf2) in enumerate(itertools.combinations(leaves, 2)):
         if idx % 1000 == 0:
-            print(f"Processed {idx} pairs of leaves (at `{leaf1.name},{leaf2.name}`) [{(idx/num_comb)*100:.2f}%]...")
+            print(
+                f"Processed {idx} pairs of leaves (at `{leaf1.name},{leaf2.name}`) [{(idx/num_comb)*100:.2f}%]..."
+            )
 
-        if idx == 10000:
-            break
+        #if idx == 10000:
+        #    break
 
-        mrca = most_recent_common_ancestor(ancestors[leaf1], ancestors[leaf2])
-
-        # Sum the lengths between leaves and the mrca, grabbing the nodes by label
-        # with the `get_node` method
-        leaf1_length = sum([tree.get_node(n).length for n in ancestors[leaf1][:ancestors[leaf1].index(mrca)]])
-        leaf2_length = sum([tree.get_node(n).length for n in ancestors[leaf2][:ancestors[leaf2].index(mrca)]])
-        distance = leaf1_length + leaf2_length
-
-        distances[leaf1.name, leaf2.name] = distance
+        distances[leaf1.name, leaf2.name] = compute_distance(leaf1, leaf2)
 
     return distances
+
 
 def read_splitstree_matrix(filename: Union[Path, str]) -> Dict[str, Dict[str, float]]:
     """

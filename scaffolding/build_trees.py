@@ -14,7 +14,7 @@ from pathlib import Path
 BASE_PATH = Path(__file__).parent.parent
 
 # list of all tree files
-tree_files = glob.glob('gled.trees/*.tree')
+tree_files = glob.glob("gled.trees/*.tree")
 
 max_branch_length = 0
 
@@ -28,15 +28,15 @@ for tree_file in tree_files:
 print("max branch length:", max_branch_length)
 
 # Read the glottolog.tsv file
-glottolog_dump = sorted(BASE_PATH.glob('src/samba_sampler/etc/glottolog.*.tsv'))[-1]
+glottolog_dump = sorted(BASE_PATH.glob("src/samba_sampler/etc/glottolog.*.tsv"))[-1]
 isolates = []
-with open(glottolog_dump, 'r', encoding="utf-8") as f:
-    tsv_reader = csv.reader(f, delimiter='\t')
+with open(glottolog_dump, "r", encoding="utf-8") as f:
+    tsv_reader = csv.reader(f, delimiter="\t")
     headers = next(tsv_reader)  # get the headers
     for row in tsv_reader:
         row_dict = dict(zip(headers, row))
-        if row_dict['isolate'] == 'True':
-            isolates.append(row_dict['glottocode'])
+        if row_dict["isolate"] == "True":
+            isolates.append(row_dict["glottocode"])
 
 # create the global tree
 global_tree = Tree()
@@ -71,7 +71,7 @@ for isolate in isolates:
 # count the number of leaves
 num_taxa = len(global_tree.get_leaves())
 
-print(f'The number of taxa in the tree is: {num_taxa}')
+print(f"The number of taxa in the tree is: {num_taxa}")
 
 # write the global tree to a file
 output = BASE_PATH / "src" / "samba_sampler" / "etc" / "global_tree.gled.newick"

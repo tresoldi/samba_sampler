@@ -209,9 +209,10 @@ class Node(object):
         # Don't include the current node, which was only used to
         # anchor the loop; note that the final element will be a None,
         # representing the root of the tree
-        ancestor_path_name = [anc.name for anc in ancestor_path[1:]]
+        # ancestor_path_name = [anc.name for anc in ancestor_path[1:]]
+        # return ancestor_path_name
 
-        return ancestor_path_name
+        return ancestor_path[1:]
 
     @property
     def descendants(self):
@@ -620,6 +621,8 @@ def loads(
         ns.to_node()
         for ns in NewickString(s).iter_subtrees(strip_comments=strip_comments)
     ]
+
+
 def dumps(trees: typing.Union[Node, typing.Iterable[Node]]) -> str:
     """
     Serialize a list of trees in Newick format.
