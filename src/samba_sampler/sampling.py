@@ -32,7 +32,6 @@ class Sampler:
         else:
             self._weights = weights
 
-    # TODO: have yield instead of return
     def sample(
         self,
         k: int,
@@ -42,93 +41,56 @@ class Sampler:
         tries: int = 100,
         seed: Optional[Union[int, str]] = None,
     ):
-        """
-        Obtain a language sample from a distance matrix.
-
-        Parameters
-        ----------
-        k
-            The number of languages to sample in each set.
-        t
-            The number of sets to sample.
-        freq_weight
-            The (penalty) weight to give to the frequency of the language in
-            previous samples. Set to 0 to ignore the frequency.
-        method
-            The method to use to compute the weight of a sample. Can be either
-            "mean" or "sum".
-        tries
-            The number of attempts to make to obtain a good sample.
-        seed
-            The seed to use for the random number generator. If None, the seed
-            will be set to the current time.
-
-        Returns
-        -------
-        sample
-            A tuple of the sampled languages.
-        """
-
-        # Make sure we are using a valid method
+        # Validate method
         if method not in ["mean", "sum"]:
             raise ValueError("Invalid method in `sample()`: {}".format(method))
 
-        # Set the seed for the random number generator
+        # Set the seed
         random.seed(seed)
 
         # Initialize the set of sampled sets
-        sampled = set()
         taxa_counter = collections.Counter()
-        for i in range(t):
-            # Run different attempts to obtain one good sample
+
+        for _ in range(t):
             candidates = []
-            for j in range(tries):
+            for _ in range(tries):
                 # Obtain a random sample of k taxa
                 sampled_taxa = tuple(random.sample(self._keys, k))
 
                 # Compute the distances between each pair of taxa
-                # pdists = []
-                # gdists = []
-                dists = [[] for i in range(len(self._matrices))]
-                for lang1, lang2 in itertools.combinations(sampled_taxa, 2):
-                    # pdists.append(self._matrices[0][lang1,lang2])
-                    # gdists.append(self._matrices[1][lang1,lang2])
-                    for m in range(len(self._matrices)):
-                        dists[m].append(self._matrices[m][lang1, lang2])
+                matrix_length = len(self._matrices)
+                dists = [
+                    [
+                        self._matrices[m][lang1, lang2]
+                        for lang1, lang2 in itertools.combinations(sampled_taxa, 2)
+                    ]
+                    for m in range(matrix_length)
+                ]
 
                 # Compute the frequency of each taxon in the sample
-                # TODO: use a Witten-Bell smoothing or something similar from lpngrams,
-                #       also accounting for pairs, etc.
                 fdists = [taxa_counter[taxon] for taxon in sampled_taxa]
 
-                # Initialize a list to store the calculated distances
-                calculated_dists = []
+                # Calculate the distances
+                calculated_dists = [
+                    sum(dist) / k if method == "mean" else sum(dist) for dist in dists
+                ]
 
-                for dists_list in dists:
-                    # Calculate the distance depending on the method
-                    if method == "mean":
-                        calculated_dist = sum(dists_list) / k
-                    else:  # sum
-                        calculated_dist = sum(dists_list)
-
-                    calculated_dists.append(calculated_dist)
-
-                # Compute the fdist
-                if not taxa_counter.most_common(1):
-                    fdist = 1.0
+                # Compute fdist
+                most_common = taxa_counter.most_common(1)
+                if most_common:
+                    most_common_count = most_common[0][1]
+                    fdist = 1 - (
+                        sum(fdists)
+                        / (
+                            k * most_common_count
+                            if method == "mean"
+                            else sum([e[1] for e in taxa_counter.most_common(k)])
+                        )
+                    )
                 else:
-                    if method == "mean":
-                        fdist = 1 - (
-                            (sum(fdists) / k) / (taxa_counter.most_common(1)[0][1])
-                        )
-                    else:  # sum
-                        fdist = 1 - (
-                            sum(fdists)
-                            / sum([e[1] for e in taxa_counter.most_common(k)])
-                        )
+                    fdist = 1.0
 
-                # Now, calculated_dists is a list containing all the calculated distances.
-                # We just need to use these in the calculation that is appended to candidates.
+                # Calculate the final score
                 score = (
                     sum(
                         dist * weight
@@ -138,16 +100,15 @@ class Sampler:
                 )
                 candidates.append((sampled_taxa, score))
 
-            # Perform a weighted sampling of the candidates, using the second
-            # element in each tuple
-            random_set = random.choices(*zip(*candidates), k=1)[0]
-            sampled.add(random_set)
+            # Perform a weighted sampling of the candidates
+            candidates, weights = zip(*candidates)
+            selected = random.choices(candidates, weights=weights, k=1)[0]
 
             # Update the tracking of the sampled languages across different sets
-            taxa_counter.update(random_set)
+            taxa_counter.update(selected)
 
-        # Return the sampled language sets
-        return sampled
+            # Yield the results
+            yield selected
 
 
 class LanguageSampler(Sampler):

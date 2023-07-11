@@ -20,4 +20,4 @@ print(len(sampler._keys))
 
 for i in range(5):
     k = sampler.sample(5)
-    print(k)
+    print(list(k))
