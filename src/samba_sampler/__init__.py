@@ -8,11 +8,9 @@ __email__ = "tiago@tresoldi.org"
 
 # Local imports
 from .common import (
-    read_splitstree_matrix,
-    read_default_matrix,
-    read_triangle_matrix,
     tree2matrix,
     DistanceMatrix,
+    build_dict_from_file,
 )
 from .sampling import LanguageSampler
 from .newick import loads, dumps, load, dump
@@ -31,4 +29,5 @@ all = [
     "GLED_Sampler",
     "MyLanguageSampler",
     "Language_Sampler",
+    "build_dict_from_file",
 ]

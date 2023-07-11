@@ -3,14 +3,13 @@ Common functions for the library.
 """
 
 # Import standard libraries
-from collections import defaultdict
 from pathlib import Path
-from typing import List, Tuple, Union, Dict, Optional
+from collections import defaultdict
+from typing import List, Tuple, Union, Optional, Sequence
 import array
 import bz2
 import csv
 import functools
-import gzip
 import itertools
 import logging
 import math
@@ -121,44 +120,33 @@ class DistanceMatrix:
 
         return self.indices[j] * (self.indices[j] - 1) // 2 + self.indices[i]
 
-    def set(self, i: str, j: str, value: Union[int, float]):
+    def __setitem__(self, key: Sequence[str], value: float):
         """
         Sets the value for a specific pair of keys (i, j) in the distance matrix.
 
-        @param i: The first key.
-        @param j: The second key.
+        Note that the method does not check if the keys are valid (in particular, if
+        only two keys are provided and if they are in the matrix).
+
+        @param key: A sequence containing the two keys.
         @param value: The value to be set for the pair of keys.
         """
-        self.data[self._get_index(i, j)] = value
+        self.data[self._get_index(key[0], key[1])] = value
 
-    def get(self, i: str, j: str) -> Union[int, float]:
+    def __getitem__(self, item: Sequence[str]) -> float:
         """
-        Retrieves the value for a specific pair of keys (i, j) from the distance matrix.
+        Returns the value for a specific pair of keys (i, j) in the distance matrix.
 
-        This method is symmetric, i.e., get(i, j) == get(j, i). If i == j, the returned value is 0,
-        as the diagonal of the distance matrix is assumed to be 0.
+        Note that the diagonal values are assumed to be 0. Also note that the
+        method does not check if the keys are valid (in particular, if
+        only two keys are provided and if they are in the matrix).
 
-        @param i: The first key.
-        @param j: The second key.
-        @return: The value corresponding to the pair of keys (i, j).
+        @param item: A sequence containing the two keys.
+        @return: The value for the pair of keys.
         """
-        if i == j:
+        if item[0] == item[1]:
             return 0  # Diagonal values are assumed to be 0
 
-        return self.data[self._get_index(i, j)]
-
-    # TODO: join with get() above
-    def __getitem__(self, item):
-        """
-        Retrieves the value for a specific pair of keys (i, j) from the distance matrix.
-
-        This method is symmetric, i.e., get(i, j) == get(j, i). If i == j, the returned value is 0,
-        as the diagonal of the distance matrix is assumed to be 0.
-
-        @param item: A tuple containing the two keys.
-        @return: The value corresponding to the pair of keys (i, j).
-        """
-        return self.get(*item)
+        return self.data[self._get_index(item[0], item[1])]
 
     def rescale(self, scale_range=(0, 1), factor: float = 1.0):
         """
@@ -243,15 +231,12 @@ def tree2matrix(tree: Node) -> DistanceMatrix:
             logging.info(
                 f"Processed {idx} pairs of leaves (at `{leaf1.name},{leaf2.name}`) [{(idx/num_comb)*100:.2f}%]..."
             )
-        matrix.set(leaf1.name, leaf2.name, compute_distance(leaf1, leaf2))
+        matrix[leaf1.name, leaf2.name] = compute_distance(leaf1, leaf2)
 
     return matrix
 
 
-##########################
-
-
-def read_splitstree_matrix(filename: Union[Path, str]) -> Dict[str, Dict[str, float]]:
+def dst2matrix(filename: Union[Path, str]) -> DistanceMatrix:
     """
     Read a distance matrix in the SplitsTree format from a file.
 
@@ -287,68 +272,51 @@ def read_splitstree_matrix(filename: Union[Path, str]) -> Dict[str, Dict[str, fl
                 matrix[taxon] = dists
 
     # Make an actual dictionary matrix
-    ret_matrix = {}
+    mtx = DistanceMatrix(taxa)
     for taxon_a, dists in matrix.items():
-        ret_matrix[taxon_a] = {taxon_b: dist for dist, taxon_b in zip(dists, taxa)}
+        for dist, taxon_b in zip(dists, taxa):
+            mtx[taxon_a, taxon_b] = dist
 
-    return ret_matrix
+    return mtx
 
 
-def read_triangle_matrix(filename: Union[Path, str]) -> Dict[str, Dict[str, float]]:
-    """
-    Read a distance matrix in the triangle format from a file.
-
-    The distance matrix is returned as a dictionary of dictionaries,
-    with each value as a dictionary to all other taxa. The function takes care
-    of opening gzipped files.
-
-    Parameters
-    ----------
-    filename
-        The file to read.
-
-    Returns
-    -------
-    matrix
-        A dictionary of dictionaries, where the first key is the taxon and the
-        second key is the taxon to which the distance is computed.
-    """
-
-    # Make sure `filename` is a Path object, and open the file with the
-    # gzip module if necessary
+def build_dict_from_file(
+    filename: Union[str, Path],
+    key: str,
+    value: str,
+    encoding: str = "utf-8",
+    multiple: str = "average",
+) -> dict:
+    # Make sure filename is a Path object
     filename = Path(filename)
-    if filename.suffix == ".gz":
-        handler = gzip.open(filename, "rt", encoding="utf-8")
-    else:
-        handler = open(filename, encoding="utf-8")
 
-    # Read raw data, filling the matrix
-    reader = csv.reader(handler, delimiter="\t")
-    taxa = next(reader)[1:]
-    matrix = defaultdict(dict)
-    for line in reader:
-        taxon_a = line[0]
-        dists = [int(dist) if dist else None for dist in line[1:]]
-        for taxon_b, dist in zip(taxa, dists):
-            matrix[taxon_a][taxon_b] = dist
-            matrix[taxon_b][taxon_a] = dist
+    # Check that multiple is a valid option
+    if multiple not in ["average", "max", "min"]:
+        raise ValueError(f"Invalid value for 'multiple': {multiple}")
 
-    # Close the file when done
-    handler.close()
+    # Open the file
+    with filename.open(newline="", encoding=encoding) as csvfile:
+        # Let the csv library sniff the dialect of the file
+        dialect = csv.Sniffer().sniff(csvfile.read(1024))
+        csvfile.seek(0)
 
-    return matrix
+        # Create a csv reader object
+        reader = csv.DictReader(csvfile, dialect=dialect)
 
+        # Create a defaultdict of lists to store all values associated with each key
+        result_dict = defaultdict(list)
 
-def read_default_matrix() -> Dict[str, Dict[str, float]]:
-    """
-    Read the default global distance matrix.
+        for row in reader:
+            # Append each value to the list of values for the appropriate key
+            result_dict[row[key]].append(float(row[value]))
 
-    Returns
-    -------
-    matrix
-        A dictionary of dictionaries, where the first key is the taxon and the
-        second key is the taxon to which the distance is computed.
-    """
+        # Calculate the final value to be associated with each key, based on the value of 'multiple'
+        for key, values in result_dict.items():
+            if multiple == "average":
+                result_dict[key] = sum(values) / len(values)
+            elif multiple == "max":
+                result_dict[key] = max(values)
+            elif multiple == "min":
+                result_dict[key] = min(values)
 
-    # TODO: read the latest version
-    return read_splitstree_matrix(ETC_PATH / "gled_global.dst")
+    return dict(result_dict)

@@ -10,29 +10,76 @@ import random
 import functools
 
 # Import from other modules
-from .common import ETC_PATH, DistanceMatrix
+from .common import ETC_PATH, DistanceMatrix, build_dict_from_file
 
 
 class Sampler:
-    def __init__(self, matrices: List[DistanceMatrix], weights=None):
+    def __init__(
+        self,
+        matrices: List[DistanceMatrix],
+        tables: List[dict],
+        mweights=None,
+        tweights=None,
+    ):
         """
         Initialize the sampler.
         :param matrices:
-        :param weights:
+        :param mweights:
         """
 
         # Store the matrices internally
         self._matrices = matrices
         self._num_matrices = len(matrices)
 
-        # Store the set of overlapping keys among the matrices as a sorted list
-        self._keys = sorted(set.intersection(*[set(m.keys) for m in matrices]))
+        # Store the tables internally
+        self._tables = tables
+        self._num_tables = len(tables)
 
-        # If `weights` is not provided, default to 1.0 for every item in `matrices`
-        if not weights:
-            self._weights = [1.0] * len(matrices)
+        # Raise an error if no matrix and no table was provided
+        if self._num_matrices == 0 and self._num_tables == 0:
+            raise ValueError("No matrix and no table provided.")
+
+        # Obtain the set of keys for all matrices and for all tables, if they
+        # were provided, and then compute the intersection of the sets,
+        # which will be the set of keys to be used for sampling. The intersection
+        # is stored as a sorted list in `self._keys`.
+        if self._num_matrices > 0 and self._num_tables > 0:
+            # Obtain the intersection of the sets of keys for all matrices
+            mkeys = set(matrices[0].keys)
+            for matrix in matrices[1:]:
+                mkeys = mkeys.intersection(set(matrix.keys))
+
+            # Obtain the intersection of the sets of keys for all tables
+            tkeys = set(tables[0].keys())
+            for table in tables[1:]:
+                tkeys = tkeys.intersection(set(table.keys()))
+
+            # Compute the intersection of the sets of keys
+            self._keys = sorted(mkeys.intersection(tkeys))
+        elif self._num_matrices > 0:
+            # Obtain the intersection of the sets of keys for all matrices
+            mkeys = set(matrices[0].keys)
+            for matrix in matrices[1:]:
+                mkeys = mkeys.intersection(set(matrix.keys))
+            self._keys = sorted(mkeys)
         else:
-            self._weights = weights
+            # Obtain the intersection of the sets of keys for all tables
+            tkeys = set(tables[0].keys)
+            for table in tables[1:]:
+                tkeys = tkeys.intersection(set(table.keys()))
+            self._keys = sorted(tkeys)
+
+        # If `mweights` is not provided, default to 1.0 for every item in `matrices`
+        if not mweights:
+            self._mweights = [1.0] * len(matrices)
+        else:
+            self._mweights = mweights
+
+        # If `tweights` is not provided, default to 1.0 for every item in `tables`
+        if not tweights:
+            self._tweights = [1.0] * len(tables)
+        else:
+            self._tweights = tweights
 
     @functools.cache  # Caching results for repeated calls with the same arguments
     def compute_score(self, sampled_taxa: Tuple, method: str) -> float:
@@ -47,25 +94,49 @@ class Sampler:
         :return: The score.
         """
 
-        # Compute the distances between each pair of taxa
-        dists = [
-            [
-                self._matrices[m][lang1, lang2]
-                for lang1, lang2 in itertools.combinations(sampled_taxa, 2)
+        # Initialize the score
+        score = 0.0
+
+        # If there are matrices, compute their contribution to the score
+        if self._matrices:
+            # Compute the distances between each pair of taxa
+            dists = [
+                [
+                    self._matrices[m][lang1, lang2]
+                    for lang1, lang2 in itertools.combinations(sampled_taxa, 2)
+                ]
+                for m in range(self._num_matrices)
             ]
-            for m in range(self._num_matrices)
-        ]
 
-        # Calculate the distances
-        calculated_dists = [
-            sum(dist) / len(sampled_taxa) if method == "mean" else sum(dist)
-            for dist in dists
-        ]
+            # Calculate the distances
+            calculated_dists = [
+                sum(dist) / len(sampled_taxa) if method == "mean" else sum(dist)
+                for dist in dists
+            ]
 
-        # Calculate the final score
-        score = sum(
-            dist * weight for dist, weight in zip(calculated_dists, self._weights)
-        )
+            # Add to the score
+            score += sum(
+                dist * weight for dist, weight in zip(calculated_dists, self._mweights)
+            )
+
+        # If there are tables, compute their contribution to the score
+        if self._tables:
+            # Compute the values for each sampled taxon
+            table_vals = [
+                [self._tables[t][taxon] for taxon in sampled_taxa]
+                for t in range(self._num_tables)
+            ]
+
+            # Calculate the values
+            calculated_vals = [
+                sum(val) / len(sampled_taxa) if method == "mean" else sum(val)
+                for val in table_vals
+            ]
+
+            # Add to the score
+            score += sum(
+                val * weight for val, weight in zip(calculated_vals, self._tweights)
+            )
 
         return score
 
@@ -203,6 +274,13 @@ class LanguageSampler(Sampler):
         Initialize the sampler.
         """
 
+        # TODO: add rescaler
+        from pathlib import Path
+
+        p = Path(__file__).parent.parent.parent / "maja.csv"
+        tok_weights = build_dict_from_file(p, "Glottocode", "motion hits")
+        print(f"Read {len(tok_weights)} entries from token weights")
+
         phylomatrix = DistanceMatrix(filename=ETC_PATH / "gled.matrix.bz2")
         print(f"Read {len(phylomatrix.data)} entries from phylogenetic matrix")
         print(phylomatrix.keys[:20])
@@ -216,4 +294,4 @@ class LanguageSampler(Sampler):
         # geomatrix.rescale()
 
         # Initialize the parent class
-        super().__init__([phylomatrix, geomatrix])
+        super().__init__([phylomatrix, geomatrix], [tok_weights])

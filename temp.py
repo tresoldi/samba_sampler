@@ -1,4 +1,4 @@
-#from samba_sampler import newick, tree2matrix, DistanceMatrix
+# from samba_sampler import newick, tree2matrix, DistanceMatrix
 
 
 # Test case
@@ -8,12 +8,13 @@
 # distances = tree2matrix(tree)
 # exit()
 
-#with open("src/samba_sampler/etc/global_tree.gled.newick", encoding="utf-8") as f:
+# with open("src/samba_sampler/etc/global_tree.gled.newick", encoding="utf-8") as f:
 #    tree = newick.load(f)[0]
-#matrix = tree2matrix(tree)
-#matrix.save("gled.bz2")
+# matrix = tree2matrix(tree)
+# matrix.save("gled.bz2")
 
 import samba_sampler as samba
+
 sampler = samba.LanguageSampler()
 print(sampler._keys[:20])
 print(len(sampler._keys))
