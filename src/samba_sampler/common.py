@@ -5,165 +5,216 @@ Common functions for the library.
 # Import standard libraries
 from collections import defaultdict
 from pathlib import Path
-from typing import *
+from typing import List, Tuple, Union, Dict, Optional
 import array
 import bz2
-import pickle
-from functools import cache
 import csv
+import functools
 import gzip
 import itertools
-import re
+import logging
 import math
+import pickle
+import re
+
+from .newick import Node
 
 ETC_PATH = Path(__file__).parent / "etc"
 
 
 class DistanceMatrix:
     """
-    This class represents a symmetric distance matrix in a memory-efficient way.
-    Instead of storing all values, it stores only half of the elements excluding the diagonal,
-    as the matrix is symmetric and the diagonal is assumed to be zeros. The matrix elements are
-    mapped to a one-dimensional array.
+    This class provides a memory-efficient implementation of a symmetric distance matrix.
+    Rather than storing all elements, it only keeps half of the elements (excluding the diagonal),
+    leveraging the symmetry of the matrix. The diagonal elements are assumed to be zeros.
+    The matrix elements are flattened into a one-dimensional array.
     """
+
+    data: array.array
 
     def __init__(
         self,
-        keys: Union[List[str], None] = None,
-        filename: Union[str, None] = None,
+        keys: Optional[List[str]] = None,
+        filename: Optional[Union[str, Path]] = None,
         datatype: str = "f",
     ):
         """
-        Initializes the matrix. The matrix can be initialized in two ways:
+        Initializes the matrix. The matrix can be populated in one of two ways:
 
-        1. By providing a list of keys. An empty matrix will be created with the given keys.
-        2. By providing a filename from which to read the matrix.
+        1. By providing a list of keys. An empty matrix is initialized with these keys.
+        2. By providing a filename to load the matrix from.
 
         Exactly one of 'keys' or 'filename' must be provided.
 
-        :param keys: A list of unique keys representing the matrix elements.
-        :param filename: The filename from which to read the matrix.
-        :param datatype: The datatype of the array elements. Must be a valid type code.
+        @param keys: A list of unique keys that represent the elements of the matrix.
+        @param filename: The name (or Path object) of the file from which to load the matrix.
+        @param datatype: The datatype of the elements in the array. Must be a valid type code.
         """
 
-        # Check that exactly one of keys or filename is provided
+        # Ensuring that either keys or filename is provided
         if (keys is None) == (filename is None):
             raise ValueError(
                 "Either 'keys' or 'filename' must be provided, but not both."
             )
 
-        # Initialize the matrix
-        if filename is not None:
-            self.keys, self.data = self.read_matrix(filename)
-        else:
+        # If filename is provided, read the matrix from file
+        if filename:
+            self.keys, self.data = self.read(filename)
+        else:  # Else, create an empty matrix with given keys
             self.keys = sorted(keys)
+            # Initializing the half-matrix with zeroes
             self.data = array.array(
                 datatype, [0] * (len(self.keys) * (len(self.keys) - 1) // 2)
             )
 
-        # Generate indices for quick lookup
+        # Generate indices for each key for quick lookup
         self.indices = {key: i for i, key in enumerate(self.keys)}
 
-    def read_matrix(self, filename: Union[str, Path]) -> Tuple[List[str], array.array]:
+    def read(self, filename: Union[str, Path]) -> Tuple[List[str], array.array]:
         """
         Reads a matrix from a compressed file.
 
-        This method reads the compressed file, deserializes it and returns the keys and data.
+        The method opens the compressed file, deserializes it, and returns the keys and data.
 
-        :param filename: The filename or Path from which to read the matrix.
-        :return: The keys and data as a tuple.
+        @param filename: The filename or Path object to read the matrix from.
+        @return: A tuple containing the keys and data of the matrix.
         """
 
-        # Convert to pathlib.Path if necessary
-        if isinstance(filename, str):
-            filename = Path(filename)
+        # Ensuring filename is a Path object
+        filename = Path(filename) if isinstance(filename, str) else filename
 
         with bz2.open(filename, "rb") as file:
             keys, data = pickle.load(file)
 
         return keys, data
 
-    def save_matrix(self, filename: Union[str, Path]):
+    def save(self, filename: Union[str, Path]):
         """
         Writes the matrix to a compressed file.
 
         This method serializes the keys and data and writes them to a compressed file.
 
-        :param filename: The filename or Path to which to write the matrix.
+        @param filename: The filename or Path object to write the matrix to.
         """
 
-        # Convert to pathlib.Path if necessary
-        if isinstance(filename, str):
-            filename = Path(filename)
+        # Ensuring filename is a Path object
+        filename = Path(filename) if isinstance(filename, str) else filename
 
         with bz2.open(filename, "wb") as file:
             pickle.dump((self.keys, self.data), file)
 
-    @cache
+    @functools.cache  # Caching results for repeated calls with the same arguments
     def _get_index(self, i: str, j: str) -> int:
         """
-        Computes the index in the array for the keys i and j.
+        Computes the index in the flattened array for the given pair of keys (i, j).
 
-        This method uses the fact that the distance matrix is stored in the form of a one-dimensional
-        array. It calculates the index of each element in the array based on the keys. The calculation
-        is based on the lower left triangle of the matrix, excluding the diagonal.
+        This method calculates the index of each element in the one-dimensional array based on the keys.
+        The computation is performed based on the lower-left triangle of the matrix,
+        excluding the diagonal.
+
+        @param i: The first key.
+        @param j: The second key.
+        @return: The index in the array corresponding to the pair of keys.
         """
-
         if self.indices[i] > self.indices[j]:
-            i, j = j, i  # Ensure i <= j
+            i, j = j, i  # Ensuring i <= j for the calculation
 
         return self.indices[j] * (self.indices[j] - 1) // 2 + self.indices[i]
 
     def set(self, i: str, j: str, value: Union[int, float]):
         """
-        Sets the value at keys i and j in the distance matrix.
+        Sets the value for a specific pair of keys (i, j) in the distance matrix.
 
-        :param i: The first key.
-        :param j: The second key.
-        :param value: The value to be set.
+        @param i: The first key.
+        @param j: The second key.
+        @param value: The value to be set for the pair of keys.
         """
         self.data[self._get_index(i, j)] = value
 
     def get(self, i: str, j: str) -> Union[int, float]:
         """
-        Retrieves the value at keys i and j from the distance matrix.
+        Retrieves the value for a specific pair of keys (i, j) from the distance matrix.
 
-        This method is symmetric, i.e., get(i, j) == get(j, i). If i == j, the return value is 0,
-        since the diagonal of the distance matrix is assumed to be 0.
+        This method is symmetric, i.e., get(i, j) == get(j, i). If i == j, the returned value is 0,
+        as the diagonal of the distance matrix is assumed to be 0.
 
-        ::param i: The first key.
-        :param j: The second key.
-        :return: The value at keys i and j.
+        @param i: The first key.
+        @param j: The second key.
+        @return: The value corresponding to the pair of keys (i, j).
         """
-
         if i == j:
             return 0  # Diagonal values are assumed to be 0
 
         return self.data[self._get_index(i, j)]
 
+    # TODO: join with get() above
+    def __getitem__(self, item):
+        """
+        Retrieves the value for a specific pair of keys (i, j) from the distance matrix.
 
-def tree2matrix(tree):
+        This method is symmetric, i.e., get(i, j) == get(j, i). If i == j, the returned value is 0,
+        as the diagonal of the distance matrix is assumed to be 0.
+
+        @param item: A tuple containing the two keys.
+        @return: The value corresponding to the pair of keys (i, j).
+        """
+        return self.get(*item)
+
+    def rescale(self, scale_range=(0, 1), factor: float = 1.0):
+        """
+        Rescales the distance matrix to a given range and by the given factor.
+        """
+
+        # Calculating the minimum and maximum values
+        min_value = min(self.data)
+        max_value = max(self.data)
+
+        # Rescaling the values
+        for i, value in enumerate(self.data):
+            self.data[i] = (value - min_value) / (
+                max_value - min_value
+            ) * factor + scale_range[0]
+
+
+def tree2matrix(tree: Node) -> DistanceMatrix:
     """
-    Convert a newick tree to a distance matrix.
+    Converts a Newick tree into a symmetric distance matrix.
 
-    :param tree:
-    :return:
+    @param tree: The input Newick tree to be converted.
+    @return: The resulting distance matrix.
     """
 
-    def most_recent_common_ancestor(anc_list1, anc_list2):
+    def most_recent_common_ancestor(
+        anc_list1: List[Node], anc_list2: List[Node]
+    ) -> Node:
+        """
+        Finds the most recent common ancestor of two lists of ancestors.
+
+        @param anc_list1: The first list of ancestors.
+        @param anc_list2: The second list of ancestors.
+        @return: The label of the most recent common ancestor.
+        @raise ValueError: Raised when no common ancestor is found.
+        """
         for anc in anc_list1:
             if anc in anc_list2:
                 return anc
-
         raise ValueError("No common ancestor found")
 
-    @cache
-    def compute_distance(leaf1, leaf2):
+    @functools.cache
+    def compute_distance(leaf1: str, leaf2: str) -> float:
+        """
+        Computes the distance between two leaves in the tree.
+
+        The distance is computed as the sum of lengths from each leaf to their most recent common ancestor (MRCA).
+
+        @param leaf1: The first leaf.
+        @param leaf2: The second leaf.
+        @return: The computed distance.
+        """
         # Get the most recent common ancestor of the two leaves
         mrca = most_recent_common_ancestor(ancestors[leaf1], ancestors[leaf2])
 
-        # Sum the lengths between leaves and the mrca, grabbing the nodes by label
-        # with the `get_node` method
+        # Compute the lengths between leaves and the MRCA
         leaf1_length = sum(
             [n.length for n in ancestors[leaf1][: ancestors[leaf1].index(mrca)]]
         )
@@ -173,28 +224,31 @@ def tree2matrix(tree):
 
         return leaf1_length + leaf2_length
 
-    # Get all the leaves of the tree
+    # Extract all leaves from the tree
     leaves = tree.get_leaves()
 
-    # Create the matrix
+    # Initialize the distance matrix
     matrix = DistanceMatrix([leaf.name for leaf in leaves])
 
-    # Build a dictionary with the leaves as keys and their ancestors as values
+    # Build a dictionary mapping leaves to their ancestors; note that this currently
+    # requires a complete traversal of the tree for each leaf, which is not efficient
+    # (this could be improved by storing the ancestors in the tree nodes, but involves
+    # changes to the `Node` class that are not urgent)
     ancestors = {leaf: leaf.ancestors for leaf in leaves}
 
-    # For each pairwise combination of leaves, get their most recent common ancestor
+    # Compute pairwise distances for each combination of leaves
     num_comb = math.comb(len(leaves), 2)
     for idx, (leaf1, leaf2) in enumerate(itertools.combinations(leaves, 2)):
         if idx % 1000 == 0:
-            print(
+            logging.info(
                 f"Processed {idx} pairs of leaves (at `{leaf1.name},{leaf2.name}`) [{(idx/num_comb)*100:.2f}%]..."
             )
-
-        # Set the value to the matrix
         matrix.set(leaf1.name, leaf2.name, compute_distance(leaf1, leaf2))
 
-
     return matrix
+
+
+##########################
 
 
 def read_splitstree_matrix(filename: Union[Path, str]) -> Dict[str, Dict[str, float]]:

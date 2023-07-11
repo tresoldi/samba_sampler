@@ -137,7 +137,7 @@ def build_geodistance():
 
     # Write the distance `matrix`` to a file
     logging.info("[build_geodistance] Writing distance matrix to MATRIX.BZ2 file")
-    matrix.save_matrix(
+    matrix.save(
         ROOT_PATH / "src" / "samba_sampler" / "etc" / "haversine.matrix.bz2"
     )
 
@@ -232,7 +232,7 @@ def build_gled_matrix():
 
     # Write the matrix to a file
     logging.info("[build_gled_matrix] Writing global matrix to file")
-    matrix.save_matrix(ROOT_PATH / "src" / "samba_sampler" / "etc" / "gled.matrix.bz2")
+    matrix.save(ROOT_PATH / "src" / "samba_sampler" / "etc" / "gled.matrix.bz2")
 
 
 def main():

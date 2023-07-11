@@ -14,7 +14,7 @@ from .common import (
     tree2matrix,
     DistanceMatrix,
 )
-from .sampling import GLED_Sampler, MyLanguageSampler
+from .sampling import LanguageSampler
 from .newick import loads, dumps, load, dump
 
 # Expose the functions

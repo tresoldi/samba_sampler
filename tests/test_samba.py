@@ -15,7 +15,7 @@ def test_trigger():
 
 
 def test_sampling():
-    sampler = samba.MyLanguageSampler()
+    sampler = samba.LanguageSampler()
 
     #sampler = samba.GLED_Sampler()
     #for idx, langset in enumerate(sampler.sample(4, 10)):

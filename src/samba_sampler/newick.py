@@ -42,23 +42,23 @@ RESERVED_PUNCTUATION = {
 RP_PATTERN = re.compile("|".join(re.escape(c) for c in RESERVED_PUNCTUATION))
 
 
-def _iter_properties(c):
+def _iter_properties(comment):
     """
     Parse key-value properties from known comment formats.
     """
     NHX_KV_PATTERN = re.compile(r":(?P<key>[^=]+)=(?P<value>[^:]+)")
-    if c.startswith("&&NHX"):
-        c = c[5:]
-        m = NHX_KV_PATTERN.match(c)
+    if comment.startswith("&&NHX"):
+        comment = comment[5:]
+        m = NHX_KV_PATTERN.match(comment)
         while m:
             yield (m.groupdict()["key"], m.groupdict()["value"])
-            c = c[m.end() :]
-            m = NHX_KV_PATTERN.match(c)
-    elif c.startswith("&"):
+            comment = comment[m.end() :]
+            m = NHX_KV_PATTERN.match(comment)
+    elif comment.startswith("&"):
         # MrBayes comment.
         kv = []
         inquote, bracketlevel = False, 0
-        for cc in c[1:]:
+        for cc in comment[1:]:
             if cc == ",":
                 if not (inquote or bracketlevel != 0):
                     assert kv
