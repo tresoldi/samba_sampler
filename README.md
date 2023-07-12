@@ -1,20 +1,22 @@
-# SAMBA - Sampling Algorithm with Matrix-Based Weight Allocation
+# SAMBA - Sampling Algorithms with Matrix-Based Weight Allocation
 
-SAMBA is a Python package providing a sampling method via matrix-based distance measures to mitigate autocorrelation.
+SAMBA is a Python package providing sampling methods via matrix-based distance measures to mitigate autocorrelation.
 
 ## Installation and Usage
 
 The package can be installed via pip:
 
 ```bash
-$ pip install samba
+$ pip install samba_sampler
 ```
 
 Detailed information on the usage of the package can be found in the [documentation](https://samba.readthedocs.io/en/latest/).
 For a quick start, the following example shows how to use the package:
 
 ```python
-print("ok")
+import samba_sampler as samba
+sampler = samba.LanguageSampler() # Default parameters
+print(sampler.sample(5))
 ```
 
 ## Showcases

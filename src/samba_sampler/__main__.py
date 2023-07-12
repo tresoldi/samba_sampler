@@ -12,11 +12,35 @@ import sys
 import samba_sampler as samba
 
 
+# Define a dictionary for models and their parameters
+models = {
+    "tiago1": {
+        "algorithm": "standard",
+        "freq_weight": 1.0,
+        "matrices": "gled.matrix.bz2,haversine.matrix.bz2",
+        "matrix_weights": "1.0,0.75",
+        "tables": None,
+        "table_weights": None,
+    },
+    "tiago2": {
+        "algorithm": "progressive",
+        "freq_weight": 0.5,
+        "matrices": "gled.matrix.bz2,haversine.matrix.bz2",
+        "matrix_weights": "1.0,0.5",
+        "tables": None,
+        "table_weights": None,
+    },
+}
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Interface with the samba_sampler library"
     )
 
+    parser.add_argument(
+        "--model", default=None, help="Model to use. Overrides other parameters."
+    )
     parser.add_argument(
         "--algorithm",
         default="standard",
@@ -47,7 +71,20 @@ def main():
         default=None,
         help="List of table weights, given as floating points separated by commas",
     )
+    parser.add_argument("-s", "--seed", type=int, help="Random seed")
     args = parser.parse_args()
+
+    # If a model is specified, update the default parameters
+    if args.model:
+        if args.model in models:
+            model_params = models[args.model]
+            for key, value in model_params.items():
+                if getattr(args, key) == parser.get_default(key):
+                    setattr(args, key, value)
+        else:
+            parser.error(
+                f"Invalid model. Available models are: {', '.join(models.keys())}"
+            )
 
     # Convert string arguments into corresponding Python types
     matrices = args.matrices.split(",") if args.matrices else None
@@ -77,7 +114,11 @@ def main():
 
     # Print tuples yielded by method sample
     for taxa in sampler.sample(
-        args.k, args.n, algorithm=args.algorithm, freq_weight=args.freq_weight
+        args.k,
+        args.n,
+        algorithm=args.algorithm,
+        freq_weight=args.freq_weight,
+        seed=args.seed,
     ):
         sys.stdout.write(str(",".join(sorted(taxa))) + "\n")
 

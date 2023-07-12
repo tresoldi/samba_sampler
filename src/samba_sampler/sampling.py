@@ -148,9 +148,10 @@ class Sampler:
         k: int,
         n: int = 1,
         freq_weight: float = 1.0,
+        candidates_ratio: float = 0.1,  # only used for progressive sampling
         algorithm: str = "standard",
         summary: str = "mean",
-        subpop: int = 100,
+        subpop: int = 100,  # only used for standard sampling
         seed: Optional[Union[int, str]] = None,
     ) -> Generator[Tuple[str], None, None]:
         """
@@ -163,10 +164,10 @@ class Sampler:
             )
         elif algorithm == "progressive":
             yield from self.progressive_sampling(
-                k, n, seed=seed
+                k, n, freq_weight, summary, candidates_ratio, seed=seed
             )  # TODO: check parameters
         else:
-            raise ValueError(f"Invalid sampling method: {summary}")
+            raise ValueError(f"Invalid sampling method: {algorithm}")
 
     def standard_sampling(
         self,
@@ -193,12 +194,12 @@ class Sampler:
         @return: A generator of samples.
         """
 
+        # Set the seed
+        random.seed(seed)
+
         # Validate method
         if summary not in ["mean", "sum"]:
             raise ValueError("Invalid method in `sample()`: {}".format(summary))
-
-        # Set the seed
-        random.seed(seed)
 
         # Initialize the set of sampled sets
         taxa_counter = collections.Counter()
@@ -248,9 +249,9 @@ class Sampler:
         self,
         k: int,
         n: int = 1,
-        candidates_ratio: float = 0.1,
         freq_weight: float = 1.0,
         summary: str = "mean",
+        candidates_ratio: float = 0.1,
         seed: Optional[Union[int, str]] = None,
     ) -> Generator[Tuple[str], None, None]:
         """
@@ -269,14 +270,14 @@ class Sampler:
         @return: A generator of samples.
         """
 
+        # Set the seed
+        random.seed(seed)
+
         # Validate method
         if summary not in ["mean", "sum"]:
             raise ValueError(
                 "Invalid method in `progressive_sample()`: {}".format(summary)
             )
-
-        # Set the seed
-        random.seed(seed)
 
         # Determine number of initial random candidates
         num_candidates = max(1, int(len(self._keys) * candidates_ratio))
@@ -291,7 +292,7 @@ class Sampler:
             while len(sampled_taxa) < k:
                 # Randomly pick remaining taxa to be considered
                 remaining_taxa = random.sample(
-                    list(set(self._keys) - set(sampled_taxa)), num_candidates
+                    sorted(set(self._keys) - set(sampled_taxa)), num_candidates
                 )
 
                 scores = []
