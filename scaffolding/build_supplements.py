@@ -5,7 +5,6 @@ Build supplementary data for the scaffolding.
 """
 
 # Import Python standard libraries
-from ete3 import Tree
 from pathlib import Path
 import csv
 import glob
@@ -13,6 +12,9 @@ import itertools
 import logging
 import math
 import os
+
+# Import 3rd party libraries
+from ete3 import Tree
 
 # Import our library to leverage functions and classes
 from samba_sampler import newick, tree2matrix, DistanceMatrix

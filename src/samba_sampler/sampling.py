@@ -1,31 +1,38 @@
 """
-Functions for obtaining language samples.
+Functions for obtaining taxa samples.
 """
 
 # Import from standard library
-from typing import Optional, Union, List, Tuple, Sequence
+from typing import Optional, Union, List, Tuple, Generator
 import collections
+import functools
 import itertools
 import random
-import functools
 
 # Import from other modules
-from .common import ETC_PATH, DistanceMatrix, build_dict_from_file
+from .common import ETC_PATH, DistanceMatrix, build_table_from_file
 
 
 class Sampler:
     def __init__(
         self,
-        matrices: List[DistanceMatrix],
-        tables: List[dict],
-        mweights=None,
-        tweights=None,
+        matrices: Optional[List[DistanceMatrix]] = None,
+        tables: Optional[List[dict]] = None,
+        mweights: Optional[List[float]] = None,
+        tweights: Optional[List[float]] = None,
     ):
         """
         Initialize the sampler.
-        :param matrices:
-        :param mweights:
+
+        @param matrices: A list of matrices to be used for sampling.
+        @param tables: A list of tables to be used for sampling.
+        @param mweights: A list of weights for the matrices.
+        @param tweights: A list of weights for the tables.
         """
+
+        # Raise an error if no matrix and no table was provided
+        if not matrices and not tables:
+            raise ValueError("No matrix and no table provided.")
 
         # Store the matrices internally
         self._matrices = matrices
@@ -35,11 +42,7 @@ class Sampler:
         self._tables = tables
         self._num_tables = len(tables)
 
-        # Raise an error if no matrix and no table was provided
-        if self._num_matrices == 0 and self._num_tables == 0:
-            raise ValueError("No matrix and no table provided.")
-
-        # Obtain the set of keys for all matrices and for all tables, if they
+        # Obtain the set of common keys for all matrices and for all tables, if they
         # were provided, and then compute the intersection of the sets,
         # which will be the set of keys to be used for sampling. The intersection
         # is stored as a sorted list in `self._keys`.
@@ -64,7 +67,7 @@ class Sampler:
             self._keys = sorted(mkeys)
         else:
             # Obtain the intersection of the sets of keys for all tables
-            tkeys = set(tables[0].keys)
+            tkeys = set(tables[0].keys())
             for table in tables[1:]:
                 tkeys = tkeys.intersection(set(table.keys()))
             self._keys = sorted(tkeys)
@@ -89,9 +92,9 @@ class Sampler:
         The score is computed as the weighted average of the distances between each pair of taxa,
         where the weights are given by the `weights` parameter.
 
-        :param sampled_taxa: The set of sampled taxa.
-        :param method: The method to use for computing the distance.
-        :return: The score.
+        @param sampled_taxa: The set of sampled taxa.
+        @param method: The method to use for computing the distance.
+        @return: The score.
         """
 
         # Initialize the score
@@ -102,8 +105,8 @@ class Sampler:
             # Compute the distances between each pair of taxa
             dists = [
                 [
-                    self._matrices[m][lang1, lang2]
-                    for lang1, lang2 in itertools.combinations(sampled_taxa, 2)
+                    self._matrices[m][taxon1, taxon2]
+                    for taxon1, taxon2 in itertools.combinations(sampled_taxa, 2)
                 ]
                 for m in range(self._num_matrices)
             ]
@@ -143,15 +146,56 @@ class Sampler:
     def sample(
         self,
         k: int,
-        t: int = 1,
+        n: int = 1,
         freq_weight: float = 1.0,
-        method: str = "mean",
-        tries: int = 100,
+        algorithm: str = "standard",
+        summary: str = "mean",
+        subpop: int = 100,
         seed: Optional[Union[int, str]] = None,
-    ):
+    ) -> Generator[Tuple[str], None, None]:
+        """
+        Sample a set of taxa.
+        """
+
+        if algorithm == "standard":
+            yield from self.standard_sampling(
+                k, n, freq_weight, summary, subpop, seed=seed
+            )
+        elif algorithm == "progressive":
+            yield from self.progressive_sampling(
+                k, n, seed=seed
+            )  # TODO: check parameters
+        else:
+            raise ValueError(f"Invalid sampling method: {summary}")
+
+    def standard_sampling(
+        self,
+        k: int,
+        n: int = 1,
+        freq_weight: float = 1.0,
+        summary: str = "mean",
+        subpop: int = 100,
+        seed: Optional[Union[int, str]] = None,
+    ) -> Generator[Tuple[str], None, None]:
+        """
+        Sample a set of taxa.
+
+        This is the default sampling method, using a non-progressive approach in which full sets
+        of taxa are sampled at random and picked based on their score. For a progressive approach,
+        see `sample_progressive()`.
+
+        @param k: The number of taxa to sample.
+        @param n: The number of samples to generate.
+        @param freq_weight: The weight to be given to the frequency of each taxon in the sample.
+        @param summary: The method to use for computing the distance.
+        @param subpop: The number of samples to generate for each subpopulation.
+        @param seed: The seed to be used for the random number generator.
+        @return: A generator of samples.
+        """
+
         # Validate method
-        if method not in ["mean", "sum"]:
-            raise ValueError("Invalid method in `sample()`: {}".format(method))
+        if summary not in ["mean", "sum"]:
+            raise ValueError("Invalid method in `sample()`: {}".format(summary))
 
         # Set the seed
         random.seed(seed)
@@ -159,14 +203,14 @@ class Sampler:
         # Initialize the set of sampled sets
         taxa_counter = collections.Counter()
 
-        for _ in range(t):
+        for _ in range(n):
             candidates = []
-            for _ in range(tries):
+            for _ in range(subpop):
                 # Obtain a random sample of k taxa
                 sampled_taxa = tuple(random.sample(self._keys, k))
 
                 # Compute the score without the frequency part
-                score = self.compute_score(sampled_taxa, method)
+                score = self.compute_score(sampled_taxa, summary)
 
                 # Compute the frequency of each taxon in the sample
                 fdists = [taxa_counter[taxon] for taxon in sampled_taxa]
@@ -179,7 +223,7 @@ class Sampler:
                         sum(fdists)
                         / (
                             k * most_common_count
-                            if method == "mean"
+                            if summary == "mean"
                             else sum([e[1] for e in taxa_counter.most_common(k)])
                         )
                     )
@@ -200,19 +244,35 @@ class Sampler:
             # Yield the results
             yield selected
 
-    def progressive_sample(
+    def progressive_sampling(
         self,
         k: int,
-        t: int = 1,
+        n: int = 1,
         candidates_ratio: float = 0.1,
         freq_weight: float = 1.0,
-        method: str = "mean",
+        summary: str = "mean",
         seed: Optional[Union[int, str]] = None,
-    ):
+    ) -> Generator[Tuple[str], None, None]:
+        """
+        Sample a set of taxa using a progressive approach.
+
+        This method starts with a single random taxon and progressively adds new taxa to the
+        sample, picking the one that maximizes the score. For a non-progressive approach, see
+        `sample()`.
+
+        @param k: The number of taxa to sample.
+        @param n: The number of samples to generate.
+        @param candidates_ratio: The ratio of candidates to consider for each new taxon.
+        @param freq_weight: The weight to be given to the frequency of each taxon in the sample.
+        @param summary: The method to use for computing the distance.
+        @param seed: The seed to be used for the random number generator.
+        @return: A generator of samples.
+        """
+
         # Validate method
-        if method not in ["mean", "sum"]:
+        if summary not in ["mean", "sum"]:
             raise ValueError(
-                "Invalid method in `progressive_sample()`: {}".format(method)
+                "Invalid method in `progressive_sample()`: {}".format(summary)
             )
 
         # Set the seed
@@ -224,7 +284,7 @@ class Sampler:
         # Initialize the set of sampled sets
         taxa_counter = collections.Counter()
 
-        for _ in range(t):
+        for _ in range(n):
             # Start with a single random taxon
             sampled_taxa = [random.choice(self._keys)]
 
@@ -237,7 +297,7 @@ class Sampler:
                 scores = []
                 for taxon in remaining_taxa:
                     new_sample = tuple(sampled_taxa + [taxon])
-                    score = self.compute_score(new_sample, method)
+                    score = self.compute_score(new_sample, summary)
 
                     # Penalize taxa that have been sampled already
                     fdists = [taxa_counter[taxon] for taxon in new_sample]
@@ -249,7 +309,7 @@ class Sampler:
                             sum(fdists)
                             / (
                                 k * most_common_count
-                                if method == "mean"
+                                if summary == "mean"
                                 else sum([e[1] for e in taxa_counter.most_common(k)])
                             )
                         )
@@ -274,24 +334,44 @@ class LanguageSampler(Sampler):
         Initialize the sampler.
         """
 
-        # TODO: add rescaler
         from pathlib import Path
 
         p = Path(__file__).parent.parent.parent / "maja.csv"
-        tok_weights = build_dict_from_file(p, "Glottocode", "motion hits")
+        tok_weights = build_table_from_file(p, "Glottocode", "motion hits")
         print(f"Read {len(tok_weights)} entries from token weights")
 
         phylomatrix = DistanceMatrix(filename=ETC_PATH / "gled.matrix.bz2")
         print(f"Read {len(phylomatrix.data)} entries from phylogenetic matrix")
-        print(phylomatrix.keys[:20])
 
         geomatrix = DistanceMatrix(filename=ETC_PATH / "haversine.matrix.bz2")
         print(f"Read {len(geomatrix.data)} entries from geographic matrix")
-        print(geomatrix.keys[:20])
 
         # TODO: decide on factors
         phylomatrix.rescale()
-        # geomatrix.rescale()
+        geomatrix.rescale()
 
         # Initialize the parent class
         super().__init__([phylomatrix, geomatrix], [tok_weights])
+
+
+class GenericSampler(Sampler):
+    def __init__(self, matrix_files, table_files, matrix_weights, table_weights):
+        """
+        Initialize the sampler.
+        """
+
+        # Load all matrices and tables
+        if matrix_files:
+            matrices = [DistanceMatrix(filename=ETC_PATH / m) for m in matrix_files]
+        else:
+            matrices = []
+
+        if table_files:
+            tables = [build_table_from_file(ETC_PATH / t) for t in table_files]
+        else:
+            tables = []
+
+        # Initialize the parent class
+        super().__init__(
+            matrices, tables, mweights=matrix_weights, tweights=table_weights
+        )

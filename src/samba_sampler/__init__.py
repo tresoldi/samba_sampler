@@ -10,9 +10,9 @@ __email__ = "tiago@tresoldi.org"
 from .common import (
     tree2matrix,
     DistanceMatrix,
-    build_dict_from_file,
+    build_table_from_file,
 )
-from .sampling import LanguageSampler
+from .sampling import LanguageSampler, GenericSampler
 from .newick import loads, dumps, load, dump
 
 # Expose the functions
@@ -28,6 +28,7 @@ all = [
     "read_triangle_matrix",
     "GLED_Sampler",
     "MyLanguageSampler",
+    "GenericSampler",
     "Language_Sampler",
     "build_dict_from_file",
 ]

@@ -3,8 +3,8 @@ Common functions for the library.
 """
 
 # Import standard libraries
-from pathlib import Path
 from collections import defaultdict
+from pathlib import Path
 from typing import List, Tuple, Union, Optional, Sequence
 import array
 import bz2
@@ -16,8 +16,10 @@ import math
 import pickle
 import re
 
+# Import local modules
 from .newick import Node
 
+# Define the path to the 'etc' directory, with supplementary material
 ETC_PATH = Path(__file__).parent / "etc"
 
 
@@ -148,20 +150,32 @@ class DistanceMatrix:
 
         return self.data[self._get_index(item[0], item[1])]
 
-    def rescale(self, scale_range=(0, 1), factor: float = 1.0):
+    def rescale(
+        self, scale_range: Tuple[float, float] = (0.0, 1.0), factor: float = 1.0
+    ):
         """
         Rescales the distance matrix to a given range and by the given factor.
+
+        @param scale_range: The range to which the values should be rescaled.
+        @param factor: The factor by which the values should be multiplied.
         """
 
         # Calculating the minimum and maximum values
         min_value = min(self.data)
         max_value = max(self.data)
 
+        # Build a new temporary array of the same size of self.data, but
+        # always of floating point type, to hold the new values
+        temp_array = array.array("f", [0] * len(self.data))
+
         # Rescaling the values
         for i, value in enumerate(self.data):
-            self.data[i] = (value - min_value) / (
+            temp_array[i] = (value - min_value) / (
                 max_value - min_value
             ) * factor + scale_range[0]
+
+        # Use the new array as the data
+        self.data = temp_array
 
 
 def tree2matrix(tree: Node) -> DistanceMatrix:
@@ -280,13 +294,24 @@ def dst2matrix(filename: Union[Path, str]) -> DistanceMatrix:
     return mtx
 
 
-def build_dict_from_file(
+def build_table_from_file(
     filename: Union[str, Path],
     key: str,
     value: str,
     encoding: str = "utf-8",
     multiple: str = "average",
 ) -> dict:
+    """
+    Build a dictionary from a tabular file.
+
+    @param filename: The name of the file to read.
+    @param key: The name of the column to use as key.
+    @param value: The name of the column to use as value.
+    @param encoding: The encoding of the file.
+    @param multiple: How to handle multiple values for the same key.
+    @return: A dictionary with the values from the file.
+    """
+
     # Make sure filename is a Path object
     filename = Path(filename)
 

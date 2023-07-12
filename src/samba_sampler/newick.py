@@ -6,14 +6,16 @@ under the Apache License 2.0.
 
 .. seealso:: https://en.wikipedia.org/wiki/Newick_format
 """
-import re
-import enum
-import typing
-import pathlib
-import itertools
+
+# Import Python standard libraries
 import dataclasses
+import enum
+import itertools
+import pathlib
+import re
+import typing
 
-
+# Define auxiliary data for the parsing
 QUOTE = "'"
 ESCAPE = {"'", "\\"}
 COMMENT = {"[": 1, "]": -1}
