@@ -19,14 +19,10 @@ sampler = samba.LanguageSampler() # Default parameters
 print(sampler.sample(5))
 ```
 
-## Showcases
-
-(...)
-
 ## Changelog
 
-Version 0.1.0 (2021-03-01)
-  - Initial release
+Version 0.3 (2023-07-13)
+  - Initial release, following on the `arcaverborum` project.
 
 ## Community Guidelines
 
@@ -40,23 +36,19 @@ The library is developed by Tiago Tresoldi (tiago@tresoldi.org).
 
 The library is developed in the context of the Cultural Evolution of Texts project, with funding from the Riksbankens Jubileumsfond (grant agreement ID: MXM19-1087:1).
 
-If you use `dafsa`, please cite it as:
+If you use `samba_sampler`, please cite it as:
 
-> Tresoldi, Tiago (2020). DAFSA, a a library for computing Deterministic Acyclic Finite State Automata. Version 1.0. Jena. DOI: 10.5281/zenodo.3668870
+> Tresoldi, Tiago (2023). SAMBA (Sampling Algorithms with Matrix-Based Weight Allocation): a Python package providing sampling methods via matrix-based distance measures to mitigate autocorrelation. Version 0.3. Uppsala: Uppsala University.
 
 In BibTeX:
 
 ```bibtex
-@misc{Tresoldi2020dafsa,
+@misc{Tresoldi2023samba,
   author = {Tresoldi, Tiago},
-  title = {DAFSA, a a library for computing Deterministic Acyclic Finite State Automata. Version 1.0.},
-  howpublished = {\url{https://github.com/tresoldi/dafsa}},
-  address = {Jena},
-  doi = {10.5281/zenodo.3668870}.
-  year = {2020},
+  title = {SAMBA (Sampling Algorithms with Matrix-Based Weight Allocation): a Python package providing sampling methods via matrix-based distance measures to mitigate autocorrelation. Version 0.3.},
+  howpublished = {\url{https://github.com/tresoldi/samba_sampler}},
+  address = {Uppsala},
+  published = {Upssala University},
+  year = {2023}
 }
 ```
-
-## TODO
-
-- different distance for family in the gled tree (not over 1000)

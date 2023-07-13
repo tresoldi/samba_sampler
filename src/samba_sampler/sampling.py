@@ -368,7 +368,11 @@ class GenericSampler(Sampler):
             matrices = []
 
         if table_files:
-            tables = [build_table_from_file(ETC_PATH / t) for t in table_files]
+            # TODO: fix this hardcode
+            tables = [
+                build_table_from_file(t, "Glottocode", "motion hits")
+                for t in table_files
+            ]
         else:
             tables = []
 

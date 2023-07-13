@@ -20,7 +20,7 @@ print(sampler._keys[:20])
 print(len(sampler._keys))
 
 for i in range(5):
-    k = sampler.sample(5)
+    k = sampler.sample(5, algorithm="standard")
     print("standard", list(k))
-    k = sampler.progressive_sample(5)
+    k = sampler.sample(5, algorithm="progressive")
     print("progressive", list(k))

@@ -2,7 +2,7 @@
 # Path: src\samba_sampler\__init__.py
 
 # Metadata
-__version__ = "2.0"  # Remember to update this in setup.py
+__version__ = "0.3"  # Remember to update this in setup.py
 __author__ = "Tiago Tresoldi"
 __email__ = "tiago@tresoldi.org"
 
