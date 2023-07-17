@@ -5,6 +5,7 @@ Build supplementary data for the scaffolding.
 """
 
 # Import Python standard libraries
+from collections import defaultdict
 from pathlib import Path
 import csv
 import glob
@@ -119,7 +120,7 @@ def build_geodistance():
 
     # Compute the Haversine distance between all pairs of languages and build the matrix
     logging.info("[build_geodistance] Building distance matrix")
-    matrix = DistanceMatrix(glottocodes, datatype="h")  # C signed short type
+    matrix = DistanceMatrix(glottocodes, datatype="H")  # C signed short type
     for idx, (l1, l2) in enumerate(itertools.combinations(glottocodes, 2)):
         if idx % 100000 == 0:
             logging.info(
@@ -140,6 +141,46 @@ def build_geodistance():
     # Write the distance `matrix`` to a file
     logging.info("[build_geodistance] Writing distance matrix to MATRIX.BZ2 file")
     matrix.save(ROOT_PATH / "src" / "samba_sampler" / "etc" / "haversine.matrix.bz2")
+
+
+def build_walking():
+    # Set the path to the walking distance file, converted from the Rdata structure
+    source_file = ROOT_PATH / "scaffolding" / "guzman_jaeger" / "walking-raw.csv"
+
+    # Collect the set of glottocodes in the matrix
+    glottocodes = []
+    max_dist = {}
+    with open(source_file, "r", encoding="utf-8") as f:
+        header = f.readline().strip().split(",")
+        glottocodes = header[1:]  # the first column is "GLOTTOCODE"
+
+        # Collect the largest, non-NA distance for each glottocode
+        for line in f:
+            distances = line.strip().split(",")
+            glottocode = distances[0]
+            max_distance = max(float(dist) for dist in distances[1:] if dist != "NA")
+            max_dist[glottocode] = int(max_distance)
+
+    # Create a DistanceMatrix object and fill it with the contents
+    matrix = DistanceMatrix(glottocodes, datatype="L")
+    with open(source_file, "r") as f:
+        f.readline()  # skip the header
+        # Iterate over the source data to set the values in the matrix
+        for line in f:
+            distances = line.strip().split(",")
+            glottocode = distances[0]
+
+            for i, value in enumerate(distances[1:]):
+                if value == "NA":
+                    ret_value = max_dist[glottocode]
+                else:
+                    ret_value = int(float(value))  # cast to an integer if necessary
+
+                matrix[glottocode, glottocodes[i]] = ret_value
+
+    # Write the distance `matrix`` to a file
+    logging.info("[build_walking] Writing distance matrix to WALKING.MATRIX.BZ2 file")
+    matrix.save(ROOT_PATH / "src" / "samba_sampler" / "etc" / "walking.matrix.bz2")
 
 
 def build_gled_tree():
@@ -241,11 +282,14 @@ def main():
     """
 
     # Build the supplementary geographic data for language sampling
-    build_geodistance()
+    # build_geodistance()
+
+    # Build the walking distance from Guzmán Naranjo & Jäger (2023)
+    build_walking()
 
     # Build the GLED tree and matrix
-    build_gled_tree()
-    build_gled_matrix()
+    # build_gled_tree()
+    # build_gled_matrix()
 
 
 if __name__ == "__main__":

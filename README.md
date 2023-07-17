@@ -21,6 +21,9 @@ print(sampler.sample(5))
 
 ## Changelog
 
+Version 0.3.1 (2023-07-17)
+  - Added first version of the walking distance matrix derived from Guzman Naranjo & Jäger (2023).
+
 Version 0.3 (2023-07-13)
   - Initial release, following on the `arcaverborum` project.
 

@@ -132,6 +132,9 @@ class DistanceMatrix:
         @param key: A sequence containing the two keys.
         @param value: The value to be set for the pair of keys.
         """
+        if key[0] == key[1]:
+            return 0  # Diagonal values are assumed to be 0
+
         self.data[self._get_index(key[0], key[1])] = value
 
     def __getitem__(self, item: Sequence[str]) -> float:
