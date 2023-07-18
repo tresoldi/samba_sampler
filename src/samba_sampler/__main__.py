@@ -71,6 +71,12 @@ def main():
         default=None,
         help="List of table weights, given as floating points separated by commas",
     )
+    parser.add_argument(
+        "-q",
+        "--query",
+        default=None,
+        help="Query string to filter taxa (e.g. `family=Indo-European;ancestors=>germ1287,<nort3175`)",
+    )
     parser.add_argument("-s", "--seed", type=int, help="Random seed")
     args = parser.parse_args()
 
@@ -85,6 +91,13 @@ def main():
             parser.error(
                 f"Invalid model. Available models are: {', '.join(models.keys())}"
             )
+
+    # If a query is specified, obtain the list of glottocodes
+    # TODO: allow to filter arbitrary, non linguistic lists
+    if args.query:
+        taxa_subset = samba.filter_glottolog(args.query)
+    else:
+        taxa_subset = None
 
     # Convert string arguments into corresponding Python types
     matrices = args.matrices.split(",") if args.matrices else None
@@ -110,6 +123,7 @@ def main():
         table_files=tables,
         matrix_weights=matrix_weights,
         table_weights=table_weights,
+        taxa_subset=taxa_subset,
     )
 
     # Print tuples yielded by method sample
