@@ -20,6 +20,7 @@ class Sampler:
         tables: Optional[List[dict]] = None,
         mweights: Optional[List[float]] = None,
         tweights: Optional[List[float]] = None,
+        taxa_subset: Optional[List[str]] = None,
     ):
         """
         Initialize the sampler.
@@ -28,6 +29,7 @@ class Sampler:
         @param tables: A list of tables to be used for sampling.
         @param mweights: A list of weights for the matrices.
         @param tweights: A list of weights for the tables.
+        @param taxa_subset: A list of taxa to be used for sampling.
         """
 
         # Raise an error if no matrix and no table was provided
@@ -71,6 +73,10 @@ class Sampler:
             for table in tables[1:]:
                 tkeys = tkeys.intersection(set(table.keys()))
             self._keys = sorted(tkeys)
+
+        # If a subset of taxa was provided, filter the keys
+        if taxa_subset:
+            self._keys = [key for key in self._keys if key in taxa_subset]
 
         # If `mweights` is not provided, default to 1.0 for every item in `matrices`
         if not mweights:
@@ -356,7 +362,9 @@ class LanguageSampler(Sampler):
 
 
 class GenericSampler(Sampler):
-    def __init__(self, matrix_files, table_files, matrix_weights, table_weights):
+    def __init__(
+        self, matrix_files, table_files, matrix_weights, table_weights, taxa_subset=None
+    ):
         """
         Initialize the sampler.
         """
@@ -378,5 +386,9 @@ class GenericSampler(Sampler):
 
         # Initialize the parent class
         super().__init__(
-            matrices, tables, mweights=matrix_weights, tweights=table_weights
+            matrices,
+            tables,
+            mweights=matrix_weights,
+            tweights=table_weights,
+            taxa_subset=taxa_subset,
         )

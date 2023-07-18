@@ -348,3 +348,90 @@ def build_table_from_file(
                 result_dict[key] = min(values)
 
     return dict(result_dict)
+
+
+def filter_data(filter_string: str, data: List[dict]) -> List[dict]:
+    """
+    Apply filtering criteria to a list of dictionaries.
+
+    @param filter_string: String that specifies the filtering criteria. The string format should be
+    "feature1=-value1,value2;feature2=value3,-value4;feature3=>value5,<value6", where '-' in front of
+    a value indicates that the dictionaries should not contain that value for the feature, '>' indicates
+    that the dictionaries should contain a value that includes the given value (substring or list element),
+    and '<' indicates that the dictionaries should not contain a value that includes the given value.
+
+    @param data: List of dictionaries to apply the filtering criteria to.
+    @return: List of dictionaries that meet all the filtering criteria.
+    """
+
+    # Parsing the filter string
+    filters = filter_string.split(";")
+    filter_dict = {}
+    for filt in filters:
+        key, values = filt.split("=")
+        filter_dict[key] = {"neg": [], "pos": [], "part": [], "not_part": []}
+        for value in values.split(","):
+            if value.startswith("-"):
+                filter_dict[key]["neg"].append(value[1:])
+            elif value.startswith(">"):
+                filter_dict[key]["part"].append(value[1:])
+            elif value.startswith("<"):
+                filter_dict[key]["not_part"].append(value[1:])
+            else:
+                filter_dict[key]["pos"].append(value)
+
+    # Filtering data
+    filtered_data = []
+    for row in data:
+        valid_row = True
+        for key, value in filter_dict.items():
+            if key in row:
+                if row[key] in value["neg"] or (
+                    value["pos"] and row[key] not in value["pos"]
+                ):
+                    valid_row = False
+                    break
+                for part_value in value["part"]:
+                    if isinstance(row[key], str):
+                        if part_value not in row[key]:
+                            valid_row = False
+                            break
+                    elif isinstance(row[key], list):
+                        if part_value not in row[key]:
+                            valid_row = False
+                            break
+                for not_part_value in value["not_part"]:
+                    if isinstance(row[key], str):
+                        if not_part_value in row[key]:
+                            valid_row = False
+                            break
+                    elif isinstance(row[key], list):
+                        if not_part_value in row[key]:
+                            valid_row = False
+                            break
+        if valid_row:
+            filtered_data.append(row)
+
+    return filtered_data
+
+
+def filter_glottolog(filter_string: str) -> List[str]:
+    """
+    Reads the glottolog data and filters it according to the filter string.
+
+    The function will load the glottolog data dump and filter it according to the
+    filter string (using the `filter_data()` function). The function will then return
+    a list of glottocodes that meet the filtering criteria.
+    """
+
+    # Obtain the path to the glottolog data dump and read it as a list of dictionaries
+    glottolog_path = sorted(ETC_PATH.glob("glottolog.*.tsv"))[-1]
+    glottolog_data = list(
+        csv.DictReader(glottolog_path.open(encoding="utf-8"), delimiter="\t")
+    )
+
+    # Filter the glottolog data
+    glottolog_data = filter_data(filter_string, glottolog_data)
+
+    # Return a list of glottocodes
+    return [row["glottocode"] for row in glottolog_data]
