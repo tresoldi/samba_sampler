@@ -7,7 +7,6 @@ Tests for the `samba_sampler` package.
 
 # Import Python standard libraries
 import csv
-import pytest
 from pathlib import Path
 
 # Import the library being tested

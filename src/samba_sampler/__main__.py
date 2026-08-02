@@ -11,7 +11,6 @@ import sys
 # Import our library to leverage functions and classes
 import samba_sampler as samba
 
-
 # Define a dictionary for models and their parameters
 models = {
     "tiago1": {
@@ -110,6 +109,13 @@ def main():
     table_weights = (
         list(map(float, args.table_weights.split(","))) if args.table_weights else None
     )
+
+    # At least one matrix or table is required to build a sampler
+    if not matrices and not tables:
+        parser.error(
+            "No data provided: specify at least one of --matrices or --tables "
+            "(optionally via --model)."
+        )
 
     # If matrices or tables were provided, make sure the corresponding weights have the same length
     if matrices and matrix_weights and len(matrices) != len(matrix_weights):
