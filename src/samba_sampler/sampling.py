@@ -7,6 +7,7 @@ from typing import Optional, Union, List, Tuple, Generator
 import collections
 import functools
 import itertools
+import logging
 import random
 
 # Import from other modules
@@ -36,13 +37,13 @@ class Sampler:
         if not matrices and not tables:
             raise ValueError("No matrix and no table provided.")
 
-        # Store the matrices internally
-        self._matrices = matrices
-        self._num_matrices = len(matrices)
+        # Store the matrices and tables internally, normalizing a missing
+        # argument to an empty list so that either one may be omitted.
+        self._matrices = matrices = list(matrices) if matrices else []
+        self._num_matrices = len(self._matrices)
 
-        # Store the tables internally
-        self._tables = tables
-        self._num_tables = len(tables)
+        self._tables = tables = list(tables) if tables else []
+        self._num_tables = len(self._tables)
 
         # Obtain the set of common keys for all matrices and for all tables, if they
         # were provided, and then compute the intersection of the sets,
@@ -90,7 +91,10 @@ class Sampler:
         else:
             self._tweights = tweights
 
-    @functools.cache  # Caching results for repeated calls with the same arguments
+    # Bounded cache for repeated calls with the same arguments. The score
+    # depends only on the (immutable) matrices/tables and the taxa, so caching
+    # is safe; the size cap keeps memory bounded during long sampling runs.
+    @functools.lru_cache(maxsize=2**16)
     def compute_score(self, sampled_taxa: Tuple, method: str) -> float:
         """
         Compute the score for a given set of sampled taxa.
@@ -200,8 +204,9 @@ class Sampler:
         @return: A generator of samples.
         """
 
-        # Set the seed
-        random.seed(seed)
+        # Use a local random generator so sampling is reproducible without
+        # mutating the global `random` state shared with the rest of the process.
+        rng = random.Random(seed)
 
         # Validate method
         if summary not in ["mean", "sum"]:
@@ -214,7 +219,7 @@ class Sampler:
             candidates = []
             for _ in range(subpop):
                 # Obtain a random sample of k taxa
-                sampled_taxa = tuple(random.sample(self._keys, k))
+                sampled_taxa = tuple(rng.sample(self._keys, k))
 
                 # Compute the score without the frequency part
                 score = self.compute_score(sampled_taxa, summary)
@@ -243,7 +248,7 @@ class Sampler:
 
             # Perform a weighted sampling of the candidates
             candidates, weights = zip(*candidates)
-            selected = random.choices(candidates, weights=weights, k=1)[0]
+            selected = rng.choices(candidates, weights=weights, k=1)[0]
 
             # Update the tracking of the sampled languages across different sets
             taxa_counter.update(selected)
@@ -276,8 +281,9 @@ class Sampler:
         @return: A generator of samples.
         """
 
-        # Set the seed
-        random.seed(seed)
+        # Use a local random generator so sampling is reproducible without
+        # mutating the global `random` state shared with the rest of the process.
+        rng = random.Random(seed)
 
         # Validate method
         if summary not in ["mean", "sum"]:
@@ -293,12 +299,15 @@ class Sampler:
 
         for _ in range(n):
             # Start with a single random taxon
-            sampled_taxa = [random.choice(self._keys)]
+            sampled_taxa = [rng.choice(self._keys)]
 
             while len(sampled_taxa) < k:
-                # Randomly pick remaining taxa to be considered
-                remaining_taxa = random.sample(
-                    sorted(set(self._keys) - set(sampled_taxa)), num_candidates
+                # Randomly pick remaining taxa to be considered, capped at the
+                # number of taxa still available to avoid a sample larger than
+                # the population.
+                available = sorted(set(self._keys) - set(sampled_taxa))
+                remaining_taxa = rng.sample(
+                    available, min(num_candidates, len(available))
                 )
 
                 scores = []
@@ -336,37 +345,74 @@ class Sampler:
 
 
 class LanguageSampler(Sampler):
-    def __init__(self):
+    """
+    A ready-to-use sampler over the bundled language data.
+
+    It combines the bundled phylogenetic (GLED) and geographic (haversine)
+    distance matrices, both rescaled to a common [0, 1] range. An optional
+    table of per-language weights may be supplied to bias the sampling.
+    """
+
+    def __init__(
+        self,
+        matrix_weights: Optional[List[float]] = None,
+        weights_table: Optional[dict] = None,
+        table_weights: Optional[List[float]] = None,
+    ):
         """
         Initialize the sampler.
+
+        @param matrix_weights: Optional weights for the phylogenetic and
+            geographic matrices, in that order. Defaults to equal weights.
+        @param weights_table: Optional mapping of glottocode to a scalar weight
+            to be added to the sampling score.
+        @param table_weights: Optional weights for the supplied table.
         """
 
-        from pathlib import Path
-
-        p = Path(__file__).parent.parent.parent / "maja.csv"
-        tok_weights = build_table_from_file(p, "Glottocode", "motion hits")
-        print(f"Read {len(tok_weights)} entries from token weights")
-
         phylomatrix = DistanceMatrix(filename=ETC_PATH / "gled.matrix.bz2")
-        print(f"Read {len(phylomatrix.data)} entries from phylogenetic matrix")
+        logging.info("Read %d entries from phylogenetic matrix", len(phylomatrix.data))
 
         geomatrix = DistanceMatrix(filename=ETC_PATH / "haversine.matrix.bz2")
-        print(f"Read {len(geomatrix.data)} entries from geographic matrix")
+        logging.info("Read %d entries from geographic matrix", len(geomatrix.data))
 
-        # TODO: decide on factors
+        # Rescale both matrices to a common range so that neither dominates the
+        # score purely because of its native units.
         phylomatrix.rescale()
         geomatrix.rescale()
 
+        tables = [weights_table] if weights_table else None
+
         # Initialize the parent class
-        super().__init__([phylomatrix, geomatrix], [tok_weights])
+        super().__init__(
+            [phylomatrix, geomatrix],
+            tables,
+            mweights=matrix_weights,
+            tweights=table_weights,
+        )
 
 
 class GenericSampler(Sampler):
     def __init__(
-        self, matrix_files, table_files, matrix_weights, table_weights, taxa_subset=None
+        self,
+        matrix_files,
+        table_files,
+        matrix_weights,
+        table_weights,
+        taxa_subset=None,
+        table_key: str = "Glottocode",
+        table_value: str = "weight",
     ):
         """
         Initialize the sampler.
+
+        @param matrix_files: Filenames of distance matrices to load from the
+            bundled data directory.
+        @param table_files: Filenames of tabular files to load as weight tables.
+        @param matrix_weights: Weights for the matrices.
+        @param table_weights: Weights for the tables.
+        @param taxa_subset: Optional subset of taxa to restrict sampling to.
+        @param table_key: Name of the column to use as the key when reading tables.
+        @param table_value: Name of the column to use as the value when reading tables.
         """
 
         # Load all matrices and tables
@@ -376,10 +422,8 @@ class GenericSampler(Sampler):
             matrices = []
 
         if table_files:
-            # TODO: fix this hardcode
             tables = [
-                build_table_from_file(t, "Glottocode", "motion hits")
-                for t in table_files
+                build_table_from_file(t, table_key, table_value) for t in table_files
             ]
         else:
             tables = []

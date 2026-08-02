@@ -104,7 +104,6 @@ class DistanceMatrix:
         with bz2.open(filename, "wb") as file:
             pickle.dump((self.keys, self.data), file)
 
-    @functools.cache  # Caching results for repeated calls with the same arguments
     def _get_index(self, i: str, j: str) -> int:
         """
         Computes the index in the flattened array for the given pair of keys (i, j).
@@ -159,9 +158,15 @@ class DistanceMatrix:
         """
         Rescales the distance matrix to a given range and by the given factor.
 
-        @param scale_range: The range to which the values should be rescaled.
-        @param factor: The factor by which the values should be multiplied.
+        Values are linearly mapped from their original range onto
+        `[scale_range[0], scale_range[1]]` and then multiplied by `factor`.
+
+        @param scale_range: The (low, high) range to which the values should be
+            rescaled.
+        @param factor: The factor by which the rescaled values should be multiplied.
         """
+
+        low, high = scale_range
 
         # Calculating the minimum and maximum values
         min_value = min(self.data)
@@ -171,11 +176,16 @@ class DistanceMatrix:
         # always of floating point type, to hold the new values
         temp_array = array.array("f", [0] * len(self.data))
 
-        # Rescaling the values
-        for i, value in enumerate(self.data):
-            temp_array[i] = (value - min_value) / (
-                max_value - min_value
-            ) * factor + scale_range[0]
+        # If every value is identical there is no range to scale over; map the
+        # whole matrix onto the lower bound of the target range.
+        value_range = max_value - min_value
+        if value_range == 0:
+            for i in range(len(self.data)):
+                temp_array[i] = low * factor
+        else:
+            for i, value in enumerate(self.data):
+                normalized = (value - min_value) / value_range
+                temp_array[i] = (normalized * (high - low) + low) * factor
 
         # Use the new array as the data
         self.data = temp_array
@@ -206,25 +216,30 @@ def tree2matrix(tree: Node) -> DistanceMatrix:
         raise ValueError("No common ancestor found")
 
     @functools.cache
-    def compute_distance(leaf1: str, leaf2: str) -> float:
+    def compute_distance(leaf1: Node, leaf2: Node) -> float:
         """
         Computes the distance between two leaves in the tree.
 
-        The distance is computed as the sum of lengths from each leaf to their most recent common ancestor (MRCA).
+        The distance is the patristic distance: the sum of the branch lengths on
+        the path connecting the two leaves, i.e. the lengths from each leaf up to
+        their most recent common ancestor (MRCA).
 
-        @param leaf1: The first leaf.
-        @param leaf2: The second leaf.
+        @param leaf1: The first leaf node.
+        @param leaf2: The second leaf node.
         @return: The computed distance.
         """
         # Get the most recent common ancestor of the two leaves
         mrca = most_recent_common_ancestor(ancestors[leaf1], ancestors[leaf2])
 
-        # Compute the lengths between leaves and the MRCA
-        leaf1_length = sum(
-            [n.length for n in ancestors[leaf1][: ancestors[leaf1].index(mrca)]]
+        # Compute the path length from each leaf up to (but not including) the
+        # MRCA. This is the leaf's own terminal branch plus the branch lengths of
+        # every intermediate ancestor below the MRCA; `node.length` is the branch
+        # from that node to its parent, so the MRCA's own branch is excluded.
+        leaf1_length = leaf1.length + sum(
+            n.length for n in ancestors[leaf1][: ancestors[leaf1].index(mrca)]
         )
-        leaf2_length = sum(
-            [n.length for n in ancestors[leaf2][: ancestors[leaf2].index(mrca)]]
+        leaf2_length = leaf2.length + sum(
+            n.length for n in ancestors[leaf2][: ancestors[leaf2].index(mrca)]
         )
 
         return leaf1_length + leaf2_length

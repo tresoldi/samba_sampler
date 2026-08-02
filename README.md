@@ -21,6 +21,14 @@ print(sampler.sample(5))
 
 ## Changelog
 
+Version 0.3.3
+  - Fixed `LanguageSampler` so the quick-start example runs without external files
+  - Fixed a bug in `tree2matrix` where terminal branch lengths were omitted from patristic distances
+  - Fixed a crash when constructing a `Sampler` with only matrices or only tables
+  - Isolated the random number generator so sampling no longer mutates global `random` state
+  - Bounded internal caches, made table columns configurable, and corrected `DistanceMatrix.rescale`
+  - Corrected the package's public API (`__all__`), raised the minimum Python to 3.9, and added a test suite and CI
+
 Version 0.3.2 (2023-07-18)
   - Added taxa filtering, applying to the Glottolog data
 
