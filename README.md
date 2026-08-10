@@ -16,10 +16,32 @@ For a quick start, the following example shows how to use the package:
 ```python
 import samba_sampler as samba
 sampler = samba.LanguageSampler() # Default parameters
-print(sampler.sample(5))
+print(list(sampler.sample(5)))
+```
+
+To also spread a sample across genealogical **genera** (a mid-level unit
+typologists use to control for genealogical bias), use `GenusSampler`, which
+adds a bundled glottocode-to-genus map on top of the phylogenetic and geographic
+matrices:
+
+```python
+import samba_sampler as samba
+sampler = samba.GenusSampler(group_weight=1.0)
+print(list(sampler.sample(5)))
+
+# The mapping is also available directly:
+genus_of = samba.load_genera()
 ```
 
 ## Changelog
+
+Version 0.4.0
+  - Added genus-aware sampling: a `GenusSampler` and an optional group-diversity
+    term that spreads samples across genealogical genera to reduce genealogical
+    autocorrelation
+  - Bundled a glottocode-to-genus map (from the `genera` project: a calibrated
+    Glottolog-depth cut, validated with WALS and supported by GLED and ASJP) and
+    exposed it via `load_genera()`
 
 Version 0.3.3
   - Fixed `LanguageSampler` so the quick-start example runs without external files

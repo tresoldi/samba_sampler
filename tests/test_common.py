@@ -118,3 +118,14 @@ def test_tree2matrix_known_distances():
     # A leaf is at distance zero from itself
     assert matrix["paum1247", "paum1247"] == 0
     assert not math.isnan(matrix["culi1244", "paum1247"])
+
+
+def test_load_genera_bundled():
+    genus_of = samba.load_genera()
+    assert len(genus_of) > 5000
+    # Swedish is an in-scope Germanic language present in the bundled map.
+    assert "swed1254" in genus_of
+
+    genus_of2, names = samba.load_genera(with_names=True)
+    assert genus_of2 == genus_of
+    assert names.get(genus_of["swed1254"])  # its genus carries a name

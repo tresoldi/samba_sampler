@@ -22,6 +22,8 @@ class Sampler:
         mweights: Optional[List[float]] = None,
         tweights: Optional[List[float]] = None,
         taxa_subset: Optional[List[str]] = None,
+        groups: Optional[dict] = None,
+        group_weight: float = 0.0,
     ):
         """
         Initialize the sampler.
@@ -31,6 +33,12 @@ class Sampler:
         @param mweights: A list of weights for the matrices.
         @param tweights: A list of weights for the tables.
         @param taxa_subset: A list of taxa to be used for sampling.
+        @param groups: Optional mapping of taxon to a group label (e.g. a
+            genealogical genus). When ``group_weight`` is non-zero, samples that
+            span more distinct groups score higher, spreading the sample across
+            groups to reduce genealogical autocorrelation.
+        @param group_weight: Weight of the group-diversity term. Defaults to 0.0
+            (disabled), preserving the original scoring behaviour.
         """
 
         # Raise an error if no matrix and no table was provided
@@ -44,6 +52,11 @@ class Sampler:
 
         self._tables = tables = list(tables) if tables else []
         self._num_tables = len(self._tables)
+
+        # Optional group (e.g. genus) labels and the weight of the group-diversity
+        # scoring term.
+        self._groups = groups or {}
+        self._gweight = group_weight
 
         # Obtain the set of common keys for all matrices and for all tables, if they
         # were provided, and then compute the intersection of the sets,
@@ -150,6 +163,14 @@ class Sampler:
             score += sum(
                 val * weight for val, weight in zip(calculated_vals, self._tweights)
             )
+
+        # Reward genealogical (group) diversity: samples spanning more distinct
+        # groups score higher. Taxa without a group label are treated as their
+        # own singleton group, so unknown taxa are never penalized.
+        if self._groups and self._gweight:
+            distinct = len({self._groups.get(taxon, taxon) for taxon in sampled_taxa})
+            diversity = distinct / len(sampled_taxa) if method == "mean" else distinct
+            score += diversity * self._gweight
 
         return score
 
@@ -358,6 +379,8 @@ class LanguageSampler(Sampler):
         matrix_weights: Optional[List[float]] = None,
         weights_table: Optional[dict] = None,
         table_weights: Optional[List[float]] = None,
+        groups: Optional[dict] = None,
+        group_weight: float = 0.0,
     ):
         """
         Initialize the sampler.
@@ -367,6 +390,9 @@ class LanguageSampler(Sampler):
         @param weights_table: Optional mapping of glottocode to a scalar weight
             to be added to the sampling score.
         @param table_weights: Optional weights for the supplied table.
+        @param groups: Optional mapping of glottocode to a group label (see
+            ``Sampler``); used by ``GenusSampler`` for genus-aware sampling.
+        @param group_weight: Weight of the group-diversity term (0.0 disables it).
         """
 
         phylomatrix = DistanceMatrix(filename=ETC_PATH / "gled.matrix.bz2")
@@ -388,6 +414,45 @@ class LanguageSampler(Sampler):
             tables,
             mweights=matrix_weights,
             tweights=table_weights,
+            groups=groups,
+            group_weight=group_weight,
+        )
+
+
+class GenusSampler(LanguageSampler):
+    """
+    A language sampler that also spreads samples across genealogical genera.
+
+    On top of the phylogenetic and geographic matrices of :class:`LanguageSampler`,
+    it loads the bundled glottocode -> genus mapping (the ``genera`` side project:
+    a calibrated Glottolog-depth cut, validated with WALS and independently
+    supported by GLED and ASJP) and rewards samples drawn from distinct genera.
+    This targets genealogical autocorrelation directly, at the mid-level unit
+    typologists balance samples on.
+    """
+
+    def __init__(
+        self,
+        group_weight: float = 1.0,
+        matrix_weights: Optional[List[float]] = None,
+        weights_table: Optional[dict] = None,
+        table_weights: Optional[List[float]] = None,
+    ):
+        """
+        @param group_weight: Weight of the genus-diversity term (default 1.0).
+        @param matrix_weights: Optional weights for the phylogenetic and
+            geographic matrices.
+        @param weights_table: Optional mapping of glottocode to a scalar weight.
+        @param table_weights: Optional weights for the supplied table.
+        """
+        from .common import load_genera
+
+        super().__init__(
+            matrix_weights=matrix_weights,
+            weights_table=weights_table,
+            table_weights=table_weights,
+            groups=load_genera(),
+            group_weight=group_weight,
         )
 
 
