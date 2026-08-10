@@ -1,0 +1,9 @@
+# Fetched external source caches (reproducible via pipeline/01_fetch_sources.py;
+# carry their own upstream licensing, so not vendored here).
+data/sources/
+
+# Generated pipeline outputs (rebuilt by the pipeline). The curated final
+# artifacts may be force-added later once stable.
+data/genera.tsv
+data/genera_summary.tsv
+data/calibration_report.md

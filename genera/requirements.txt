@@ -1,0 +1,9 @@
+# genera side-project pipeline dependencies.
+# Kept deliberately small; the phylogenetics are done with the bundled
+# samba_sampler newick reader plus the standard library where possible.
+
+# Phase 1
+scikit-learn>=1.0    # agreement metrics (adjusted Rand, V-measure) for calibration
+
+# Phase 2 (ASJP extension) — uncomment when phase 2 lands
+# lingpy>=2.6        # ASJP wordlist handling / distance computation
