@@ -1,0 +1,1552 @@
+genus_id	genus_name	family	family_gc	n_languages	method	wals_genus	gled_monophyletic	gled_crown_height	example_languages
+bant1294	Bantoid	Atlantic-Congo	atla1278	730	glottolog_depth	Bantoid			Abanyom, Mungbam, Abon, Aghem
+ocea1241	Oceanic	Austronesian	aust1307	521	glottolog_depth	Oceanic			Abadi, Adzera, Aighon, Aiklep
+indo1321	Indo-Aryan	Indo-European	indo1319	220	glottolog_depth	Indic	True	0.5339	Kotia-Adivasi Oriya-Desiya, Adiwasi Garasia, Aer, Andaman Creole Hindi
+came1255	Cameroun-Ubangian	Atlantic-Congo	atla1278	118	glottolog_depth	Ubangi			Bai, Baka (Cameroon), Bali (Nigeria), Banda-Mbrès
+nort3152	Northwest Germanic	Indo-European	indo1319	104	glottolog_depth	Germanic	True	0.5112	Afrikaans, Afro-Seminole Creole, Antigua and Barbuda Creole English, Archaic Norrlandic
+lolo1267	Loloish	Sino-Tibetan	sino1245	101	glottolog_depth	Burmese-Lolo	True	1.8821	Ache, Akeu, Akha, Alo Phola
+iran1269	Iranian	Indo-European	indo1319	96	glottolog_depth	Iranian	True	0.6515	Adhari, Aimaq, Alviri-Vidari, Ashtiani
+gura1261	Gur	Atlantic-Congo	atla1278	93	glottolog_depth	Northern-Central Gur			Akaselem, Awak, Baatonum, Bago-Kusuntu
+lati1262	Latino-Faliscan	Indo-European	indo1319	81	glottolog_depth	Romance	True	0.4769	Angolar, Aragonese, Aromanian, Asturian-Leonese-Cantabrian
+nort3170	North and East Malayo-Sumbawan	Austronesian	aust1307	73	glottolog_depth	Malayo-Sumbawan			Acehnese, Ambonese Malay, Baba Malay, Bacanese Malay
+cent2236	Central Semitic	Afro-Asiatic	afro1255	71	glottolog_depth	Semitic	True	0.6013	Algerian Arabic, Algerian Saharan Arabic, Ancient Hebrew, Ancient North Arabian
+benu1248	Benue-Congo Plateau	Atlantic-Congo	atla1278	70	glottolog_depth	Platoid			Afudu, Ndunic, Akye, Akpondu
+zapo1436	Zapotecan	Otomanguean	otom1299	64	glottolog_depth	Zapotecan	True	1.9372	Aloápam Zapotec, Amatlán Zapotec, Asunción Mixtepec Zapotec, Ayoquesco Zapotec
+daic1237	Daic	Tai-Kadai	taik1256	58	glottolog_depth	Kam-Tai	True	3.3658	Ahom, Aiton, Bouyei, Cao Lan
+mixt1422	Mixtecan	Otomanguean	otom1299	58	glottolog_depth	Mixtecan	True	0.7245	Alacatlatzala Mixtec, Alcozauca Mixtec, Amoltepec Mixtec, Apasco-Apoala Mixtec
+delt1251	Delta Cross	Atlantic-Congo	atla1278	57	glottolog_depth	Cross River			Abua, Abureni, Robambami, Agwagwune
+kain1275	Kainji	Atlantic-Congo	atla1278	53	glottolog_depth	Kainji			Amo, Atsam, Baangi, Basa-Gumna
+nort3156	North Biu-Mandara	Afro-Asiatic	afro1255	50	glottolog_depth	Biu-Mandara	True	0.5078	Afade, Baldemu, Bana, Buduma
+cent2246	Central Philippine	Austronesian	aust1307	48	glottolog_depth	Greater Central Philippine			Aklanon, Alabat Island Agta, Inland-Buhi-Daraga Bikol, Ata
+tami1291	Tamil-Kannada	Dravidian	drav1251	48	glottolog_depth	Southern Dravidian	True	0.673	Allar, Alu Kurumba, Aranadan, Attapady Kurumba
+tupi1276	Tupi-Guarani	Tupian	tupi1275	47	glottolog_depth	Tupi-Guaraní	True	14.1741	Aché, Amanayé, Amundava, Anambé
+west2714	West Chadic A	Afro-Asiatic	afro1255	46	glottolog_depth	West Chadic	True	0.6368	Beele, Belneng, Bure, Cakfem-Mushere
+oldm1245	Early Old Tibetan	Sino-Tibetan	sino1245	44	glottolog_depth	Bodic	True	1.7193	Amdo Tibetan, Baima, Balti, Bhoti Kinnauri
+grea1299	Greater Eastern Celebic	Austronesian	aust1307	43	glottolog_depth	Celebic			Andio, Bahonsuai, Balaesang, Balantak
+sout3229	South Halmahera-West New Guinea	Austronesian	aust1307	42	glottolog_depth	South Halmahera - West New Guinea			Ambai, Ansus, As, Batanta
+nyoa1234	Nyo	Atlantic-Congo	atla1278	41	glottolog_depth	Kwa			Abé, Abidji, Abron, Abure
+saba1285	Sabahan	Austronesian	aust1307	39	glottolog_depth	North Borneo			Abai Sungai, Abai Tubu-Abai Sembuak, Bolongan, Bonggi
+west2790	West Chadic B	Afro-Asiatic	afro1255	38	glottolog_depth	West Chadic	True	0.4909	Ajawa, Auyokawa, Bade, Boghom
+grea1283	Greater Barito linkage	Austronesian	aust1307	36	glottolog_depth	Sama-Bajaw			Ampanang, Antankarana Malagasy, Bakumpai, Balangingi
+meso1254	Meso-Cordilleran	Austronesian	aust1307	32	glottolog_depth	Northern Luzon			Ahin-Kayapa Kalanguya, Amganad Ifugao, Balangao, Banao Itneg
+kira1253	Kiranti	Sino-Tibetan	sino1245	31	glottolog_depth	Mahakiranti	True	1.3492	Athpariya, Bahing, Bantawa, Belhariya
+cent2047	Central Mande	Mande	mand1469	31	glottolog_depth	Western Mande	True	1.4273	Bambara, Bolon, Dyula, Eastern Maninkakan
+azte1234	Aztec	Uto-Aztecan	utoa1244	31	glottolog_depth	Aztecan	True	2.019	Tlaxcala-Puebla-Central Nahuatl, Central Puebla Nahuatl, Central Huasteca Nahuatl, Classical Nahuatl
+akpe1249	Akpes-Edoid	Atlantic-Congo	atla1278	30	glottolog_depth	Edoid			Akpes, Akuku, Bini, Degema
+nucl1720	Nuclear Hmongic	Hmong-Mien	hmon1336	30	glottolog_depth	Hmong-Mien	True	0.6153	Bunu, Central Mashan Hmong, Central Huishui Hmong, Eastern Qiandong Miao
+mabu1247	Mabuso	Nuclear Trans New Guinea	nucl1709	29	glottolog_depth	Madang	True	0.4642	Amele, Bagupi, Baimak, Bau
+nucl1719	Nuclear SBB Occidental	Central Sudanic	cent2225	29	glottolog_depth	Bongo-Bagirmi	True	1.3725	Bagirmi, Nangnda, Berakou, Dagba
+pano1257	Pano Nawa	Pano-Tacanan	pano1259	28	glottolog_depth	Panoan	True	21.0508	Amahuaca, Arazaire, Atsahuaca, Capanahua
+sout3145	South Biu-Mandara	Afro-Asiatic	afro1255	28	glottolog_depth	Biu-Mandara	True	0.3579	Bacama-Yimburu, Bacama, Bata, Boga
+lowl1267	Lowland East Cushitic	Afro-Asiatic	afro1255	26	glottolog_depth	Lowland East Cushitic	True	1.3379	Afar, Arbore, Aweer, Baiso
+flor1240	Flores-Sumba-Hawu	Austronesian	aust1307	26	glottolog_depth	Central Malayo-Polynesian			Anakalangu, Baliledu-Buawa, Dhao, Ende
+grea1298	Greater Northern Adelbert	Nuclear Trans New Guinea	nucl1709	23	glottolog_depth	Madang	True	0.3834	Bepour, Karen, Barem, Gavak
+sout3382	Southwest Maluku	Austronesian	aust1307	23	glottolog_depth	Central Malayo-Polynesian			Central Masela, Dai, Dawera-Daweloor, East Masela
+gbee1241	Gbe	Atlantic-Congo	atla1278	22	glottolog_depth	Kwa			Adangbe, Aguna, Aja (Benin), Ayizo Gbe
+east2633	East Chadic B	Afro-Asiatic	afro1255	22	glottolog_depth	East Chadic	True	0.2374	Barain, Bidiyo, Birgit, Boor
+nort3171	North Sarawakan	Austronesian	aust1307	22	glottolog_depth	North Borneo			Lemeting, Bintulu, Central Berawan, Eastern Penan
+peri1260	Peripheral Kuki-Chin	Sino-Tibetan	sino1245	21	glottolog_depth	Kuki-Chin	True	0.1571	Asho Chin, Chinbon Chin, Daai Chin, Eastern Khumi Chin
+sara1342	Central Sarawak	Austronesian	aust1307	20	glottolog_depth	North Borneo			Aoheng-Seputan, Bukat, Bukitan, Central Melanau
+slav1255	Slavic	Indo-European	indo1319	20	glottolog_depth	Slavic	True	0.4288	Belarusian, Bulgarian, Church Slavic, Czech
+okok1235	Ok-Oksapmin	Nuclear Trans New Guinea	nucl1709	20	glottolog_depth	Ok	True	0.4797	Bimin, Burumakok, Faiwol, Morop-Dintere
+qian1263	Qiangic	Sino-Tibetan	sino1245	20	glottolog_depth		True	0.3098	Drag-yab, Eastern Muya, Khroskyabs, Stau-Dgebshes
+piru1243	Piru Bay	Austronesian	aust1307	19	glottolog_depth	Central Malayo-Polynesian			Amahai, Asilulu, Boano (Maluku), Haruku
+quec1389	Quechua IIC	Quechuan	quec1387	19	glottolog_depth	Quechuan	True	0.6513	Arequipa-La Unión Quechua, Ayacucho Quechua, Calderón Highland Quichua, Cañar-Azuay-South Chimborazo Highland Quichua
+cent2330	Central Kuki-Chin	Sino-Tibetan	sino1245	19	glottolog_depth	Kuki-Chin	True	0.3848	Bawm Chin, Biete, Bualkhaw Chin, Darlong
+grea1275	Greater Awyu	Nuclear Trans New Guinea	nucl1709	18	glottolog_depth	Awju-Dumut	True	0.3825	Aghu, Asue Awyu, Central Awyu, Edera Awyu
+popo1293	Popolocan-Mazatecan	Otomanguean	otom1299	18	glottolog_depth	Popolocan	True	1.6919	Ayautla Mazatec, Chiquihuitlán Mazatec, Chochotec, Coyotepec Popoloca
+midd1354	Middle-Modern Sinitic	Sino-Tibetan	sino1245	18	glottolog_depth	Chinese	True	0.559	Daohua, Dungan, Gan Chinese, Gangou
+burm1266	Burmish	Sino-Tibetan	sino1245	17	glottolog_depth	Burmese-Lolo	True	0.5031	Longchuan Achang, Chashan, Hpon, Intha-Danu
+defo1239	Defoid	Atlantic-Congo	atla1278	17	glottolog_depth	Defoid			Àhàn, Arigidi, Ayere, Ede Cabe
+otop1242	Otopamean	Otomanguean	otom1299	17	glottolog_depth	Otomian	True	0.8542	Atzingo Matlatzinca, Central Mazahua, Central Pame, Chichimeca-Jonaz
+east2331	East Palaungic	Austroasiatic	aust1305	17	glottolog_depth	Palaungic	True	0.5876	Lavia-Awalai-Damangnuo Awa, Bit, Blang, Eastern Lawa
+kail1255	Kaili-Wolio	Austronesian	aust1307	17	glottolog_depth	Celebic			Baras, Da'a Kaili, Kalao, Kamaru
+ethi1244	Ethiosemitic	Afro-Asiatic	afro1255	16	glottolog_depth	Semitic	True	0.5833	Amharic, Argobba, Dahalik, Gafat
+sout3148	South Adelbert	Nuclear Trans New Guinea	nucl1709	16	glottolog_depth	Madang	True	0.464	Anam, Anamuxra, Apali, Mand
+nort2894	Northern South Sulawesi	Austronesian	aust1307	16	glottolog_depth	South Sulawesi			Aralle-Tabulahan, Bambam, Dakka, Duri
+bakk1238	Bak	Atlantic-Congo	atla1278	16	glottolog_depth	Bak			Arame-Gubaare, Balanta-Kentohe, Balanta-Ganja, Bandial
+mari1445	Maric	Pama-Nyungan	pama1250	16	glottolog_depth	Northern Pama-Nyungan	True	0.3588	Bidyara, Biri, Gangulu, Giya
+east2700	Eastern Algonquian	Algic	algi1248	16	glottolog_depth	Algonquian	True	9.6268	Carolina Algonquian, Eastern Abenaki, Nipmuck, Loup B
+mano1276	Manobo	Austronesian	aust1307	15	glottolog_depth	Greater Central Philippine			Agusan Manobo, Ata Manobo, Talaandig-Binukid, Cinamiguin Manobo
+buak1234	Bua-Kim-Day	Atlantic-Congo	atla1278	15	glottolog_depth	Bua			Besme, Bolgo, Bon Gula, Bua
+juku1257	Jukunoid	Atlantic-Congo	atla1278	15	glottolog_depth	Platoid			Como Karim, Etkywan, Hõne, Jan-Awei
+weeb1234	Wee-Bassa-Klao	Kru	krua1234	15	glottolog_depth	Kru	True	1.132	Daho-Doo, Dewoin, Konobo-Eastern Krahn, Gbii
+nucl1760	Nuclear Goroka	Nuclear Trans New Guinea	nucl1709	14	glottolog_depth	Eastern Highlands	True	0.4489	Abaga, Alekano, Benabena, Dano
+flor1239	Flores-Lembata	Austronesian	aust1307	14	glottolog_depth	Central Malayo-Polynesian			Adonara, Alorese, Ile Ape, Kedang
+oldk1252	Northwestern Kuki-Chin	Sino-Tibetan	sino1245	14	glottolog_depth	Kuki-Chin	True	0.739	Aimol, Anal, Chiru, Chothe
+gbay1279	Gbaya-Manza-Ngbaka	Atlantic-Congo	atla1278	14	glottolog_depth	Gbaya-Manza-Ngbaka			Ali, Ngombe-Bangandu, Bofi, Bokoto
+chin1484	Chinantecan	Otomanguean	otom1299	14	glottolog_depth	Chinantecan	True	0.8572	Chiltepec Chinantec, Comaltepec Chinantec, Lalana Chinantec, Lealao Chinantec
+east2640	East Chadic A	Afro-Asiatic	afro1255	14	glottolog_depth	East Chadic	True	0.1309	Gabri, Gadang, Kabalai, Kera
+east2765	Eastern Great Lakes Algonquian	Algic	algi1248	13	glottolog_depth	Algonquian	True	9.324	Algonquin, Central Ojibwa, Chippewa, Eastern Ojibwa
+kher1245	Kherwarian	Austroasiatic	aust1305	13	glottolog_depth	Munda	True	0.1158	Asuri, Bijori, Birhor, Ho
+wika1239	Wik	Pama-Nyungan	pama1250	13	glottolog_depth	Northern Pama-Nyungan	True	0.0912	Barrow Point, Flinders Island, Kuku-Uwanh, Kuku-Ugbanh
+nucl1715	Nuclear Celtic	Indo-European	indo1319	13	glottolog_depth	Celtic	True	0.2229	Breton, Cisalpine Gaulish, Cornish, Galatian
+senu1239	Senufo	Atlantic-Congo	atla1278	13	glottolog_depth	Senufo			Senari, Djimini Senoufo, Eastern Karaboro, Mamara Senoufo
+west2994	West Alor-Straits-Pantar	Timor-Alor-Pantar	timo1261	12	glottolog_depth	Greater Alor	True	3.2715	Adang, Blagar, Hamap, Kabola
+caga1241	Cagayan Valley	Austronesian	aust1307	12	glottolog_depth	Northern Luzon			Adasen, Central Cagayan Agta, Faire Atta, Ga'dang
+gree1276	Greek	Indo-European	indo1319	12	glottolog_depth	Greek	True	0.0351	Ionic-Attic Ancient Greek, Ancient North Greek, Apulia-Calabrian Greek, Cappadocian Greek
+west2795	Western Huon	Nuclear Trans New Guinea	nucl1709	12	glottolog_depth	Finisterre-Huon	True	0.3609	Borong, Burum-Mindik, Dedua, Kinalakna
+ghal1247	Ghale-Tamangic	Sino-Tibetan	sino1245	12	glottolog_depth	Bodic	True	0.7307	Chantyal, Eastern Gorkha Tamang, Eastern Tamang, Gurung
+ngay1241	Ngayarda	Pama-Nyungan	pama1250	12	glottolog_depth	Western Pama-Nyungan	True	0.2003	Kariyarra, Kurrama, Martuthunira, Ngarluma
+grea1276	Greater Quichean	Mayan	maya1287	11	glottolog_depth	Mayan	True	0.3572	Achi, Cakchiquel-Quiché Mixed Language, Kaqchikel, Kekchí
+prea1240	Pre-Andine Maipuran	Arawakan	araw1281	11	glottolog_depth	Pre-Andine Arawakan	True	0.0881	Ajyíninka Apurucayali, Asháninka, Ashéninka Perené, Ashéninka Pajonal
+ebir1244	Ebira-Nupoid	Atlantic-Congo	atla1278	11	glottolog_depth	Nupoid			Asu (Nigeria), Dibo, Ebira, Gbagyi
+wape1250	Wapeic	Nuclear Torricelli	nucl1708	11	glottolog_depth	Wapei-Palei	False	0.559	Au, Alu-Sinagen, Elkei, Minidien
+cent2371	Central Alaska-Yukon Athabaskan	Athabaskan-Eyak-Tlingit	atha1245	11	glottolog_depth	Athapaskan	True	0.4816	Degexit'an, Gwich'in, Han, Holikachuk
+erap1240	Erap	Nuclear Trans New Guinea	nucl1709	11	glottolog_depth		True	0.3859	Finongan, Gusan, Mamaa, Mungkip
+rote1234	Rote-Meto	Austronesian	aust1307	10	glottolog_depth	Central Malayo-Polynesian			Amarasi, Baikeno, Bilba, Dela-Oenale
+anga1286	Angami-Pochuri	Sino-Tibetan	sino1245	10	glottolog_depth	Kuki-Chin	True	0.2326	Angami Naga, Chokri Naga, Khezha Naga, Mao Naga
+waru1269	Warup	Nuclear Trans New Guinea	nucl1709	10	glottolog_depth		True	0.2077	Asaro'o, Bulgebi, Degenan, Forak
+cree1271	Cree-Montagnais-Naskapi	Algic	algi1248	10	glottolog_depth	Algonquian	True	7.6899	Atikamekw, Michif, Montagnais, Moose Cree
+kaya1335	Kayan-Murik-Modang	Austronesian	aust1307	10	glottolog_depth	North Borneo			Bahau, Baram Kayan, Busang Kayan, Kayan Mahakam
+greb1258	Grebo-Aizi	Kru	krua1234	10	glottolog_depth	Kru	True	0.8554	Barclayville Grebo, Central Grebo, Gboloo Grebo, Mobumrin Aizi
+bida1239	Bidayuh-Southern Land Dayak	Austronesian	aust1307	10	glottolog_depth	Land Dayak			Bau-Jagoi Bidayuh, Biatah Bidayuh, Bukar-Sadung Bidayuh, Jangkang
+sout2690	South Bahnaric	Austroasiatic	aust1305	10	glottolog_depth	Bahnaric	True	0.1538	Budeh Stieng, Bulo Stieng, Central Mnong, Chrau
+zena1250	Zenatic	Afro-Asiatic	afro1255	10	glottolog_depth	Berber	True	0.0435	Western Algerian Berber, Sened, Chaouia of the Aures, Ouargli
+paci1277	Pacific Coast Athabaskan	Athabaskan-Eyak-Tlingit	atha1245	10	glottolog_depth	Athapaskan	True	0.7131	Coquille, Galice, Hupa-Chilula, Kato
+neva1234	Neva	Uralic	ural1272	10	glottolog_depth	Finnic	True	31.8924	Estonian, Finnish, Ingrian, Karelian
+fula1264	Fula	Atlantic-Congo	atla1278	9	glottolog_depth	Peul-Serer			Adamawa Fulfulde, Bagirmi Fulfulde, Borgu Fulfulde, Central-Eastern Niger Fulfulde
+nucl1603	Nuclear Binanderean	Nuclear Trans New Guinea	nucl1709	9	glottolog_depth	Binanderean	True	0.9369	Aeka, Baruga, Binandere, Doghoro
+nucl1321	Samur	Nakh-Daghestanian	nakh1245	9	glottolog_depth	Lezgic	True	0.2665	Aghul, Aghwan, Budukh, Kryz
+gond1265	Gondi	Dravidian	drav1251	9	glottolog_depth	South-Central Dravidian	True	0.7454	Aheri Gondi, Dandami Maria, Eastern Muria, Far Western Muria
+yuin1243	Yuin-Kuri	Pama-Nyungan	pama1250	9	glottolog_depth	Southeastern Pama-Nyungan	True	0.3144	Awabakal, Dhurga, Hawkesbury, Northern Inland Yuin
+sout2842	Southwest Mande	Mande	mand1469	9	glottolog_depth	Western Mande	True	3.2746	Bandi, Guinea Kpelle, Kono (Guinea), Liberia Kpelle
+nort2682	North Aslian	Austroasiatic	aust1305	9	glottolog_depth	Aslian	True	0.331	Batek, Chewong, Jedek, Jehai
+nort3354	Northwestern Canada Athabaskan	Athabaskan-Eyak-Tlingit	atha1245	9	glottolog_depth	Athapaskan	True	0.1761	Beaver, Chipewyan, Dogrib, Kaska
+goro1257	Gorontalo-Mongondow	Austronesian	aust1307	9	glottolog_depth	Greater Central Philippine			Bintauna, Bolango, Buol, Gorontalo
+kham1285	Kham-Magar-Chepang	Sino-Tibetan	sino1245	9	glottolog_depth	Mahakiranti	True	0.2782	Bujhyal, Chepang, Dura, Eastern Magar
+lotu1248	Lotuxo-Maa	Nilotic	nilo1247	9	glottolog_depth	Nilotic	True	0.6283	Dongotono, Lango-Logire-Logir, Lokoya, Lopit
+samb1319	Sambalic	Austronesian	aust1307	8	glottolog_depth				Abenlen Ayta, Ambala Ayta, Bataan Ayta, Bolinao
+nort3362	Northeast Japura-Colombia	Arawakan	araw1281	8	glottolog_depth	Inland Northern Arawakan	True	0.2061	Achagua, Baniwa do Icana, Cabiyarí, Curripaco
+nato1234	Na-Togo	Atlantic-Congo	atla1278	8	glottolog_depth	Kwa			Adele, Anii, Boro, Lelemi
+core1260	Core Thura Yura	Pama-Nyungan	pama1250	8	glottolog_depth	Central Pama-Nyungan			Adnyamathanha, Banggarla, Guyani, Kaurna
+idom1262	Idomoid	Atlantic-Congo	atla1278	8	glottolog_depth	Idomoid			Agatu, Akpa, Alago, Etulo
+sout2693	South Siberian Turkic	Turkic	turk1311	8	glottolog_depth	Turkic	True	1.8141	Ainu (China), Chulym Turkic, Taiga Sayan Turkic, Khakas
+kato1245	Ka-Togo	Atlantic-Congo	atla1278	8	glottolog_depth	Kwa			Akebu, Animere, Avatime, Igo
+andi1254	Andic	Nakh-Daghestanian	nakh1245	8	glottolog_depth	Avar-Andic-Tsezic	True	0.3502	Akhvakh, Andi, Bagvalal, Botlikh
+thre1238	Three Rivers	Austronesian	aust1307	8	glottolog_depth	Central Malayo-Polynesian			Alune, Hulung, Lisabata-Nuniali, Loun
+west2798	Western Kra	Tai-Kadai	taik1256	8	glottolog_depth	Kadai	True	1.1479	A'ou, Gelao Mulao, Hagei Gelao, Lachi
+prew1234	Pre-Western Tani	Sino-Tibetan	sino1245	8	glottolog_depth	Tani	True	0.6232	Apatani, Bokar-Ramo, Damu, Galo
+ramp1244	Rampi-Seko-Badaic	Austronesian	aust1307	8	glottolog_depth	Celebic			Bada (Indonesia), Besoa, Budong-Budong, Napu
+nucl1769	Nuclear Oghuz	Turkic	turk1311	8	glottolog_depth	Turkic	True	2.9311	Rumelian Turkish, Gagauz, Khorasan Turkic, North Azerbaijani
+duun1243	Duun-Bobo	Mande	mand1469	8	glottolog_depth		True	0.2534	Bankagooma, Duungooma, Dzùùngoo, Jowulu
+pala1354	Palawanic	Austronesian	aust1307	8	glottolog_depth	Greater Central Philippine			Batak, Brooke's Point Palawano, Central Tagbanwa, Central Palawano
+boro1284	Boroic	Sino-Tibetan	sino1245	8	glottolog_depth	Bodo-Garo	True	0.5284	Bodo-Mech, Dimasa, Kachari, Kok Borok
+samo1302	Samo-Busa	Mande	mand1469	8	glottolog_depth	Eastern Mande	True	1.9105	Boko (Benin), Bokobaru, Busa, Kyenga
+east2777	Eastern West Himalayish	Sino-Tibetan	sino1245	8	glottolog_depth	Bodic	True	0.1694	Byangsi, Chaudangsi, Darma, Bunan
+luvo1235	Luvo-Palaic	Indo-European	indo1319	8	glottolog_depth				Carian, Cuneiform Luwian, Hieroglyphic Luwian, Lycian A
+east2705	Eastern Huon	Nuclear Trans New Guinea	nucl1709	8	glottolog_depth	Finisterre-Huon	True	0.4786	Kâte, Kovai, Mape, Migabac
+high1285	Highland East Cushitic	Afro-Asiatic	afro1255	7	glottolog_depth	Lowland East Cushitic	True	0.2217	Alaba-K'abeena, Burji, Gedeo, Hadiyya
+nucl1722	Nuclear Palai	Nuclear Torricelli	nucl1708	7	glottolog_depth		True	2.5834	Ambrak, Mol, Srenge, Bragat
+sakk1239	Luish	Sino-Tibetan	sino1245	7	glottolog_depth				Andro, Burma Pyu, Chak, Kado
+anga1291	Sau-Angal-Kewa	Nuclear Trans New Guinea	nucl1709	7	glottolog_depth		True	0.4618	Angal Heneng, Angal, Angal Enen, East Kewa
+sout3015	Southern Magdalenic	Chibchan	chib1249	7	glottolog_depth	Tunebo	True	0.219	Angosturas Tunebo, Barí, Barro Negro Tunebo, Central Tunebo
+aoic1235	Central Naga	Sino-Tibetan	sino1245	7	glottolog_depth	Kuki-Chin	True	0.2302	Ao Naga, Long Phuri Naga, Lotha Naga, Makuri Naga
+east2708	Eastern Eastern Tucanoan II	Tucanoan	tuca1253	7	glottolog_depth	Tucanoan	True	0.3274	Arapaso, Carapana, Kotiria, Wa'ikhana
+toba1265	Batakic	Austronesian	aust1307	7	glottolog_depth	Northwest Sumatra-Barrier Islands			Batak Simalungun, Batak Toba, Batak Angkola, Batak Mandailing
+main1269	East Bodish	Sino-Tibetan	sino1245	7	glottolog_depth				Bumthangkha, Chalikha, Dakpakha, Dzalakha
+asma1257	Asmat	Nuclear Trans New Guinea	nucl1709	7	glottolog_depth	Asmat-Kamoro	True	0.1952	Casuarina Coast Asmat, Central Asmat, Citak, Diuwe
+kony1247	Konyak I	Sino-Tibetan	sino1245	7	glottolog_depth	Northern Naga	True	0.2287	Chang Naga, Khiamniungan Naga, Konyak Naga, Leinong Naga
+west2868	Western West Himalayish	Sino-Tibetan	sino1245	7	glottolog_depth	Bodic	True	0.1832	Chhitkul-Rakchham, Jangshung, Kanashi, Kinnauri
+chol1286	Cholan-Tzeltalan	Mayan	maya1287	7	glottolog_depth	Mayan	True	0.5295	Chol, Cholti, Chortí, Epigraphic Mayan
+cent2129	Central Salish	Salishan	sali1255	7	glottolog_depth	Central Salish	True	1.9309	Comox, Halkomelem, Nooksack, Pentlatch
+kord1246	Kordofan Nubian	Nubian	nubi1251	7	glottolog_depth	Nubian	True	1.3263	Dair, Dilling, El Hugeirat, Uncunwee
+cent2046	Central Ometo	Ta-Ne-Omotic	gong1255	7	glottolog_depth	North Omotic	True	1.3834	Dawro, Dorze, Gamo, Gofa
+mayo1269	Mayo Group	Pano-Tacanan	pano1259	7	glottolog_depth	Panoan	True	4.2782	Demushbo, Korubo, Kulina Pano, Matís
+sino1246	Tangkhulic	Sino-Tibetan	sino1245	7	glottolog_depth	Kuki-Chin			East Tusom, Southern Tangkhul Naga, Lairamlo, Northern Tangkhul Naga
+igbo1258	Igboid	Atlantic-Congo	atla1278	7	glottolog_depth	Igboid			Ekpeye, Ika, Ikwere, Izi-Ezaa-Ikwo-Mgbo
+gusa1245	Gusap-Mot	Nuclear Trans New Guinea	nucl1709	7	glottolog_depth	Finisterre-Huon	True	0.2621	Iyo, Madi (Papua New Guinea), Nekgini, Neko
+mond1269	Mondzish	Sino-Tibetan	sino1245	7	glottolog_depth				Thou-Kathu, Maang, Mango (China), Mantsi
+kony1249	Tangsa-Nocte	Sino-Tibetan	sino1245	7	glottolog_depth	Northern Naga	True	0.0388	Muklomic, Nahenic, Nocte Naga, Ponthai
+sout2831	Southern Lwoo	Nilotic	nilo1247	6	glottolog_depth	Nilotic	True	0.2983	Acoli, Adhola, Alur, Kumam
+gauw1235	Gauwa	Nuclear Trans New Guinea	nucl1709	6	glottolog_depth	Eastern Highlands	True	0.4226	Agarabi, Awa (Papua New Guinea), Awiyaana, Gadsup
+then1235	Then-MMS	Tai-Kadai	taik1256	6	glottolog_depth	Kam-Tai	True	1.6198	Ai-Cham, Chadong, Mak (China), Maonan
+tamo1242	Tamolan	Lower Sepik-Ramu	lowe1437	6	glottolog_depth		True	0.5332	Chini, Breri, Igana, Itutang-Inapang
+sout3384	South Arandic	Pama-Nyungan	pama1250	6	glottolog_depth	Central Pama-Nyungan	True	0.0483	Alyawarr, Andegerebinha, Anmatyerre, Eastern Arrernte
+mind1258	Mindjim	Nuclear Trans New Guinea	nucl1709	6	glottolog_depth	Madang	True	0.2618	Anjam, Bongu, Jilim, Male (Papua New Guinea)
+nort2814	Northern Lwoo	Nilotic	nilo1247	6	glottolog_depth	Nilotic	True	0.067	Anuak, Belanda Bor, Luwo, Päri
+core1264	Core Northern Je	Nuclear-Macro-Je	nucl1710	6	glottolog_depth	Ge-Kaingang	True	2.0196	Apinayé, Canela-Krahô, Kayapó, Northeastern Timbira
+puru1265	Purus	Arawakan	araw1281	6	glottolog_depth	Purus	True	0.1579	Apurinã, Carari, Iñapari, Machinere
+east2703	Nyun	Atlantic-Congo	atla1278	6	glottolog_depth				Bainounk-Gujaher, Bainouk-Gunyaamolo-Gutobor, Gubeeher-Gufangor-Gubelor, Kasanga
+mode1252	Modern South Arabian	Afro-Asiatic	afro1255	6	glottolog_depth	Semitic	True	0.1215	Bathari, Harsusi, Hobyót, Mehri
+moro1293	Morokodo-Beli	Central Sudanic	cent2225	6	glottolog_depth	Bongo-Bagirmi	True	1.0902	Beli (South Sudan), Jur Modo, Mittu, Mo'da
+nwab1239	Nwa-Ben	Mande	mand1469	6	glottolog_depth	Eastern Mande	True	0.5532	Beng, Gban, Gbin, Mwan
+east2741	East Seram	Austronesian	aust1307	6	glottolog_depth				Benggoi, Bobot, Hoti of East Seram, Liana-Seti
+yupn1242	Yupna	Nuclear Trans New Guinea	nucl1709	6	glottolog_depth	Finisterre-Huon	True	0.0808	Bonkiman, Domung, Ma (Papua New Guinea), Nankina
+kuli1256	Kulin-Bunganditj	Pama-Nyungan	pama1250	6	glottolog_depth	Southeastern Pama-Nyungan	True	0.4726	Bunganditj, Colac, Warrnambool, Wathawurrung
+mula1252	Mulam-Kam	Tai-Kadai	taik1256	6	glottolog_depth	Kam-Tai	True	0.8024	Cao Miao, Lianmin Yao, Mulam, Nuoxi Yao
+nort2947	Northern Iroquoian	Iroquoian	iroq1247	6	glottolog_depth	Northern Iroquoian	False	2.5046	Cayuga, Laurentian, Onondaga, Seneca
+suba1253	Subanen	Austronesian	aust1307	6	glottolog_depth				Central Subanen, Eastern Subanen, Kolibugan Subanon, Lapuyan Subanun
+khal1273	Khalkha-Buriat	Mongolic-Khitan	mong1349	6	glottolog_depth	Mongolic	True	0.3941	China Buriat, Halh Mongolian, Oirad-Kalmyk-Darkhat, Mongolia Buriat
+kanj1261	Kanjobalan-Chujean	Mayan	maya1287	6	glottolog_depth	Mayan	True	0.2587	Chuj, Mocho, Popti', Q'anjob'al
+lowl1268	Lowland-Midland-South Highland Mixe	Mixe-Zoque	mixe1284	6	glottolog_depth	Mixe-Zoque	True	0.4757	Coatlán Mixe, Isthmus Mixe, Juquila Mixe, Mazatlán Mixe
+band1357	Greater Bandjalangic	Pama-Nyungan	pama1250	6	glottolog_depth		True	0.2178	Condamine-Upper Clarence Bandjalang, Guwar, Lower Richmond, Middle Clarence Bandjalang
+huay1239	Huaylay	Quechuan	quec1387	6	glottolog_depth	Quechuan	True	0.3696	Corongo Ancash Quechua, Huamalíes-Dos de Mayo Huánuco Quechua, Huaylas Ancash Quechua, Northern Conchucos Ancash Quechua
+west1472	West Kipchak	Turkic	turk1311	6	glottolog_depth	Turkic	True	4.5401	Crimean Tatar, Karaim, Karachay-Balkar, Krymchak
+guro1245	Mano-Dan	Mande	mand1469	6	glottolog_depth	Eastern Mande	True	1.5226	Dan, Goo, Guro, Mann
+sout3149	Southern-Eastern Yolngu	Pama-Nyungan	pama1250	6	glottolog_depth	Western Pama-Nyungan	True	0.2871	Dayi, Dhangu, Dhuwal, Djambarrpuyngu
+keit1238	Nuclear Tanimbar-Bomberai	Austronesian	aust1307	6	glottolog_depth	Central Malayo-Polynesian			Fordata, Kei, Onin, Sekar
+nort3157	North Masa	Afro-Asiatic	afro1255	6	glottolog_depth	Masa	True	0.0474	Gizey, Ham, Marba, Masana
+ngum1256	Ngumpin	Pama-Nyungan	pama1250	6	glottolog_depth	Western Pama-Nyungan	True	0.005	Gurindji, Jaru, Mudburra, Ngarinman
+east2894	Eastern Timor	Austronesian	aust1307	6	glottolog_depth	Central Malayo-Polynesian			Habu, Kairui-Midiki, Nauete, Tetum
+soni1257	Soninke-Bozo	Mande	mand1469	6	glottolog_depth	Western Mande	True	0.8441	Hainyaxo Bozo, Jenaama Bozo, Sininkere, Soninke
+apac1239	Apachean	Athabaskan-Eyak-Tlingit	atha1245	6	glottolog_depth	Athapaskan	True	0.1236	Jicarilla Apache, Kiowa Apache, Lipan Apache, Mescalero-Chiricahua Apache
+amam1245	Amami	Japonic	japo1237	6	glottolog_depth		True	0.1188	Kikai, Northern Amami-Oshima, Oki-No-Erabu, Southern Amami-Oshima
+pint1254	Pintupic	Pama-Nyungan	pama1250	6	glottolog_depth	Western Pama-Nyungan	True	0.2441	Kukatja, Ngaanyatjarra, Pintupi-Luritja, Pintiini
+nucl1299	Nuclear West Bahnaric	Austroasiatic	aust1305	6	glottolog_depth	Bahnaric	True	0.0816	Laven, Brao, Nyaheun, Oy
+subt1249	Subtiaba-Tlapanec	Otomanguean	otom1299	5	glottolog_depth	Subtiaba-Tlapanec	True	0.7854	Acatepec Me'phaa, Azoyú Me'phaa, Malinaltepec Me'phaa, Subtiaba
+guda1246	Gudang-Northeast Paman	Pama-Nyungan	pama1250	5	glottolog_depth	Northern Pama-Nyungan			Angkamuthi, Atampaya, Gudang, Wuthathi
+west2506	West-Kxoe	Khoe-Kwadi	khoe1240	5	glottolog_depth	Khoe-Kwadi	True	0.4854	//Ani, //Gana, /Gwi, Kxoe
+weta1246	Wetar-Atauro	Austronesian	aust1307	5	glottolog_depth	Central Malayo-Polynesian			Aputai, Galoli-Talur, Ili'uun, Perai
+kabe1245	Kabenau	Nuclear Trans New Guinea	nucl1709	5	glottolog_depth	Madang	True	0.2969	Arawum, Kolom, Lemio, Pulabu
+east2900	Eastern Bomberai	Austronesian	aust1307	5	glottolog_depth	South Halmahera - West New Guinea			Arguni, Bedoanas, Erokwanas, Irarutu
+nort3000	Northern Magdalenic	Chibchan	chib1249	5	glottolog_depth	Arhuacic	True	0.2895	Arhuaco, Chimila, Cogui, Kankuamo
+nort2758	Northern Pama	Pama-Nyungan	pama1250	5	glottolog_depth				Arritinngithigh, Mbiywom, Mpalityanh-Luthigh, Ngkoth
+wapi1252	Wapishanan	Arawakan	araw1281	5	glottolog_depth	Wapishanan			Aroaqui, Atorada, Parauana, Shebayo
+nuri1243	Nuristani	Indo-European	indo1319	5	glottolog_depth	Nuristani	True	0.1293	Ashkun, Katë, Prasun, Tregami
+mala1545	Malayo-Polynesian	Austronesian	aust1307	5	glottolog_depth	Chamorro			Ati, Chamorro, Enggano, Nasal
+wagg1235	Ottilien	Lower Sepik-Ramu	lowe1437	5	glottolog_depth	Lower Ramu	True	0.127	Awar, Borei, Bosngun, Kaian
+nort3256	Northeastern Pama	Pama-Nyungan	pama1250	5	glottolog_depth	Northern Pama-Nyungan			Yintyinka-Ayabadhu, Kanju, Kuuku-Ya'u, Umbindhamu
+temn1245	Northern Mel	Atlantic-Congo	atla1278	5	glottolog_depth	Mel			Baga Manduri, Baga Sitemu, Baga Koga, Landoma
+kwer1262	Kwerbaic	Greater Kwerba	kwer1242	5	glottolog_depth				Bagusa, Kauwera, Kwerba Mamberamo, Kwerba
+yaga1258	Yaganon	Nuclear Trans New Guinea	nucl1709	5	glottolog_depth		True	0.0345	Bai-Maclay, Dumun, Ganglau, Saep
+band1354	Banda-Geser	Austronesian	aust1307	5	glottolog_depth				Banda (Indonesia), Bati (Indonesia), Geser-Gorom, Kowiai
+newa1245	Newaric	Sino-Tibetan	sino1245	5	glottolog_depth	Mahakiranti	True	0.0942	Baraamu, Eastern Newari, Kathmandu Valley Newari, Pahari Newari
+geel1240	Geelvink Bay	Geelvink Bay	geel1240	5	glottolog_depth	East Geelvink Bay	False	2.3132	Bauzi, Demisa, Nisa-Anasi, Tefaro
+tulu1261	South-Western Dravidian	Dravidian	drav1251	5	glottolog_depth	Southern Dravidian	True	0.0106	Bellari, Korra Koraga, Kudiya, Mudu Koraga
+maka1310	Makassaric	Austronesian	aust1307	5	glottolog_depth	South Sulawesi			Bentong, Coastal Konjo, Highland Konjo, Makasar
+tora1268	Tor	Tor-Orya	toro1256	5	glottolog_depth	Tor	True	1.6513	Berik, Itik, Kwesten, Mander
+tsez1239	Tsezic	Nakh-Daghestanian	nakh1245	5	glottolog_depth	Avar-Andic-Tsezic	True	0.1624	Bezhta, Tsez, Hinuq, Hunzib
+nucl1586	Nuclear Central Sepik Hill	Sepik	sepi1257	5	glottolog_depth	Sepik Hill	True	0.2371	Bisis, Kapriman, Mari (East Sepik Province), Sumariup
+shir1260	Shirongol	Mongolic-Khitan	mong1349	5	glottolog_depth	Mongolic			Bonan, Dongxiang, Mongghul, Kangjia
+coas1312	Coastal Tor	Tor-Orya	toro1256	5	glottolog_depth		False	3.0155	Bonerif, Dabe, Jofotek-Bromnya, Keder
+apam1237	AP-AM-AH	Quechuan	quec1387	5	glottolog_depth	Quechuan	True	0.0642	Cajatambo North Lima Quechua, Chiquián Ancash Quechua, Huallaga Huánuco Quechua, Margos-Yarowilca-Lauricocha Quechua
+mode1251	Modern Javanese	Austronesian	aust1307	5	glottolog_depth	Javanese			Caribbean Javanese, Javanese, New Caledonian Javanese, Osing
+tara1321	Tarahumaran	Uto-Aztecan	utoa1244	5	glottolog_depth	Tarahumaran			Central Tarahumara, Western Tarahumara, Northern Tarahumara, Southwestern Tarahumara
+uygh1241	Uyghur-Uzbek	Turkic	turk1311	5	glottolog_depth	Turkic	True	0.3396	Chagatai, Ili Turki, Northern Uzbek, Southern Uzbek
+telu1265	Teluguic	Dravidian	drav1251	5	glottolog_depth	South-Central Dravidian			Chenchu, Mukha-Dora, Old Telugu, Telugu
+west2438	Western Central Karnic	Pama-Nyungan	pama1250	5	glottolog_depth	Central Pama-Nyungan	True	0.0588	Dieri, Ngamini-Yarluyandi-Karangura, Pirlatapa, Yandruwandha
+cent2309	Central Aru	Austronesian	aust1307	5	glottolog_depth	Central Malayo-Polynesian			Dobel, Koba, Lola, Lorang
+nucl1617	Nuclear Simbu	Nuclear Trans New Guinea	nucl1709	5	glottolog_depth	Chimbu	True	0.1706	Dom, Golin, Kuman, Salt-Yui
+dout1239	Doutai-Kai-Waritai	Lakes Plain	lake1255	5	glottolog_depth	Lakes Plain	True	0.1601	Doutai, Kaiy, Kwerisa, Papasena
+nuru1240	Nuru	Nuclear Trans New Guinea	nucl1709	5	glottolog_depth		True	0.0392	Duduela, Kwato, Ogea, Uya
+brou1236	Brou-So	Austroasiatic	aust1305	5	glottolog_depth	Katuic	True	0.0691	Eastern Bru, Northern Katang, Sô, Southern Katang
+hres1236	Hre-Sedang-Todrah-Monam	Austroasiatic	aust1305	5	glottolog_depth	Bahnaric	True	0.2303	Hre, Monom, Rengao, Sedang
+gran1246	Grand Valley Dani	Nuclear Trans New Guinea	nucl1709	5	glottolog_depth	Dani	True	0.1505	Hupla, Lower Grand Valley Dani, Mid Grand Valley Dani, Upper Grand Valley Dani
+bain1263	Baining	Baining	bain1263	5	glottolog_depth	Baining	True	11.1541	Kairak, Mali, Qaqet, Simbali
+teso1248	Teso-Turkana	Nilotic	nilo1247	5	glottolog_depth	Nilotic	True	0.2243	Karamojong, Nyangatom, Teso, Toposa
+cent2293	Central Kalenjin	Nilotic	nilo1247	5	glottolog_depth	Nilotic	True	0.0938	Keiyo, Kipsigis, Nandi, Terik
+kond1294	Konda-Kui	Dravidian	drav1251	5	glottolog_depth	South-Central Dravidian	True	0.0702	Konda-Dora, Kui (India), Kuvi, Manda (India)
+west2585	Western Mek	Nuclear Trans New Guinea	nucl1709	5	glottolog_depth	Mek			Korapun-Bromley, Korupun-Sela, Kosarek Yale, Nalca
+seno1278	Senoic	Austroasiatic	aust1305	5	glottolog_depth	Aslian	True	0.2865	Lanoh, Sabüm, Semai, Semnam
+naic1235	Naic	Sino-Tibetan	sino1245	5	glottolog_depth	Naxi			Laze, Namuyi, Naxi, Shixing
+lowe1401	Lower Murray	Pama-Nyungan	pama1250	5	glottolog_depth	Southeastern Pama-Nyungan			Lower Riverland, Lower Darling-Lower Lachlan, Narrinyeri, Northern Sunraysia
+mari1420	Marithielic	Western Daly	west2434	5	glottolog_depth	Bringen			Maridjabin, Maridan, Mariyedi, Marithiel
+dink1262	Dinka	Nilotic	nilo1247	5	glottolog_depth	Nilotic	True	0.1327	Northeastern Dinka, Northwestern Dinka, Southwestern Dinka, South Central Dinka
+uruw1240	Uruwa	Nuclear Trans New Guinea	nucl1709	5	glottolog_depth		True	0.1006	Nukna, Sakam, Som, Weliki
+west2791	West Palaungic	Austroasiatic	aust1305	5	glottolog_depth		True	0.2044	Riang (Myanmar), Ruching Palaung, Rumai Palaung, Shwe Palaung
+jece1235	Je Central	Nuclear-Macro-Je	nucl1710	4	glottolog_depth	Ge-Kaingang	True	0.6929	Acroá, Xakriabá, Xavánte, Xerénte
+nort3187	Northeastern Luzon	Austronesian	aust1307	4	glottolog_depth	Northern Luzon			Agta-Pahanan, Casiguran-Nagtipunan Agta, Dupaninan Agta, Paranan
+grea1277	Greater Mamean	Mayan	maya1287	4	glottolog_depth	Mayan	True	0.2469	Aguacateco, Ixil, Mam, Tektiteko
+pemo1247	Pemongan	Cariban	cari1283	4	glottolog_depth	Cariban	True	7.9222	Akawaio-Ingariko, Macushi, Patamona, Pemon
+main1280	Mainland Eastern Saami	Uralic	ural1272	4	glottolog_depth		True	2.6519	Akkala Saami, Inari Saami, Kemi Saami, Skolt Saami
+west2720	West Rift South Cushitic	Afro-Asiatic	afro1255	4	glottolog_depth	Southern Cushitic	True	0.2328	Alagwa, Burunge, Gorowa, Iraqw
+pena1272	Penangic	Dogon	dogo1299	4	glottolog_depth		True	0.8096	Ampari Dogon, Bunoge Dogon, Mombo Dogon, Penange
+araf1243	Arafundi	Arafundi	araf1243	4	glottolog_depth				Andai, Awiakay-Karimba, Nanubae-Imangae, Tapei
+tang1354	Ataitan	Lower Sepik-Ramu	lowe1437	4	glottolog_depth		True	0.3595	Andarum, Kanggape, Tanggu, Tanguat
+east2852	Eastern Enlhet-Enenlhet	Lengua-Mascoy	leng1261	4	glottolog_depth	Mascoian			Angaité, Guaná (Paraguay), Sanapaná, Toba-Enenlhet
+alba1272	Albatross Bay	Pama-Nyungan	pama1250	4	glottolog_depth				Anguthimri, Tyanngayt-Mamngayt-Ntrwangayt-Ntrangit, Yangathimri, Yuputhimri
+xing1247	Xinguan	Cariban	cari1283	4	glottolog_depth		True	0.0107	Apiaka-Tocantins, Ikpeng, Pará Arára, Yarumá
+tond1250	Tonda	Yam	more1255	4	glottolog_depth				Arammba, Mblafe-Ránmo, Warta Thuntai, Rema
+taka1268	Takanik	Pano-Tacanan	pano1259	4	glottolog_depth	Tacanan	True	2.3349	Araona, Reyesano, Tacana, Toromono
+cent2043	Central Moru-Madi	Central Sudanic	cent2225	4	glottolog_depth	Moru-Ma'di	True	0.2271	Aringa, Avokaya, Logo, Lugbara
+dako1257	Dakotan	Siouan	siou1252	4	glottolog_depth	Core Siouan	True	0.3281	Assiniboine, Dakota, Lakota, Stoney
+koch1249	Kochic	Sino-Tibetan	sino1245	4	glottolog_depth		True	0.1264	Atong (India), Koch, Rabha, Ruga
+cent2370	Central British Columbia Athabaskan	Athabaskan-Eyak-Tlingit	atha1245	4	glottolog_depth	Athapaskan	True	0.0521	Witsuwit'en-Babine, Central Carrier, Chilcotin-Nicola, Southern Carrier
+bahi1255	Bahinemic	Sepik	sepi1257	4	glottolog_depth	Sepik Hill			Bahinemo, Berinomo, Nigilu, Wagu
+kiwa1251	Kiwaian	Kiwaian	kiwa1251	4	glottolog_depth	Kiwaian	True	0.6115	Bamu, Northeast Kiwai, Southern Kiwai, Waboda
+nucl1713	Nuclear Tirio	Anim	anim1240	4	glottolog_depth				Baramu, Bitur, Makayam, Were
+cent2139	Central Chumashan	Chumashan	chum1262	4	glottolog_depth	Chumash	True	0.8314	Barbareño, Ineseño, Purisimeño, Ventureño
+kany1246	Kanyara	Pama-Nyungan	pama1250	4	glottolog_depth	Western Pama-Nyungan			Bayungu, Burduna, Dhalandji, Pinigura
+beny1238	Benyadu-Bekati	Austronesian	aust1307	4	glottolog_depth				Riuk Bekati', Benyadu', Rara Bakati', Sara Bakati'
+nucl1708	Nuclear Torricelli	Nuclear Torricelli	nucl1708	4	glottolog_depth	Urim	True	0.1268	Beli (Papua New Guinea), Laeko-Libuat, Urim, Wom (Papua New Guinea)
+lese1245	Leseic	Central Sudanic	cent2225	4	glottolog_depth	Mangbutu-Efe			Bendi, Efe, Lese, Mvuba
+geme1247	Gemein Datooga	Nilotic	nilo1247	4	glottolog_depth	Nilotic			Biyanjiida, Buraadiga, Barabayiiga-Gisamjanga, Isimjeega-Rootigaanga
+east2503	Eastern Trans-Fly	Eastern Trans-Fly	east2503	4	glottolog_depth	Western Fly	True	34.1969	Bine, Gizrra, Meriam, Wipi
+tair1260	Tairora	Nuclear Trans New Guinea	nucl1709	4	glottolog_depth	Eastern Highlands	True	0.1677	Binumarien, North Tairora, South Tairora, Waffa
+east2569	Eastern Isthmic Chibchan	Chibchan	chib1249	4	glottolog_depth	Guaymiic	True	0.267	Border Kuna, Buglere, Ngäbere, San Blas Kuna
+west2641	Western Isthmic Chibchan	Chibchan	chib1249	4	glottolog_depth	Talamanca	True	0.4625	Boruca, Bribri, Cabécar, Teribe
+bugi1243	Tamanic-Bugis	Austronesian	aust1307	4	glottolog_depth	South Sulawesi			Buginese, Campalagian, Embaloh, Taman (Indonesia)
+sout2915	South Mangyan	Austronesian	aust1307	4	glottolog_depth	Greater Central Philippine			Buhid, Eastern Tawbuid, Hanunoo, Western Tawbuid
+aust1307	Austronesian	Austronesian	aust1307	4	glottolog_depth	Paiwan			Bunun, Paiwan, Puyuma, Rukai
+sula1247	Sula-Buru	Austronesian	aust1307	4	glottolog_depth	Central Malayo-Polynesian			Buru (Indonesia), Hukumina, Lisela, Sula
+cupa1239	Cupan	Uto-Aztecan	utoa1244	4	glottolog_depth	California Uto-Aztecan	True	0.4019	Cahuilla, Cupeño, Island Takic, Luiseno-Juaneño
+yupi1267	Yupik	Eskimo-Aleut	eski1264	4	glottolog_depth	Eskimo	True	0.1521	Central Alaskan Yupik, Central Siberian Yupik, Naukan Yupik, Pacific Gulf Yupik
+atla1275	Atlas Berber	Afro-Asiatic	afro1255	4	glottolog_depth	Berber	True	0.0391	Central Moroccan Berber, Ghomara, Senhaja De Srair, Tachelhit
+juku1256	Ju-Kung	Kxa	kxaa1236	4	glottolog_depth	Ju-Kung	True	4.2828	Central Ju, South-Eastern Ju, North-Central Ju, Northern Ju
+nort3265	Northern Totonacan	Totonacan	toto1251	4	glottolog_depth	Totonacan	True	0.0548	Coahuitlán Totonac, Tecpatlán Totonac, Upper Necaxa Totonac, Xicotepec De Juárez Totonac
+delt1253	Delta-Californian Yuman	Cochimi-Yuman	coch1271	4	glottolog_depth	Yuman			Cocopa, Ipai, Tipai, Kwatl
+chia1261	Chiapas Zoque	Mixe-Zoque	mixe1284	4	glottolog_depth	Mixe-Zoque	True	0.4883	Copainalá Zoque, Francisco León Zoque, Jitotolteco, Rayón Zoque
+cube1243	Cubeo-Desano	Tucanoan	tuca1253	4	glottolog_depth	Tucanoan	True	0.7261	Cubeo, Desano, Yupua, Siriano
+sout3363	South-Central Nasioi	South Bougainville	sout2948	4	glottolog_depth	East Bougainville			Daantanai', Koromira, Naasioi, Ounge
+peka1243	Peka	Nuclear Trans New Guinea	nucl1709	4	glottolog_depth		True	0.2427	Danaru, Sop, Sumau, Urigina
+mant1266	Mantharta	Pama-Nyungan	pama1250	4	glottolog_depth	Western Pama-Nyungan			Dhargari, Djiwarli, Thiin, Wariyangga
+didi1256	Didinga-Murle	Surmic	surm1244	4	glottolog_depth	Surmic	True	0.4053	Didinga, Murle, Narim, Tennet
+mail1249	Mailuan	Mailuan	mail1249	4	glottolog_depth	Mailuan	False	20.819	Domu, Laua, Mailu, Morawa
+evap1240	Evapia	Nuclear Trans New Guinea	nucl1709	4	glottolog_depth		True	0.3827	Dumpu, Kesawai, Sausi, Kou
+buya1244	Buyang	Tai-Kadai	taik1256	4	glottolog_depth		True	0.0456	E'ma Buyang, En, Langnian Buyang, Yerong-Southern Buyang
+enga1251	Engan	Nuclear Trans New Guinea	nucl1709	4	glottolog_depth	Engan	False	0.1117	Enga, Ipili, Kyaka, Lembena
+nort2703	Northern Karen	Sino-Tibetan	sino1245	4	glottolog_depth		True	0.3066	Geko Karen, Kayan Lahwi, Yinbaw Karen, Lahta-Zayein Karen
+waka1283	Waka-Kabic	Pama-Nyungan	pama1250	4	glottolog_depth	Southeastern Pama-Nyungan	True	0.2896	Gureng Gureng, Kabikabi, Wakawaka, Wuliwuli
+jehh1244	Kayong-Jeh-Halang	Austroasiatic	aust1305	4	glottolog_depth	Bahnaric			Halang, Halang Doan, Jeh, Kayong
+eban1241	Ebang-Logol	Heibanic	heib1242	4	glottolog_depth	Heiban	True	8.5114	Ebang, Laru (North Sudan), Logol, Otoro
+sout3146	South Masa	Afro-Asiatic	afro1255	4	glottolog_depth	Masa	True	0.1805	Herde, Mesme, Ngete, Peve
+pata1263	Patakai-Manusela	Austronesian	aust1307	4	glottolog_depth				Huaulu, Manusela, North Nuaulu, South Nuaulu
+kaki1245	Nikio	Ijoid	ijoi1239	4	glottolog_depth		True	0.5436	Ibani, Kalabari, Kirike, Nkoroo
+nucl1773	Nuclear Warisic	Border	bord1247	4	glottolog_depth	Border	False	12.8586	Imonda, Manem, Senggi, Waris
+cent2238	Central-Northern One	Nuclear Torricelli	nucl1708	4	glottolog_depth	West Wapei			Inebu One, Kabore One, Molmo One, Northern One
+zeme1241	Zemeic	Sino-Tibetan	sino1245	4	glottolog_depth	Kuki-Chin	True	0.1038	Inpui Naga, Maram Naga, Rongmei Naga, Thangal Naga
+dheg1241	Dhegiha	Siouan	siou1252	4	glottolog_depth	Core Siouan	True	0.2782	Kansa, Omaha-Ponca, Osage, Quapaw
+nucl1441	Macro-Maba	Maban	maba1274	4	glottolog_depth	Maban			Karanga, Kendeje, Maba (Chad), Marfa
+khas1274	Khasi-Pnar-Lyngngam	Austroasiatic	aust1305	4	glottolog_depth	Khasian	True	0.0912	Khasi, India Lyngam, Bangladesh Lyngam, Pnar
+nort2823	Northern Songhay	Songhay	song1307	4	glottolog_depth		True	6.8656	Korandje, Tadaksahak, Tagdal, Tasawaq
+xing1249	Xinguan Arawak	Arawakan	araw1281	4	glottolog_depth	Central Arawakan	True	0.2368	Kustenau, Mehináku, Waurá, Yawalapití
+nucl1463	Nuclear Barrier Islands	Austronesian	aust1307	4	glottolog_depth	Northwest Sumatra-Barrier Islands			Mentawai, Nias, Sikule, Simeulue
+namb1292	Nambu	Yam	more1255	4	glottolog_depth				Namat, Nambo, Neme, Nen
+maid1262	Maiduan	Maiduan	maid1262	4	glottolog_depth	Maiduan	True	3.6578	Nisenan, Northwest Maidu, Northeast Maidu, Valley Maidu
+tepe1281	Tepehuan	Uto-Aztecan	utoa1244	4	glottolog_depth	Tepiman			Northern Tepehuan, Southeastern Tepehuan, Southwestern Tepehuan, Tepecano
+pwoo1239	Pwo	Sino-Tibetan	sino1245	4	glottolog_depth	Karen	True	0.1083	Phrae Pwo Karen, Pwo Eastern Karen, Pwo Northern Karen, Pwo Western Karen
+nort2886	North Minahasan	Austronesian	aust1307	4	glottolog_depth	Minahasan			Tombulu, Tondano, Tonsea, Tontemboan
+west2435	Western Worrorran	Worrorran	worr1236	4	glottolog_depth				Umiida-Unggarangu, Unggumi, Winjarumi, Worrorra
+mufi1239	Mufian-Bukiyip-Abu	Nuclear Torricelli	nucl1708	3	glottolog_depth	Kombio-Arapesh	True	0.2708	Abu' Arapesh, Bukiyip, Mufian
+alor1250	Central Alor	Timor-Alor-Pantar	timo1261	3	glottolog_depth	Greater Alor	True	1.0615	Abui, Kamang, Kui (Indonesia)
+shua1256	Shuaric	Chicham	jiva1245	3	glottolog_depth	Jivaroan	True	0.4814	Achuar-Shiwiar, Huambisa, Shuar
+bosa1246	Bosavi Watershed	Bosavi	bosa1245	3	glottolog_depth		True	0.2287	Aimele, Kasua, Onobasulu
+pagi1245	Pagi-Kilmeri	Border	bord1247	3	glottolog_depth		True	2.0342	Ainbai, Kilmeri, Pagi
+akak1254	Aka-Kelo-Molo	Eastern Jebel	east2386	3	glottolog_depth				Aka, Kelo, Molo
+yell1247	Yellow River	Sepik	sepi1257	3	glottolog_depth	Yellow River	True	0.0449	Ak, Auwon, Namia
+tiri1260	Tiriyoan	Cariban	cari1283	3	glottolog_depth	Cariban			Akurio, Pauxi, Trió
+alab1247	Alabaman-Koasati	Muskogean	musk1252	3	glottolog_depth	Muskogean	True	0.5517	Alabama, Apalachee, Koasati
+nort2873	North Mangyan	Austronesian	aust1307	3	glottolog_depth				Alangan, Iraya, Tadyawan
+mara1414	Maran	Mangarrayi-Maran	mang1423	3	glottolog_depth	Alawa	True	1.0722	Alawa, Marra, Wandarang
+croi1234	Croisilles	Nuclear Trans New Guinea	nucl1709	3	glottolog_depth	Madang	True	0.12	Amaimon, Bargam, Yamben
+yaru1256	Yaru Quechua	Quechuan	quec1387	3	glottolog_depth	Quechuan			Ambo-Pasco Quechua, North Junín Quechua, Chaupihuaranga Quechua
+yali1257	Yalic	Nuclear Trans New Guinea	nucl1709	3	glottolog_depth	Dani	True	0.1537	Angguruk Yali, Ninia Yali, Pass Valley Yali
+unun9966	Unclassified Wati	Pama-Nyungan	pama1250	3	glottolog_depth	Western Pama-Nyungan			Antakarinya, Kokata, Lake Carnegie Western Desert
+unun9902	Unclassified Volta-Congo	Atlantic-Congo	atla1278	3	glottolog_depth	Kru			Aproumu Aizi, Mbre, Mpra
+arap1273	Arapahoic	Algic	algi1248	3	glottolog_depth	Algonquian			Arapaho, Gros Ventre, Nawathinehena
+iner1234	Ineric	Arawakan	araw1281	3	glottolog_depth	Caribbean Arawakan	True	0.0508	Lokono, Garifuna, Island Carib
+alba1268	Albanian-Tosk	Indo-European	indo1319	3	glottolog_depth				Arbëreshë Albanian, Arvanitika Albanian, Northern Tosk Albanian
+kuth1239	Kuthant-Gurdjar	Pama-Nyungan	pama1250	3	glottolog_depth				Areba, Gurdjar, Kuthant
+chut1246	East Chutic	Austroasiatic	aust1305	3	glottolog_depth		True	0.0367	Arem, Chut, Maleng
+kire1239	Ruboni	Lower Sepik-Ramu	lowe1437	3	glottolog_depth	Mikarew	True	0.2934	Aruamu, Kire, Sepen
+gavi1248	Nuclear Gavianic	Tupian	tupi1275	3	glottolog_depth	Monde	True	0.0468	Aruá (Rondonia State), Cinta Larga, Gavião Do Jiparaná
+araw1282	Arawan	Arawan	araw1282	3	glottolog_depth	Arauan			Arawá (Amazonas State), Paumari, Suruahá
+kunj1248	Southwestern Alaya-Athima	Pama-Nyungan	pama1250	3	glottolog_depth	Northern Pama-Nyungan			Athima, Kawarrang-Ogh Undjan, Kunjen
+want1251	Wantoatic	Nuclear Trans New Guinea	nucl1709	3	glottolog_depth	Finisterre-Huon			Awara, Tuma-Irumu, Wantoat
+berb1260	Berber	Afro-Asiatic	afro1255	3	glottolog_depth		False	0.0328	Awjilah, Ghadames, Nafusi
+yimi1235	Yimin-Bel	Sepik	sepi1257	3	glottolog_depth				Ayi (Papua New Guinea), Kalou, Pasi
+kart1250	Kartu	Pama-Nyungan	pama1250	3	glottolog_depth	Western Pama-Nyungan			Badimaya, Malgana, Wajarri
+nalu1241	Naluic	Atlantic-Congo	atla1278	3	glottolog_depth				Pukur, Mbulungish, Nalu
+nang1263	Nangan Dogon	Dogon	dogo1299	3	glottolog_depth		True	1.5649	Bankan Tey Dogon, Ben Tey Dogon, Nanga
+bass1263	Bassari-Bedik-Bapen	Atlantic-Congo	atla1278	3	glottolog_depth	Tenda			Bapen, Bassari-Tanda, Bedik
+yare1251	Yareba-Bariji-Nawaru	Yareban	yare1250	3	glottolog_depth	Yareban			Bariji, Nawaru, Yareba
+tura1264	Turama-Omatian	Turama-Kikori	tura1263	3	glottolog_depth		True	0.8587	Barikewa, Ikobi, Mouwase
+nort2900	Northern East Formosan	Austronesian	aust1307	3	glottolog_depth				Basay, Kavalan, Ketangalan
+biao1257	Biaoic	Tai-Kadai	taik1256	3	glottolog_depth				Shidong Biao, Dagang-Baoshan-Liangcun, Yonggu Biao
+mien1243	Mien-Mun	Hmong-Mien	hmon1336	3	glottolog_depth	Hmong-Mien	True	0.6632	Biao Mon, Iu Mien, Kim Mun
+nort3158	Northern-Eastern-Western Agaw	Afro-Asiatic	afro1255	3	glottolog_depth	Central Cushitic	True	0.1865	Bilin, Qimant, Xamtanga
+kanu1281	Kanuric	Saharan	saha1256	3	glottolog_depth	Western Saharan	True	1.0966	Bilma Kanuri, Central Kanuri, Manga Kanuri
+bind1237	Bindalic	Pama-Nyungan	pama1250	3	glottolog_depth				Bindal-Cunningham, Bindal-Gorton, Bindal-Mount Elliot
+erit1238	Eritai-Obokuitai-Biritai	Lakes Plain	lake1255	3	glottolog_depth	Lakes Plain	True	0.4839	Biritai, Eritai, Obokuitai
+inla1259	Inland Ijo	Ijoid	ijoi1239	3	glottolog_depth		True	0.0765	Biseni, Okodia, Oruma
+unun9972	Unclassified Rai Coast	Nuclear Trans New Guinea	nucl1709	3	glottolog_depth	Madang	True	0.0223	Biyom, Tauya, Wasembo
+bull1246	Bullom	Atlantic-Congo	atla1278	3	glottolog_depth				Bom-Kim, Bullom So, Sherbro
+lago1243	Barupu Lagoon	Sko	skoo1245	3	glottolog_depth	Warapu			Bouni-Bobe, Uni, Bauni
+west2636	Western Maxakali	Nuclear-Macro-Je	nucl1710	3	glottolog_depth	Maxakalí			Capoxo, Macuni, Maxakalí
+khme1253	Khmeric	Austroasiatic	aust1305	3	glottolog_depth	Khmer	True	0.2474	Central Khmer, Northern Khmer, Old Khmer
+sier1249	Sierra Miwokan	Miwok-Costanoan	miwo1274	3	glottolog_depth	Miwok	True	0.7279	Central Sierra Miwok, Northern Sierra Miwok, Southern Sierra Miwok
+west2394	Western Pearic	Austroasiatic	aust1305	3	glottolog_depth				Central Chong, Chong of Chanthaburi, Somray of Battambang-Somre of Siem Reap
+quec1384	Quechua IIB	Quechuan	quec1387	3	glottolog_depth		True	0.0929	Chachapoyas Quechua, Classical Quechua, San Martín Quechua
+sout2986	Southern Costanoan	Miwok-Costanoan	miwo1274	3	glottolog_depth				Chalon, Mutsun, Rumsen
+char1238	Charruan	Charruan	char1238	3	glottolog_depth				Chaná, Charrúa, Güenoa
+darg1242	Dargwic	Nakh-Daghestanian	nakh1245	3	glottolog_depth	Lak-Dargwa			Chirag, North-Central Dargwa, Kubachi
+sout1559	Southern Interior Salish	Salishan	sali1255	3	glottolog_depth	Interior Salish	True	2.3518	Coeur d'Alene, Columbia-Wenatchi, Okanagan
+cent2130	Central Numic	Uto-Aztecan	utoa1244	3	glottolog_depth	Numic	True	2.6159	Comanche, Panamint, Shoshoni
+nucl1661	Nuclear Kamakanan	Kamakanan	kama1371	3	glottolog_depth				Cotoxo, Kamakan, Menien
+lowl1271	Lowland-Sierra Totonacan	Totonacan	toto1251	3	glottolog_depth	Totonacan	True	0.0313	Coyutla Totonac, Highland Totonac, Papantla Totonac
+sout3144	South Eastern Tucanoan	Tucanoan	tuca1253	3	glottolog_depth	Tucanoan	True	0.0539	Kueretu, Tanimuca-Retuarã, Yahuna
+uncl1527	Unclassified Indo-European	Indo-European	indo1319	3	glottolog_depth				Dacian, Messapic, Thracian
+yang1287	Yangmanic	Yangmanic	yang1287	3	glottolog_depth	Yangmanic	True	3.4014	Dagoman, Wardaman, Yangman
+west2489	Western Bete	Kru	krua1234	3	glottolog_depth	Kru	True	0.1636	Daloa Bété, Godié, Guiberoua Béte
+west2501	Western Dajuic	Dajuic	daju1249	3	glottolog_depth	Daju	True	0.2291	Dar Daju Daju, Dar Sila Daju, Njalgulgule
+mong1329	Mongolic	Mongolic-Khitan	mong1349	3	glottolog_depth	Mongolic	False	0.5254	Dagur, Middle Mongol, Mogholi
+east2706	Eastern Victoria	Pama-Nyungan	pama1250	3	glottolog_depth	Southeastern Pama-Nyungan			Dhudhuroa, Pallanganmiddang, Yorta Yorta
+dizo1235	Dizoid	Dizoid	dizo1235	3	glottolog_depth	Dizoid	True	3.9732	Dizin, Nayi, Sheko
+yala1261	Yalandyic	Pama-Nyungan	pama1250	3	glottolog_depth	Northern Pama-Nyungan			Djangun, Kuku-Yalanji, Muluridyi
+esca1235	Escarpment Dogon	Dogon	dogo1299	3	glottolog_depth	Dogon	True	0.8764	Donno So Dogon, Tommo So Dogon, Toro So Dogon
+pama1250	Pama-Nyungan	Pama-Nyungan	pama1250	3	glottolog_depth	Northern Pama-Nyungan	False	0.0549	Dyirbal, Kala Lagaw Ya, Warrgamay
+kaya1337	Kayah-Yintale	Sino-Tibetan	sino1245	3	glottolog_depth	Karen	True	1.9424	Eastern Kayah, Western Kayah, Yintale Karen
+kamc1243	Kamchatkan	Chukotko-Kamchatkan	chuk1271	3	glottolog_depth	Southern Chukotko-Kamchatkan			Northeast Itelmen, West Itelmen, South Itelmen
+east2504	Eastern Mek	Nuclear Trans New Guinea	nucl1709	3	glottolog_depth	Mek	True	0.0555	Eipomek, Ketengban, Una
+komb1275	Kombioic	Nuclear Torricelli	nucl1708	3	glottolog_depth	Kombio-Arapesh	True	1.5691	Eitiep, Kombio, Aro
+elep1241	Elepi-Kamasau-Marienberg	Nuclear Torricelli	nucl1708	3	glottolog_depth	Marienberg	True	0.9885	Elepi, Kamasau, Urimo
+cora1259	Corachol	Uto-Aztecan	utoa1244	3	glottolog_depth	Corachol	True	0.9312	El Nayar Cora, Huichol, Santa Teresa Cora
+east2530	Eastern Pauwasi	Pauwasi	pauw1244	3	glottolog_depth	Eastern Pauwasi	True	3.4859	Emumu, Karkar-Yuri, Yafi
+pare1273	Xaray	Arawakan	araw1281	3	glottolog_depth	Central Arawakan	True	0.065	Enawené-Nawé, Parecís, Saraveca
+ersu1242	Ersuic	Sino-Tibetan	sino1245	3	glottolog_depth				Ersu, Lizu, Tosu
+east2433	East Strickland	East Strickland	east2433	3	glottolog_depth		True	0.4963	Fembe, Konai, Odoodee
+dida1245	Dida	Kru	krua1234	3	glottolog_depth	Kru	True	0.0882	Gabogbo, Lakota Dida, Yocoboué Dida
+benu1247	Benue-Congo	Atlantic-Congo	atla1278	3	glottolog_depth	Nupoid			Gade, Oko-Eni-Osayen, Ukaan
+jarr1235	Jarrakan	Jarrakan	jarr1235	3	glottolog_depth	Jarrakan	True	7.7108	Gajirrabeng, Kitja, Miriwung
+forr1234	Forrest River	Worrorran	worr1236	3	glottolog_depth	Worrorran			Gambera, Kwini, Miwa
+wolo1247	Wolofic	Atlantic-Congo	atla1278	3	glottolog_depth	Wolof			Gambian Wolof, Lebu Wolof, Wolof
+wira1261	Wiradhuric	Pama-Nyungan	pama1250	3	glottolog_depth	Southeastern Pama-Nyungan	True	0.2373	Yuwaalaraay-Gamilaraay, Ngiyambaa, Wiradhuri
+nucl1759	Nuclear Sahuan	North Halmahera	nort2923	3	glottolog_depth	North Halmaheran			Gamkonora, Sahu, Waioli
+east2867	Eastern !Ui	Tuu	tuuu1241	3	glottolog_depth				!Gã!ne, Vaal-Orange, //Xegwi
+mund1335	Mundaic	Austroasiatic	aust1305	3	glottolog_depth	Munda	True	0.0509	Gata', Juang, Kharia
+kubo1241	Kubo-Samo-Bibo	East Strickland	east2433	3	glottolog_depth	East Strickland	True	0.3688	Gobasi, Kubo, Samo
+amuz1254	Amuzgoan	Otomanguean	otom1299	3	glottolog_depth	Amuzgoan	True	0.1277	Guerrero Amuzgo, Ipalapa Amuzgo, San Pedro Amuzgos Amuzgo
+coas1313	Coastal Southwest Paman	Pama-Nyungan	pama1250	3	glottolog_depth				Gugubera, Koko Dhawa, Yir-Yoront
+hewa1240	Hewa-April River	Sepik	sepi1257	3	glottolog_depth		True	0.1424	Hewa, Niksek, Piame
+gulf1238	Gulf Zoque	Mixe-Zoque	mixe1284	3	glottolog_depth	Mixe-Zoque	True	0.1303	Highland Popoluca, Tabasco Zoque, Texistepec Popoluca
+tepe1243	Tepehua	Totonacan	toto1251	3	glottolog_depth	Totonacan	True	0.0465	Huehuetla Tepehua, Pisaflores Tepehua, Tlachichilco Tepehua
+voti1248	Votic Chibchan	Chibchan	chib1249	3	glottolog_depth	Rama	True	0.183	Huetar, Maléku Jaíka, Rama
+east2431	Eastern Songhay	Songhay	song1307	3	glottolog_depth	Songhay	True	0.1883	Humburi Senni Songhay, Koyraboro Senni Songhai, Tondi Songway Kiini
+sawo1234	Iatmulic	Ndu	nduu1242	3	glottolog_depth	Ndu			Iatmul, Keak, Sos Kundi
+moxo1235	Mojeno-Paunaca	Arawakan	araw1281	3	glottolog_depth	Bolivia-Parana	True	0.0434	Ignaciano, Paunaka, Trinitario-Javeriano-Loretano
+dana1253	Danaw	Austronesian	aust1307	3	glottolog_depth	Greater Central Philippine			Iranun, Maguindanao, Maranao
+jion1235	Jiongnai-Ho Ne	Hmong-Mien	hmon1336	3	glottolog_depth		True	0.5162	Jiongnai Bunu, Pa Na, She
+beic1239	Beic	Tai-Kadai	taik1256	3	glottolog_depth				Jizhao, Western Ong-Be, Eastern Ong-Be
+sout1516	South Bird's Head Family	South Bird's Head Family	sout1516	3	glottolog_depth				Kaburi, Kais, Puragi
+east2423	East Ometo	Ta-Ne-Omotic	gong1255	3	glottolog_depth	North Omotic	True	0.2342	Kachama-Ganjule-Haro, Koorete, Zayse-Zergulla
+kain1270	Kaingang-Xokleng	Nuclear-Macro-Je	nucl1710	3	glottolog_depth	Ge-Kaingang	True	0.2041	Kaingang, São Paulo Kaingáng, Xokleng
+sout1499	South West Bird's Head	West Bird's Head	west1493	3	glottolog_depth	West Bird's Head			Kalabra, Moraid, Tehit
+mirn1243	Mirning	Pama-Nyungan	pama1250	3	glottolog_depth	Western Pama-Nyungan			Kalarko-Mirniny, Kalaamaya, Ngadjunmaya
+kala1404	Kalam-Kobon	Nuclear Trans New Guinea	nucl1709	3	glottolog_depth	Madang	True	0.0982	Kalam, Kobon, Tai
+kala1402	Kalapuyan	Kalapuyan	kala1402	3	glottolog_depth	Kalapuyan			Central Kalapuya, Tualatin-Yamhill, Yoncalla
+kane1244	Kanembuic	Saharan	saha1256	3	glottolog_depth	Western Saharan			Kanembu, Tarjumo, Tumari Kanuri
+kaor1242	Kao River	North Halmahera	nort2923	3	glottolog_depth	North Halmaheran	True	0.1488	Kao, Modole, Pagu
+sout2701	South Kipchak	Turkic	turk1311	3	glottolog_depth	Turkic	True	1.6593	Kara-Kalpak, Kazakh, Nogai
+marr1265	Marrngu	Pama-Nyungan	pama1250	3	glottolog_depth	Western Pama-Nyungan			Karadjeri, Mangala, Nyangumarta
+nucl1710	Nuclear-Macro-Je	Nuclear-Macro-Je	nucl1710	3	glottolog_depth	Karajá	False	0.4602	Karajá, Ofayé, Rikbaktsa
+cost1250	Costanoan	Miwok-Costanoan	miwo1274	3	glottolog_depth				Karkin, San Francisco Bay Ohlone, Awaswas
+lepk1239	Lepki-Murkim-Kembra	Lepki-Murkim-Kembra	lepk1239	3	glottolog_depth		True	9.3579	Kembra, Lepki, Murkim
+west2573	Western Eleman	Eleman	nucl1580	3	glottolog_depth	Eleman Proper	True	0.1578	Keoru-Ahia, Opao, Orokolo
+ujir1238	Ujir-Kola-Kompane	Austronesian	aust1307	3	glottolog_depth	Central Malayo-Polynesian			Kola, Kompane, Ujir
+komi1267	Komi	Uralic	ural1272	3	glottolog_depth	Permic	True	20.114	Komi-Zyrian, Komi-Permyak, Komi-Yazva
+tbol1241	Tboli-Blaan	Austronesian	aust1307	3	glottolog_depth	Bilic			Koronadal Blaan, Sarangani Blaan, Tboli
+ostk1235	Ost-Kxoe	Khoe-Kwadi	khoe1240	3	glottolog_depth	Khoe-Kwadi	True	0.0981	Southern Tshwa, Shua, Northern Tshwa
+nort2899	Northwest Formosan	Austronesian	aust1307	3	glottolog_depth				Pazeh-Kahabu, Kulon, Saisiyat
+roos1235	Roosevelt	Nambiquaran	namb1299	3	glottolog_depth				Lakondê, Latundê, Tawandê
+saaf1239	Saafi-Noon-Lehar	Atlantic-Congo	atla1278	3	glottolog_depth	Cangin			Lehar, Noon, Saafi-Saafi
+east2892	Eastern Skouic	Sko	skoo1245	3	glottolog_depth	Western Skou	True	0.4625	Leitre, Vanimo, Wutung
+nucl1313	Nuclear Zemeic	Sino-Tibetan	sino1245	3	glottolog_depth	Kuki-Chin	True	0.2122	Liangmai Naga, Mzieme Naga, Zeme Naga
+nort2948	Northern Interior Salish	Salishan	sali1255	3	glottolog_depth	Interior Salish	True	2.4449	Lillooet, Shuswap, Thompson
+ongt1234	Ong-Ta'oih	Austroasiatic	aust1305	3	glottolog_depth				Lower Ta'oih, Ong-Ir, Upper Ta'oih
+cent2240	Central Western Saami	Uralic	ural1272	3	glottolog_depth	Saami	True	0.0559	Lule Saami, North Saami, Pite Saami
+sion1248	Siona-Secoya	Tucanoan	tuca1253	3	glottolog_depth	Tucanoan	True	0.1483	Macaguaje, Secoya, Siona-Tetete
+sout2827	Southern Moru-Madi	Central Sudanic	cent2225	3	glottolog_depth	Moru-Ma'di	True	0.1162	Ma'di, Olu'bo, Southern Ma'di
+west2867	West Inland Gulf of Papua	Anim	anim1240	3	glottolog_depth		True	0.3528	Mahigi, Minanibai-Foia Foia, Mubami
+tini1248	Tinic	Austroasiatic	aust1305	3	glottolog_depth	Khmuic	False	0.1049	Mal, Mlabri, Prai
+mapo1245	Mapoyo-Yawarana	Cariban	cari1283	3	glottolog_depth	Cariban	True	1.2652	Mapoyo, Pémono, Yabarana
+rive1260	River Yuman	Cochimi-Yuman	coch1271	3	glottolog_depth	Yuman	True	0.3561	Maricopa, Mohave, Quechan
+mart1257	Martuwangkic	Pama-Nyungan	pama1250	3	glottolog_depth	Western Pama-Nyungan			Martu Wangka, Wanman, Yulparija
+masa1301	Macro-Masalit	Maban	maba1274	3	glottolog_depth	Maban			Massalat, Masalit, Surbakhal
+past1248	Pastoral Surmic	Surmic	surm1244	3	glottolog_depth	Surmic	True	0.2715	Me'en, Mursi, Tirma-Chai
+mair1253	Mairasic	Mairasic	mair1253	3	glottolog_depth	Mairasi-Tanahmerah	True	5.7505	Mer, Mairasi, Semimi
+coas1318	Coastal Min	Sino-Tibetan	sino1245	3	glottolog_depth	Chinese	True	0.5874	Min Dong Chinese, Min Nan Chinese, Pu-Xian Chinese
+moni1258	Monic	Austroasiatic	aust1305	3	glottolog_depth	Monic	True	0.1427	Mon, Nyahkur, Old Mon
+wahg1249	Wahgic	Nuclear Trans New Guinea	nucl1709	3	glottolog_depth				Nii, North Wahgi, Wahgi
+nyaw1248	Nyawaygic	Pama-Nyungan	pama1250	3	glottolog_depth	Northern Pama-Nyungan	True	0.2477	Nyawaygi, Wulguru, Yuru
+pram1235	Pramic	Austroasiatic	aust1305	3	glottolog_depth				O'du, Phong-Kniang, Theen
+japa1256	Japanesic	Japonic	japo1237	3	glottolog_depth				Old Japanese, Kagoshima, Tsugaru
+mixe1286	Mixe	Mixe-Zoque	mixe1284	3	glottolog_depth	Mixe-Zoque	True	0.0852	Oluta Popoluca, Sayula Popoluca, Tapachultec
+daga1274	Dagan	Dagan	daga1274	3	glottolog_depth				Onjob, Turaka, Umanakaina
+wanh1234	Wanham-Wari-Oro Win	Chapacuran	chap1271	3	glottolog_depth	Chapacura-Wanham	True	5.0159	Oro Win, Wanyam, Wari'
+sabe1249	Sabellic	Indo-European	indo1319	3	glottolog_depth				Oscan, Old Sabellic, Umbrian
+pahe1239	Paheng	Hmong-Mien	hmon1336	3	glottolog_depth	Hmong-Mien	True	0.029	Pa-Hng, Wunai Bunu, Younuo Bunu
+para1308	Paravilhana-Pauxiana	Cariban	cari1283	3	glottolog_depth				Paravilhana, Pauxiana, Sapara
+yucu1252	Caqueta	Arawakan	araw1281	3	glottolog_depth	Inland Northern Arawakan	True	0.0397	Resígaro, Uainuma-Mariate, Yucuna
+nort3174	Northern Sangiric	Austronesian	aust1307	3	glottolog_depth	Sangiric			Sangir, Sangil, Talaud
+seme1246	Semelai-Semaq	Austroasiatic	aust1305	3	glottolog_depth	Aslian	True	0.0073	Semaq Beri, Semelai, Temoq
+sout3263	Southern Tuareg	Afro-Asiatic	afro1255	3	glottolog_depth	Berber	True	0.1769	Tamasheq, Tawallammat Tamajaq, Tayart Tamajeq
+east2707	Eastern Eastern Tucanoan I	Tucanoan	tuca1253	3	glottolog_depth	Tucanoan	True	0.775	Tatuyo, Tucano, Waimaha
+wich1261	Wichi	Matacoan	mata1289	3	glottolog_depth	Matacoan	True	0.1503	Wichí Lhamtés Nocten, Wichí Lhamtés Vejoz, Wichí Lhamtés Güisnay
+aari1238	Aari-Gayil	South Omotic	sout2845	2	glottolog_depth	South Omotic	True	0.2174	Aari, Gayil
+sout3054	South Cushitic	Afro-Asiatic	afro1255	2	glottolog_depth		True	0.0252	Aasax, Kw'adza
+sepi1257	Sepik	Sepik	sepi1257	2	glottolog_depth	Upper Sepik			Abau, Amal
+abkh1243	Abkhaz-Abaza	Abkhaz-Adyge	abkh1242	2	glottolog_depth	Northwest Caucasian	True	1.0788	Abaza, Abkhaz
+agoa1234	Agoan	Lower Sepik-Ramu	lowe1437	2	glottolog_depth				Abu, Gorovu
+ache1247	Acheron-Tocho	Narrow Talodi	narr1279	2	glottolog_depth				Acheron, Tocho
+pala1350	Palaihnihan	Palaihnihan	pala1350	2	glottolog_depth	Palaihnihan	True	6.2725	Achumawi, Atsugewi
+gada1257	Ga-Dangme	Atlantic-Congo	atla1278	2	glottolog_depth	Kwa			Adangme, Ga
+circ1239	Circassian	Abkhaz-Adyge	abkh1242	2	glottolog_depth	Northwest Caucasian	True	6.6953	Adyghe, Kabardian
+awin1249	Elevala	Kamula-Elevala	kamu1264	2	glottolog_depth	Awin-Pare			Aekyom, Pare
+nyim1244	Nyimang	Nyimang	nyim1244	2	glottolog_depth	Nyimang	True	9.2239	Afitti, Ama (Sudan)
+thay1250	Thaypanic	Pama-Nyungan	pama1250	2	glottolog_depth	Northern Pama-Nyungan			Aghu Tharnggalu, Thaypan
+agiy1234	Agi-Yeri	Nuclear Torricelli	nucl1708	2	glottolog_depth		True	0.1863	Agi, Yeri
+paho1240	Pahoturi	Pahoturi	paho1240	2	glottolog_depth				Agob-Ende-Kawam, Idi-Taeme
+kala1389	Kalamian	Austronesian	aust1307	2	glottolog_depth				Agutaynen, Calamian Tagbanwa
+sout3337	Southern Alaskan Athabaskan	Athabaskan-Eyak-Tlingit	atha1245	2	glottolog_depth	Athapaskan	True	0.1839	Ahtena, Dena'ina
+hokk1250	Hokkaido-Kuril Ainu	Ainu	ainu1252	2	glottolog_depth				Hokkaido Ainu, Kuril Ainu
+aian1241	Aian	Lower Sepik-Ramu	lowe1437	2	glottolog_depth		True	0.1489	Aiome, Anor
+west1486	Samarokena-Airoran	Greater Kwerba	kwer1242	2	glottolog_depth				Airoran, Samarokena
+boca1235	Bo-Cari	Great Andamanese	grea1241	2	glottolog_depth	Great Andamanese	True	0.4411	Akabo, Akacari
+sout2683	South Great Andamanese	Great Andamanese	grea1241	2	glottolog_depth	Great Andamanese	True	0.132	Akabea, Akarbale
+jeru1239	Jeru-Kora	Great Andamanese	grea1241	2	glottolog_depth				Akajeru, Akakora
+okol1242	Okol-Opucikwar	Great Andamanese	grea1241	2	glottolog_depth	Great Andamanese	True	2.4637	Akakol, Apucikwar
+east2678	East Semitic	Afro-Asiatic	afro1255	2	glottolog_depth				Akkadian, Eblaite
+tain1255	Tainae-Akoye	Angan	anga1289	2	glottolog_depth		True	0.6749	Akoye, Tainae
+akun1243	Corumbiara	Tupian	tupi1275	2	glottolog_depth	Tupari			Akuntsu, Mekens
+nort1506	North Central Alacufan	Kawesqar	kawe1237	2	glottolog_depth	Alacalufan			Alacalufe-Central, Qawasqar
+west2399	West Bahnaric	Austroasiatic	aust1305	2	glottolog_depth				Alak, Lawi
+east2496	Eastern Sepik Hill	Sepik	sepi1257	2	glottolog_depth	Sepik Hill			Alamblak, Kaningra
+aleu1261	Aleutic	Eskimo-Aleut	eski1264	2	glottolog_depth	Aleut			Aleut, Mednyj Aleut
+huar1251	Huarpean	Huarpean	huar1251	2	glottolog_depth	Huarpe			Allentiac, Millcayac
+leni1237	Linngithigh-Alngith	Pama-Nyungan	pama1250	2	glottolog_depth	Northern Pama-Nyungan			Alngith, Linngithigh
+weri1254	Weric	Kunimaipan	kuni1270	2	glottolog_depth	Goilalan			Amam, Weri
+iwai1246	Iwaidjan Proper	Iwaidjan Proper	iwai1246	2	glottolog_depth	Iwaidjan	False	70.2265	Amurdak, Mawng
+hara1260	Harakmbut	Harakmbut	hara1260	2	glottolog_depth	Harakmbet	True	7.3976	Amarakaeri, Huachipaeri
+east2864	East Keram	Keram	kera1258	2	glottolog_depth	Botin	True	5.3258	Ambakich, Ap Ma
+ambu1246	Ambulas-Hanga-Hundi	Ndu	nduu1242	2	glottolog_depth	Ndu	True	0.0297	Ambulas, Hanga Hundi
+fura1235	Furan	Furan	fura1235	2	glottolog_depth		True	12.6196	Amdang, Fur
+amem1235	Ame-Manda	Western Daly	west2434	2	glottolog_depth	Wagaydy			Ami, Manda (Australia)
+cent2103	Central East Formosan	Austronesian	aust1307	2	glottolog_depth	East Formosan			Amis, Sakizaya
+karb1240	Karbic	Sino-Tibetan	sino1245	2	glottolog_depth	Kuki-Chin	True	0.1064	Amri Karbi, Hills Karbi
+amto1249	Amto-Musan	Amto-Musan	amto1249	2	glottolog_depth				Amto, Siawi
+yand1256	Yanda-Ana	Dogon	dogo1299	2	glottolog_depth		True	0.3474	Ana Tinga Dogon, Yanda Dom Dogon
+mara1421	Marauia-Castana	Arawakan	araw1281	2	glottolog_depth				Anauyá, Yabaâna-Mainatari
+unun9983	Unclassified Huitotoan	Huitotoan	huit1251	2	glottolog_depth				Andoquero, Coeruna
+arab1396	Arabela-Andoa	Zaparoan	zapa1251	2	glottolog_depth	Zaparoan			Andoa, Arabela
+dori1247	Doriri-Abia	Yareban	yare1250	2	glottolog_depth		True	0.4811	Aneme Wake, Moikodi
+gong1256	Kefoid	Ta-Ne-Omotic	gong1255	2	glottolog_depth	North Omotic	True	0.1349	Anfillo, Boro (Ethiopia)
+sena1264	Senagi	Senagi	sena1264	2	glottolog_depth	Senagi	True	9.456	Angor, Dera (Indonesia)
+lowe1423	Lower Sepik	Lower Sepik-Ramu	lowe1437	2	glottolog_depth	Lower Sepik	True	0.0643	Angoram, Chambri
+wubu1239	Wubuy-Anindilyakwa	Gunwinyguan	gunw1250	2	glottolog_depth	Anindilyakwa			Anindilyakwa, Wubuy
+unun9901	Unclassified Chocoan	Chocoan	choc1280	2	glottolog_depth				Anserma, Caramanta
+mrui1235	Mruic	Sino-Tibetan	sino1245	2	glottolog_depth				Anu-Hkongso, Mru
+uncl1518	Unclassified Bolivian Arawakan	Arawakan	araw1281	2	glottolog_depth				Apolista, Magiana
+arab1266	Arabana-Wangganguru	Pama-Nyungan	pama1250	2	glottolog_depth	Central Pama-Nyungan			Arabana, Wangganguru
+uncl1521	Unclassified Caribbean Arawakan	Arawakan	araw1281	2	glottolog_depth				Araicu, Uirina
+kemb1251	Kemberanic	South Bird's Head Family	sout1516	2	glottolog_depth	South Bird's Head Proper	True	0.1979	Dombano, Kemberano
+ariw1234	Ari-Waruna	Suki-Gogodala	suki1244	2	glottolog_depth		True	1.7305	Ari, Waruna
+pawn1253	Pawnee-Arikara	Caddoan	cadd1255	2	glottolog_depth	Caddoan	True	0.3044	Arikara, Pawnee
+arik1263	Arikemic	Tupian	tupi1275	2	glottolog_depth	Arikem			Arikem, Karitiâna
+jabu1249	Jabuti	Nuclear-Macro-Je	nucl1710	2	glottolog_depth	Jabutí	True	0.0527	Arikapú, Djeoromitxí
+arin1242	Arin-Pumpokol	Yeniseian	yeni1252	2	glottolog_depth				Arin, Pumpokol
+tewa1261	Tewa	Kiowa-Tanoan	kiow1265	2	glottolog_depth	Kiowa-Tanoan			Arizona Tewa, Rio Grande Tewa
+ewen1234	Ewenic	Tungusic	tung1282	2	glottolog_depth	Tungusic			Arman, Even
+nort3238	Northern Luzon	Austronesian	aust1307	2	glottolog_depth	Northern Luzon			Arta, Iloko
+roto1248	Rotokas-Askopan	North Bougainville	nort2933	2	glottolog_depth	West Bougainville			Askopan, Rotokas
+mang1424	Mangbetuic	Central Sudanic	cent2225	2	glottolog_depth	Mangbetu			Asoa, Mangbetu
+tama1368	Tama-Sungor	Tamaic	tama1329	2	glottolog_depth	Taman			Assangori, Tama (Chad)
+atay1246	Atayalic	Austronesian	aust1307	2	glottolog_depth	Atayalic			Atayal, Seediq
+zapa1252	Zaparo-Abishira	Zaparoan	zapa1251	2	glottolog_depth	Zaparoan			Aushiri, Záparo
+simo1242	Simog-Daonda	Border	bord1247	2	glottolog_depth				Auwe, Daonda
+auye1239	Auye-Dao	Nuclear Trans New Guinea	nucl1709	2	glottolog_depth				Auye, Dao
+sime1243	Simekuic	South Bougainville	sout2948	2	glottolog_depth				Avaipa, Simeku
+unun9945	Unclassified Barbacoan	Barbacoan	barb1265	2	glottolog_depth	Barbacoan			Awa-Cuaiquer, Canari
+bayo1259	Bayono-Awbono	Bayono-Awbono	bayo1259	2	glottolog_depth				Awbono, Bayono
+taik1254	Taikat-Awyi	Border	bord1247	2	glottolog_depth	Border	True	7.1352	Awyi, Taikat
+zamu1244	Zamuco-Ayoreo	Zamucoan	zamu1243	2	glottolog_depth	Zamucoan			Ayoreo, Zamuco
+cent2106	Central Western Plains	Austronesian	aust1307	2	glottolog_depth				Babuza, Papora-Hoanya
+ngka1236	Ngkantr	Yam	more1255	2	glottolog_depth	Morehead and Upper Maro Rivers	True	0.0329	Ngkontar Baedi, Ngkontar Ngkolmpu
+jaad1234	Jaad	Atlantic-Congo	atla1278	2	glottolog_depth	Biafada			Jaad-Badyara, Biafada
+paha1254	Southern Kra	Tai-Kadai	taik1256	2	glottolog_depth	Kadai			Baha Buyang, Laha (Viet Nam)
+nucl1641	Nuclear West Bomberai	West Bomberai	west2604	2	glottolog_depth	West Bomberai	True	0.5586	Baham, Iha
+tamp1256	Tampuon-Bahnar	Austroasiatic	aust1305	2	glottolog_depth	Bahnaric	True	0.042	Bahnar, Tampuan
+baib1250	Baibai-Fas	Baibai-Fas	baib1250	2	glottolog_depth	Baibai-Fas			Baibai, Momu-Fas
+unun9910	Unclassified Benue-Congo	Atlantic-Congo	atla1278	2	glottolog_depth				Baissa Fali, Tita
+bakw1242	Bakwe-Wane	Kru	krua1234	2	glottolog_depth				Bakwé, Wané
+ramu1234	Ramu	Lower Sepik-Ramu	lowe1437	2	glottolog_depth	Annaberg	False	0.1086	Banaro, Rao
+miji1239	Miji	Sino-Tibetan	sino1245	2	glottolog_depth				Bangru, Sajolang
+sout3155	Southern Sangiric	Austronesian	aust1307	2	glottolog_depth	Sangiric			Bantik, Ratahan
+kare1350	Karey-Barakai	Austronesian	aust1307	2	glottolog_depth				Barakai, Karey
+sout3006	Barasano-Eduria-Macuna	Tucanoan	tuca1253	2	glottolog_depth	Tucanoan	True	0.1342	Barasana-Eduria, Macuna
+bard1254	Bardic	Nyulnyulan	nyul1248	2	glottolog_depth	Nyulnyulan			Bardi, Djawi
+bare1282	Bareic	Arawakan	araw1281	2	glottolog_depth	Inland Northern Arawakan			Baré, Guinau
+nucl1796	Nuclear Barian	Nilotic	nilo1247	2	glottolog_depth	Nilotic			Bari, Kuku
+muru1265	Muruwaric	Pama-Nyungan	pama1250	2	glottolog_depth	Southeastern Pama-Nyungan			Barranbinya, Muruwari
+baru1271	Baruya-Simbari	Angan	anga1289	2	glottolog_depth	Angan	True	0.7578	Baruya, Simbari
+nort2696	North Kipchak	Turkic	turk1311	2	glottolog_depth	Turkic	True	0.6514	Bashkir, Tatar
+nort3161	North-West Ometo	Ta-Ne-Omotic	gong1255	2	glottolog_depth	North Omotic	True	0.1504	Basketo, Male (Ethiopia)
+unun9962	Unclassified Bodish	Sino-Tibetan	sino1245	2	glottolog_depth				Basum, Songlin
+batu1262	Batuley-Mariri	Austronesian	aust1307	2	glottolog_depth				Batuley, Mariri
+boli1260	Bolivian Arawakan	Arawakan	araw1281	2	glottolog_depth	Bolivia-Parana	False	0.2965	Baure, Terena-Kinikinao-Chane
+bauw1241	Bauwakic	Mailuan	mail1249	2	glottolog_depth				Bauwaki, Ooku
+rock1234	Rockhampton-Gladstone	Pama-Nyungan	pama1250	2	glottolog_depth	Northern Pama-Nyungan			Bayali, Dharumbal
+nyal1252	Nyala Dajuic	Dajuic	daju1249	2	glottolog_depth	Daju			Baygo, Dar Fur Daju
+east2546	Eastern Miwokan	Miwok-Costanoan	miwo1274	2	glottolog_depth	Miwok			Bay Miwok, Plains Miwok
+etor1234	Etoro-Bedamini	Bosavi	bosa1245	2	glottolog_depth	Bosavi	True	0.0797	Beami, Edolo
+gong1255	Ta-Ne-Omotic	Ta-Ne-Omotic	gong1255	2	glottolog_depth	North Omotic	True	0.7231	Bench, Yemsa
+nort1442	North-Eastern Tasmanian	North-Eastern Tasmanian	nort1442	2	glottolog_depth				Ben-Lomond-Cape-Portland, North Midlands Tasmanian
+east2432	Eastern Saharan	Saharan	saha1256	2	glottolog_depth	Eastern Saharan	True	0.324	Berti, Beria
+beta1259	Betaf-Vitou	Tor-Orya	toro1256	2	glottolog_depth		True	0.0101	Betaf, Vitou
+biag1235	Biage-Mountain Koiali	Koiarian	koia1260	2	glottolog_depth	Koiarian			Biage, Mountain Koiali
+nucl1621	Marindic	Anim	anim1240	2	glottolog_depth	Marind			Bian Marind, Marind
+kuni1270	Kunimaipan	Kunimaipan	kuni1270	2	glottolog_depth	Goilalan			Biangai, Kunimaipa
+mien1242	Mienic	Hmong-Mien	hmon1336	2	glottolog_depth		True	0.6769	Biao-Jiao Mien, Dzao Min
+bijo1239	Bijogo	Atlantic-Congo	atla1278	2	glottolog_depth				Kanyaki-Kagbaaga-Kajoko Bidyogo, Kamona Bijogo
+yuga1243	Yugambal-Bigambal	Pama-Nyungan	pama1250	2	glottolog_depth				Bigambal, Yugambal
+sout2988	Southeastern Siouan	Siouan	siou1252	2	glottolog_depth	Core Siouan	True	0.0489	Biloxi, Ofo
+bima1248	Bima-Lembata	Austronesian	aust1307	2	glottolog_depth	Central Malayo-Polynesian			Bima, Sangar
+bina1273	Binaharic	Mailuan	mail1249	2	glottolog_depth				Binahari-Ma, Binahari-Neme
+cent2232	Central Nubian	Nubian	nubi1251	2	glottolog_depth	Nubian			Birked, Kenuzi-Dongola
+oute1259	Outer Enga	Nuclear Trans New Guinea	nucl1709	2	glottolog_depth				Bisorio, Nete
+bunm1234	Bun-Mundukumo	Yuat	yuat1252	2	glottolog_depth		True	1.0492	Biwat, Bun
+toli1244	Tolitoli	Austronesian	aust1307	2	glottolog_depth				Boano (Sulawesi), Totoli
+guto1244	Gutob-Remo	Austroasiatic	aust1305	2	glottolog_depth	Munda	True	0.1071	Bodo Gadaba, Bondo
+nduu1242	Ndu	Ndu	nduu1242	2	glottolog_depth	Ndu	True	1.6046	Boikin, Ngala
+bolg1249	Bolgar	Turkic	turk1311	2	glottolog_depth	Turkic			Bolgarian, Chuvash
+boly1240	Pakanic	Austroasiatic	aust1305	2	glottolog_depth		True	0.0561	Bolyu, Bugan
+yawa1262	Yawaperi	Cariban	cari1283	2	glottolog_depth				Bonari, Waimiri-Atroari
+yand1255	Yanda-Bondum-Tebul	Dogon	dogo1299	2	glottolog_depth		True	0.5276	Najamba-Kindige, Tebul Ure Dogon
+sara1341	Sara-Bongo-Bagirmi	Central Sudanic	cent2225	2	glottolog_depth	Bongo-Bagirmi	True	0.1618	Bongo, Sinyar
+iter1240	Iteri-Bo	Left May	left1242	2	glottolog_depth				Bo (Papua New Guinea), Iteri
+bora1262	Boran	Boran	bora1262	2	glottolog_depth	Boran	True	4.1537	Bora, Muinane
+east2361	Eastern Tani	Sino-Tibetan	sino1245	2	glottolog_depth	Tani			Bori-Karko, Mising-Padam-Miri-Minyong
+boro1285	Bororo-Otuke	Bororoan	boro1281	2	glottolog_depth	Bororoan			Bororo, Otuke
+melp1239	Melpa-Tembagla	Nuclear Trans New Guinea	nucl1709	2	glottolog_depth				Bo-Ung, Melpa
+kaya1316	Kayaw-Manu	Sino-Tibetan	sino1245	2	glottolog_depth				Brek Karen, Manumanaw Karen
+sout1293	South-Eastern Tasmanian	South-Eastern Tasmanian	sout1293	2	glottolog_depth				Bruny Island, South-Eastern-Tasmanian-Hinterland
+thaw1238	Thawa	Pama-Nyungan	pama1250	2	glottolog_depth	Western Pama-Nyungan			Bularnu, Warluwara
+dana1255	Dana-Opo	Koman	koma1264	2	glottolog_depth				Dana, Opo
+buna1274	Bunaban	Bunaban	buna1274	2	glottolog_depth	Bunuban	True	4.6701	Bunaba, Gooniyandi
+mari1433	Marienberg	Nuclear Torricelli	nucl1708	2	glottolog_depth		False	0.9633	Buna, Bungain
+bure1238	Bureran	Maningrida	mani1293	2	glottolog_depth	Burarran	True	1.2083	Burarra, Guragone
+bura1294	Burate-Wate	Geelvink Bay	geel1240	2	glottolog_depth		True	4.7508	Burate, Tunggare
+saba1280	Sabakor	Nuclear Trans New Guinea	nucl1709	2	glottolog_depth				Buruwai, Kamberau
+bund1258	Burui-Gaikundi	Ndu	nduu1242	2	glottolog_depth				Burui, Gaikundi
+taul1250	Taulil-Butam	Taulil-Butam	taul1250	2	glottolog_depth				Butam, Taulil
+geba1236	Geba-Bwe	Sino-Tibetan	sino1245	2	glottolog_depth	Karen	True	0.1106	Bwe Karen, Geba Karen
+mata1287	Matagalpan	Misumalpan	misu1242	2	glottolog_depth				Cacaopera, Matagalpa
+kaku1242	Kakua-Nukak	Kakua-Nukak	kaku1242	2	glottolog_depth	Cacua-Nukak	True	7.4533	Kakua, Nukak Makú
+cahu1267	Cahuarano-Iquito	Zaparoan	zapa1251	2	glottolog_depth	Zaparoan	True	0.303	Cahuarano, Iquito
+caja1240	Cajamarca-Lambayeque Quechua	Quechuan	quec1387	2	glottolog_depth	Quechuan	True	0.2567	Cajamarca Quechua, Lambayeque Quechua
+cari1286	Cariai-Manao	Arawakan	araw1281	2	glottolog_depth				Cariay, Manao
+main1279	Mainline Pano	Pano-Tacanan	pano1259	2	glottolog_depth	Panoan	True	6.4801	Cashibo-Cacataibo, Kaxararí
+cata1285	Catawban	Siouan	siou1252	2	glottolog_depth	Catawban			Catawba, Woccon
+tupe1234	Tupe	Aymaran	ayma1253	2	glottolog_depth	Aymaran			Cauqui of Cachuy, Jaqaru
+cent2305	Central Nicobar	Austroasiatic	aust1305	2	glottolog_depth	Nicobarese			Central Nicobarese, Southern Nicobarese
+sout3254	South-Central Bai	Sino-Tibetan	sino1245	2	glottolog_depth	Bai	True	0.0221	Central Bai, Southern Bai
+okin1244	Okinawa	Japonic	japo1237	2	glottolog_depth	Japanese	True	0.024	Central Okinawan, Kunigami
+nort2965	Northern-Central Pomoan	Pomoan	pomo1273	2	glottolog_depth	Pomoan	True	11.4614	Central Pomo, Northern Pomo
+nucl1667	Central-Southern Aymara	Aymaran	ayma1253	2	glottolog_depth	Aymaran	True	0.1721	Central Aymara, Southern Aymara
+nort3271	North-Central Mansi	Uralic	ural1272	2	glottolog_depth	Ugric			Central Mansi, Northern Mansi
+caya1244	Cayapa-Colorado	Barbacoan	barb1265	2	glottolog_depth	Barbacoan	True	0.1609	Cha'palaa, Tsafiki
+coas1302	Cumana	Cariban	cari1283	2	glottolog_depth				Chaima, Cumanagoto
+cham1317	Chamicuro-Morike	Arawakan	araw1281	2	glottolog_depth				Chamicuro, Morike
+yuat1252	Yuat	Yuat	yuat1252	2	glottolog_depth		True	0.478	Changriwa, Mekmek
+dora1241	Doracic	Chibchan	chib1249	2	glottolog_depth				Changuena, Dorasque
+chow1240	Chowra-Teressa	Austroasiatic	aust1305	2	glottolog_depth				Chaura, Teressa
+cahu1265	Cahuapanan	Cahuapanan	cahu1265	2	glottolog_depth	Cahuapanan	True	4.9043	Shawi, Jebero
+chec1244	Chechen-Ingush	Nakh-Daghestanian	nakh1245	2	glottolog_depth	Nakh	True	0.0275	Chechen, Ingush
+woga1248	Wogamusin-Chenapian	Sepik	sepi1257	2	glottolog_depth	Upper Sepik			Chenapian, Wogamusin
+algo1257	Algonquian	Algic	algi1248	2	glottolog_depth	Algonquian	False	0.8646	Cheyenne, Menominee
+mang1426	Manguean	Otomanguean	otom1299	2	glottolog_depth		True	0.0339	Chiapanec, Mangue
+west2614	Western Muskogean	Muskogean	musk1252	2	glottolog_depth	Muskogean	True	0.7386	Chickasaw, Choctaw
+huas1241	Huastecan Mayan	Mayan	maya1287	2	glottolog_depth	Mayan	True	0.0734	Chicomuceltec, Huastec
+chim1311	Chimakuan	Chimakuan	chim1311	2	glottolog_depth	Chimakuan			Chimakum, Quileute
+lowe1438	Lower Chinookan	Chinookan	chin1490	2	glottolog_depth	Chinookan			Creolized Grand Ronde Chinook Jargon, Clatsop-Shoalwater Chinook
+huan1255	Central Quechua IIA	Quechuan	quec1387	2	glottolog_depth				Chincha Quechua, Yauyos Quechua
+uruc1242	Uru-Chipaya	Uru-Chipaya	uruc1242	2	glottolog_depth	Uru-Chipaya	True	14.2152	Chipaya, Uru
+chiq1253	Chiquitano	Chiquitano	chiq1253	2	glottolog_depth	Chiquito			Lomeriano-Ignaciano Chiquitano, Migueleño Chiquitano
+hibi1242	Hibito-Cholon	Hibito-Cholon	hibi1242	2	glottolog_depth				Cholón, Hibito
+chua1249	Chuave-Nomane	Nuclear Trans New Guinea	nucl1709	2	glottolog_depth	Chimbu			Chuave, Nomane
+chug1251	Chug-Lish	Sino-Tibetan	sino1245	2	glottolog_depth				Duhumbi, Khispi
+koly1247	Kolymic	Yukaghir	yuka1259	2	glottolog_depth	Yukaghir			Chuvantsy, Southern Yukaghir
+stra1246	Straits Salish	Salishan	sali1255	2	glottolog_depth	Central Salish	True	1.9245	Clallam, Northern Straits Salish
+west2633	Western Miwokan	Miwok-Costanoan	miwo1274	2	glottolog_depth	Miwok	True	0.1201	Coast Miwok, Lake Miwok
+coos1248	Coosan	Coosan	coos1248	2	glottolog_depth	Coosan			Hanis, Miluk
+egyp1245	Egyptian	Afro-Asiatic	afro1255	2	glottolog_depth	Egyptian-Coptic			Coptic, Egyptian (Ancient)
+puri1261	Puri-Coroado	Puri-Coroado	puri1261	2	glottolog_depth				Coroado-Puri, Puri
+inla1265	Inland Tsamosan	Salishan	sali1255	2	glottolog_depth	Tsamosan	True	0.774	Cowlitz, Upper Chehalis
+musk1252	Muskogean	Muskogean	musk1252	2	glottolog_depth	Muskogean	False	3.9465	Creek, Mikasuki
+east2805	East Germanic	Indo-European	indo1319	2	glottolog_depth				Crimean Gothic, Gothic
+miss1252	Missouri River Siouan	Siouan	siou1252	2	glottolog_depth	Core Siouan	True	0.2015	Crow, Hidatsa
+madi1263	Madiha	Arawan	araw1282	2	glottolog_depth	Arauan	True	0.2168	Culina, Deni
+nucl1241	Nuclear Hlaic	Tai-Kadai	taik1256	2	glottolog_depth	Hlai	True	0.2229	Cun, Hlai
+daat1235	Daats'iin-Southern Gumuz	Gumuz	gumu1250	2	glottolog_depth				Daats'iin, Southern Gumuz
+tebe1251	Teberan	Teberan	tebe1251	2	glottolog_depth	Teberan	True	9.2439	Dadibi, Folopa
+sout3381	Southwest Dagan	Dagan	daga1274	2	glottolog_depth	Dagan			Daga, Mapena
+ngil1241	Buram Hill Chain	Narrow Talodi	narr1279	2	glottolog_depth	Talodi	True	0.273	Dagik, Ngile
+nuuu1241	Ghaap-Kalahari	Tuu	tuuu1241	2	glottolog_depth				Danster !Ui, N||ng
+yarl1237	Yarli-Baagandji	Pama-Nyungan	pama1250	2	glottolog_depth	Central Pama-Nyungan			Paakantyi, Yarli
+tebu1238	Tebu	Saharan	saha1256	2	glottolog_depth		True	12.4535	Dazaga, Tedaga
+zarm1240	Zarma-Kaado-Dendi	Songhay	song1307	2	glottolog_depth	Songhay	True	1.8656	Dendi (Benin), Zarma
+bodo1279	Bodo-Garo	Sino-Tibetan	sino1245	2	glottolog_depth	Bodo-Garo	False	0.4198	Deori, Garo
+dhim1245	Dhimalish	Sino-Tibetan	sino1245	2	glottolog_depth	Dhimalic			Dhimal, Toto
+mish1241	Digarish	Sino-Tibetan	sino1245	2	glottolog_depth	Digaroan	True	0.1281	Tawra, Idu
+cent2401	Central Dagan	Dagan	daga1274	2	glottolog_depth		False	2.4143	Dima, Maiwa (Papua New Guinea)
+maka1326	Makah-Nitinat	Wakashan	waka1280	2	glottolog_depth	Southern Wakashan	True	2.9051	Ditidaht, Makah
+djam1254	Yirram	Mirndi	mirn1241	2	glottolog_depth	Jaminjungan			Jaminjung-Ngaliwurru, Nungali
+west2440	Western-Inland Yolngu	Pama-Nyungan	pama1250	2	glottolog_depth	Western Pama-Nyungan	True	0.1096	Djinba, Djinang
+nort2688	North Siberian Turkic	Turkic	turk1311	2	glottolog_depth	Turkic	True	1.1514	Dolgan, Sakha
+kres1241	Kreshic	Kresh-Aja	kres1240	2	glottolog_depth	Kresh			Dongo Kresh, Kresh-Woro
+manu1261	Manubaran	Manubaran	manu1261	2	glottolog_depth		True	5.304	Doromu-Koki, Maria (Papua New Guinea)
+doso1238	Doso-Turumsa	Doso-Turumsa	doso1238	2	glottolog_depth				Doso, Turumsa
+nama1270	Nama-Dre	Yam	more1255	2	glottolog_depth				Dre, Nama (Papua New Guinea)
+guno1235	Gunong	Sino-Tibetan	sino1245	2	glottolog_depth	Nungish	True	0.2299	Drung, Nung (Myanmar)
+west2611	Western Pauwasi	Pauwasi	pauw1244	2	glottolog_depth		True	3.2701	Dubu, Towei
+inan1242	Inanwatan	Inanwatan	inan1242	2	glottolog_depth	Inanwatan			Duriankere, Suabo
+yidi1249	Yidinic	Pama-Nyungan	pama1250	2	glottolog_depth	Northern Pama-Nyungan	True	0.1622	Dyaabugay, Yidiñ
+nyul1250	Nyulnyulic	Nyulnyulan	nyul1248	2	glottolog_depth	Nyulnyulan			Dyaberdyaber, Nyulnyul
+macl1239	Macleay-New England	Pama-Nyungan	pama1250	2	glottolog_depth				Dyangadi, Nganyaywana
+yawu1243	Yawuric	Nyulnyulan	nyul1248	2	glottolog_depth	Nyulnyulan			Dyugun, Yawuru
+nucl1297	Nuclear Katu	Austroasiatic	aust1305	2	glottolog_depth				Eastern Katu, Western Katu
+kere1287	Keresan	Keresan	kere1287	2	glottolog_depth	Keresan	True	0.1826	Eastern Keres, Western Keres
+mari1278	Mari	Uralic	ural1272	2	glottolog_depth	Mari	True	8.3799	Eastern Mari, Western Mari
+limb1267	Limba	Atlantic-Congo	atla1278	2	glottolog_depth				East Limba, West-Central Limba
+aruu1241	Aru	Austronesian	aust1307	2	glottolog_depth	Central Malayo-Polynesian			East Tarangan, West Tarangan
+inui1246	Inuit	Eskimo-Aleut	eski1264	2	glottolog_depth	Eskimo	True	0.0186	Eastern Canadian Inuktitut, Western Canadian Inuktitut
+cent2110	Central Tariku	Lakes Plain	lake1255	2	glottolog_depth	Lakes Plain	True	0.0111	Edopi, Iau
+meew1234	Mee-Wodani	Nuclear Trans New Guinea	nucl1709	2	glottolog_depth	Wissel Lakes-Kemandoga			Ekari, Wolani
+pana1309	Panama-Baudo-Atrato	Chocoan	choc1280	2	glottolog_depth	Choco			Emberá-Baudó, Northern Emberá
+uppe1440	Upper San Juan	Chocoan	choc1280	2	glottolog_depth	Choco	True	0.9278	Emberá-Tadó, Emberá-Chamí
+urni1238	Urninganggic	Giimbiyu	giim1238	2	glottolog_depth		True	0.3332	Erre, Urningangg
+mord1256	Mordvin	Uralic	ural1272	2	glottolog_depth	Mordvin	True	12.5392	Erzya, Moksha
+bara1376	Baraic	Koiarian	koia1260	2	glottolog_depth	Koiarian			Ese, Ömie
+opat1247	Opata-Eudeve	Uto-Aztecan	utoa1244	2	glottolog_depth	Opata-Eudeve			Eudeve, Teguima
+nort3147	Northern Tungusic	Tungusic	tung1282	2	glottolog_depth	Tungusic	False	0.0141	Evenki, Oroqen
+east2774	East Khanty	Uralic	ural1272	2	glottolog_depth				Vach-Vasjugan, Surgut Khanty
+fata1246	Fataluku-Oirata	Timor-Alor-Pantar	timo1261	2	glottolog_depth		True	0.9482	Fataluku, Oirata
+fayu1239	Fayu-Kirikiri	Lakes Plain	lake1255	2	glottolog_depth	Lakes Plain	True	0.6724	Fayu, Kirikiri
+cent1397	Central Totonacan	Totonacan	toto1251	2	glottolog_depth				Filomeno Mata Totonac, Ozumatlán Totonac
+east2499	East Kutubu	East Kutubu	east2499	2	glottolog_depth	Kutubuan			Fiwaga, Foi
+east2500	East Lakes Plain	Lakes Plain	lake1255	2	glottolog_depth				Abawiri, Taworta
+enet1250	Enets	Uralic	ural1272	2	glottolog_depth				Forest Enets, Tundra Enets
+nene1251	Nenets	Uralic	ural1272	2	glottolog_depth	Samoyedic			Forest Nenets, Tundra Nenets
+east2416	Eastern Bete	Kru	krua1234	2	glottolog_depth				Gagnoa Bété, Kouya
+gale1261	Galela-Loloda	North Halmahera	nort2923	2	glottolog_depth	North Halmaheran	True	0.5104	Galela, Loloda-Laba
+guia1242	Guianan	Cariban	cari1283	2	glottolog_depth	Cariban			Galibi Carib, Palmela
+gana1279	Ganaic	Pama-Nyungan	pama1250	2	glottolog_depth				Birrdhawal, Ganai
+garr1260	Garrwan	Garrwan	garr1260	2	glottolog_depth	Garrwan			Garrwa, Wanyi
+cent2228	Central Iwaidjic	Iwaidjan Proper	iwai1246	2	glottolog_depth	Iwaidjan			Garig-Ilgar, Iwaidja
+bili1253	Bilic	Austronesian	aust1307	2	glottolog_depth	Bilic			Giangan, Tiruray
+nivk1234	Nivkh	Nivkh	nivk1234	2	glottolog_depth	Nivkh			Amur Nivkh, Nighvng
+sout3380	Southeast Dagan	Dagan	daga1274	2	glottolog_depth				Ginuman, Kanasi
+nish1242	Nishga-Gitxsan	Tsimshian	tsim1258	2	glottolog_depth	Tsimshianic			Gitxsan, Nisga'a
+atla1278	Atlantic-Congo	Atlantic-Congo	atla1278	2	glottolog_depth	Mel			Gola, Mansoanka
+sino1245	Sino-Tibetan	Sino-Tibetan	sino1245	2	glottolog_depth				Gongduk, Olekha
+koit1243	Koita-Koiari	Koiarian	koia1260	2	glottolog_depth	Koiarian			Grass Koiari, Koitabu
+gres1241	Gresi-Kemtuik	Nimboranic	nimb1257	2	glottolog_depth	Nimboran			Gresi, Kemtuik
+guah1254	Guahibo-Playero	Guahiboan	guah1252	2	glottolog_depth	Guahiban	True	0.1871	Sikuani, Playero
+coco1262	Coconucan	Barbacoan	barb1265	2	glottolog_depth	Barbacoan	True	7.0269	Guambiano, Totoro
+pare1275	Parenic	Arawakan	araw1281	2	glottolog_depth	Alto-Orinoco	True	0.1301	Baniva de Maroa, Yavitero-Pareni
+pama1251	Paman	Pama-Nyungan	pama1250	2	glottolog_depth	Northern Pama-Nyungan			Gugadj, Mbara-Yanga
+cent2231	Central Gunwinyguan	Gunwinyguan	gunw1250	2	glottolog_depth	Gunwinygic	True	0.4294	Bininj Kun-Wok, Ngalkbun
+guwa1241	Guwa-Yanda	Pama-Nyungan	pama1250	2	glottolog_depth				Guwa, Yanda
+nort3245	North Khoekhoe	Khoe-Kwadi	khoe1240	2	glottolog_depth	Khoe-Kwadi			Hai//om-Akhoe, Nama (Namibia)
+hame1241	Hamer-Karo	South Omotic	sout2845	2	glottolog_depth	South Omotic	True	0.4901	Hamer-Banna, Karo (Ethiopia)
+kapa1251	Kapau-Menya	Angan	anga1289	2	glottolog_depth	Angan	True	0.0243	Hamtai, Menya
+piaw1238	Piawi	Piawi	piaw1238	2	glottolog_depth	Piawi			Haruai, Pinai-Hagahai
+hata1242	Hatam-Mansim	Hatam-Mansim	hata1242	2	glottolog_depth	Hatam			Hatam, Mansim
+insu1253	Insular Chonan	Chonan	chon1288	2	glottolog_depth	Chon Proper			Haush, Selk'nam
+paii1252	Pai	Cochimi-Yuman	coch1271	2	glottolog_depth	Yuman			Havasupai-Walapai-Yavapai, Paipai
+kwak1268	Kwakiutlan	Wakashan	waka1280	2	glottolog_depth	Northern Wakashan	True	0.1385	Heiltsuk-Oowekyala, Kwak'wala
+heyo1241	Heyo-Yahang	Nuclear Torricelli	nucl1708	2	glottolog_depth		True	1.9488	Heyo, Yahang
+waiw1245	Waiwaian	Cariban	cari1283	2	glottolog_depth	Cariban	True	5.5203	Hixkaryána, Waiwai
+winn1245	Winnebago-Chiwere	Siouan	siou1252	2	glottolog_depth	Core Siouan			Ho-Chunk, Iowa-Oto
+hoya1236	Hoyaic	Anim	anim1240	2	glottolog_depth				Hoia Hoia-Ukusi-Koperami, Hoyahoya-Matakaia
+east2768	Eastern-Western Armenian	Indo-European	indo1319	2	glottolog_depth	Armenian	True	0.0246	Western Armenian, Eastern Armenian
+hozo1235	Hozo-Seze	Blue Nile Mao	maoo1243	2	glottolog_depth		True	1.7177	Hozo, Seze
+taaa1242	Taa	Tuu	tuuu1241	2	glottolog_depth	=|Hoan			East Taa, West !Xoon
+jauj1237	Jauja-Huanca	Quechuan	quec1387	2	glottolog_depth		True	0.1164	Huaylla Wanca Quechua, Jauja Wanca Quechua
+arau1255	Araucanian	Araucanian	arau1255	2	glottolog_depth	Araucanian			Huilliche, Mapudungun
+hume1245	Humene-Kwale	Kwalean	kwal1257	2	glottolog_depth		True	25.4807	Humene, Uare
+hung1287	Hungaric	Uralic	ural1272	2	glottolog_depth	Ugric			Hungarian, Old Hungarian
+cuoi1242	Cuoi	Austroasiatic	aust1305	2	glottolog_depth				Hung, Tho
+hupy1235	Hup-Yuhup	Naduhup	nada1235	2	glottolog_depth	Nadahup	True	0.8546	Hup, Yuhup
+hurr1239	Hurro-Urartian	Hurro-Urartian	hurr1239	2	glottolog_depth				Hurrian, Urartian
+east2733	Lakalei-Idate	Austronesian	aust1307	2	glottolog_depth				Idaté, Lakalei
+cent2337	Central Alaya-Athima	Pama-Nyungan	pama1250	2	glottolog_depth				Ikaranggal, Tagalaka
+auag1234	Aua-Gawil	Nuclear Trans New Guinea	nucl1709	2	glottolog_depth	Chimbu			Imbongu, Umbu-Ungu
+inga1253	Ingain-Kimda	Nuclear-Macro-Je	nucl1710	2	glottolog_depth				Ingain, Kimda
+nucl1662	Kujubim-More	Chapacuran	chap1271	2	glottolog_depth				Itene, Kuyubi
+mopa1242	Mopan-Itza	Mayan	maya1287	2	glottolog_depth	Mayan	True	0.1635	Itzá, Mopán Maya
+yami1257	Yami-Itbayat	Austronesian	aust1307	2	glottolog_depth	Batanic			Itbayat, Yami
+iwam1260	Iwamic	Sepik	sepi1257	2	glottolog_depth	Upper Sepik	True	0.7511	Iwam, Sepik Iwam
+chor1274	Chorote	Matacoan	mata1289	2	glottolog_depth		True	0.3595	Iyojwa'ja Chorote, Iyo'wujwa Chorote
+plai1257	Plains Dogon	Dogon	dogo1299	2	glottolog_depth	Dogon	True	0.014	Jamsay Dogon, Toro Tegu Dogon
+yukp1243	Yukpan	Cariban	cari1283	2	glottolog_depth	Cariban			Japrería, Yukpa
+jara1244	Jarawa-Onge	Jarawa-Onge	jara1244	2	glottolog_depth	South Andamanese	True	2.4478	Jarawa (India), Önge
+kore1284	Koreanic	Koreanic	kore1284	2	glottolog_depth				Jejueo, Korean
+kiow1265	Kiowa-Tanoan	Kiowa-Tanoan	kiow1265	2	glottolog_depth	Kiowa-Tanoan	False	1.9705	Towa, Kiowa
+katl1236	Katla-Julud	Katla-Tima	katl1246	2	glottolog_depth	Katla-Tima			Julud, Katla
+japu1237	Japura-Ica	Arawakan	araw1281	2	glottolog_depth				Jumana, Passe
+maba1272	Southern Burun	Nilotic	nilo1247	2	glottolog_depth		True	0.2007	Jumjum, Mabaan
+sora1256	Sora-Juray	Austroasiatic	aust1305	2	glottolog_depth	Munda	True	0.0139	Juray, Sora
+ticu1244	Ticuna-Yuri	Ticuna-Yuri	ticu1244	2	glottolog_depth				Juri, Ticuna
+yuru1262	Yuruna	Tupian	tupi1275	2	glottolog_depth	Tupi-Guaraní	True	0.0154	Jurúna, Xipaya
+mand1470	Mandi-Muniwara	Nuclear Torricelli	nucl1708	2	glottolog_depth		True	0.6491	Juwal, Wiarumus
+jing1260	Jingpho	Sino-Tibetan	sino1245	2	glottolog_depth	Jingpho			Southern Jinghpaw, Northern Jinghpaw
+baal1234	Baale-Olam	Surmic	surm1244	2	glottolog_depth	Surmic			Kacipo-Balesi, Ngaalam
+lama1291	Lamamic	Austroasiatic	aust1305	2	glottolog_depth				Kaco', Romam
+sout2835	South Gonga	Ta-Ne-Omotic	gong1255	2	glottolog_depth	South Omotic	True	0.3684	Kafa, Shekkacho
+sout3260	South Dargwa	Nakh-Daghestanian	nakh1245	2	glottolog_depth				Kajtak, Southwestern Dargwa
+bari1283	Barian	Nilotic	nilo1247	2	glottolog_depth		True	0.0222	Kakwa, Mandari
+tsha1247	Tshanglic	Sino-Tibetan	sino1245	2	glottolog_depth	Bodic			Kalaktang Monpa, Tshangla
+east2872	Eastern Karnic	Pama-Nyungan	pama1250	2	glottolog_depth	Central Pama-Nyungan			Bulloo River, Wilson River (Grey Range)
+gree1280	Greenlandic Inuit	Eskimo-Aleut	eski1264	2	glottolog_depth	Eskimo			Kalaallisut, Tunumiisiut
+kali1307	Kalispel-Spokane	Salishan	sali1255	2	glottolog_depth	Interior Salish	True	5.1358	Kalispel-Pend d'Oreille, Spokane
+galg1238	Kalkatungic	Pama-Nyungan	pama1250	2	glottolog_depth	Northern Pama-Nyungan	True	0.1196	Kalkatungu, Yalarnnga
+kalu1249	Kaluli-Sunia	Bosavi	bosa1245	2	glottolog_depth	Bosavi	True	0.1974	Kaluli, Sonia
+kama1376	Kamas-Selkup	Uralic	ural1272	2	glottolog_depth	Samoyedic	True	2.8663	Kamas-Koibal, Selkup
+kama1359	Kamasa-Susuami	Angan	anga1289	2	glottolog_depth				Kamasa, Susuami
+asma1256	Asmat-Kamoro	Nuclear Trans New Guinea	nucl1709	2	glottolog_depth	Asmat-Kamoro			Kamoro, Sempan
+east2374	Eastern Daly	Eastern Daly	east2374	2	glottolog_depth	Eastern Daly			Kamu, Madngele
+kana1292	Kanakanavu-Saaroa	Austronesian	aust1307	2	glottolog_depth				Kanakanavu, Saaroa
+katu1274	Katukinan	Katukinan	katu1274	2	glottolog_depth	Katukinan			Katukína-Kanamarí, Katawixi
+kand1306	Kandawo-Narak	Nuclear Trans New Guinea	nucl1709	2	glottolog_depth		True	0.113	Kandawo, Narak
+katc1251	Katcha-Kadugli-Miri-Kanga	Kadugli-Krongo	kadu1256	2	glottolog_depth	Kadugli	True	0.1441	Kanga, Katcha-Kadugli-Miri
+madu1247	Maduresic	Austronesian	aust1307	2	glottolog_depth	Malayo-Sumbawan			Kangean, Madurese
+pouy1239	Pouye-Karawa	Sepik	sepi1257	2	glottolog_depth		True	0.2533	Karawa, Pouye
+rama1257	Ramarama	Tupian	tupi1275	2	glottolog_depth	Ramarama			Karo (Brazil), Urumi
+mith1235	Mithaka-Karuwali	Pama-Nyungan	pama1250	2	glottolog_depth				Karruwali, Mithaka
+sout2983	Southern Pomoan-Kashaya	Pomoan	pomo1273	2	glottolog_depth	Pomoan	True	0.2728	Kashaya, Southern Pomo
+chin1490	Chinookan	Chinookan	chin1490	2	glottolog_depth	Chinookan			Kathlamet, Upper Chinook
+nort3150	North Bahnaric	Austroasiatic	aust1305	2	glottolog_depth				Katua, Takua
+kaur1274	Kaure-Kosare	Kaure-Kosare	kaur1274	2	glottolog_depth		True	5.1729	Kaure-Narau, Kosadle
+nort3145	Wojokesic	Angan	anga1289	2	glottolog_depth	Angan	True	0.1815	Kawacha, Safeyoka
+sout2968	Southern Numic	Uto-Aztecan	utoa1244	2	glottolog_depth	Numic	True	0.1663	Kawaiisu, Ute-Southern Paiute
+kaya1318	Kayardild-Yangkaal	Tangkic	tang1340	2	glottolog_depth	Tangkic			Kayardild, Yangkaal
+kayg1237	Kaygir-Tamagario	Kayagaric	kaya1327	2	glottolog_depth	Kayagar	True	0.4045	Kayagar, Tamagario
+kali1312	Kalikoic	Central Sudanic	cent2225	2	glottolog_depth		True	0.6809	Keliko, Omi
+west2547	Kemak-Tukudede	Austronesian	aust1307	2	glottolog_depth				Kemak, Tukudede
+jkor1234	J-Koryakic	Chukotko-Kamchatkan	chuk1271	2	glottolog_depth	Northern Chukotko-Kamchatkan			Kerek, Koryak
+tura1266	Turama-Kerewo	Kiwaian	kiwa1251	2	glottolog_depth		True	0.1704	Kerewo, Morigi
+nort2746	Northern Yeniseian	Yeniseian	yeni1252	2	glottolog_depth	Yeniseian	True	0.2489	Ket, Yugh
+nort3264	Northern Khanty	Uralic	ural1272	2	glottolog_depth	Ugric			Kazym-Berezover-Suryskarer Khanty, Obdorsk Khanty
+dagh1238	Daghestanian	Nakh-Daghestanian	nakh1245	2	glottolog_depth	Lezgic	True	0.0846	Khinalug, Lak
+khmu1255	Khmu'	Austroasiatic	aust1305	2	glottolog_depth	Khmuic			Khmu, Khuen
+mari1415	Maringic	Sino-Tibetan	sino1245	2	glottolog_depth				Khoibu, Maring Naga
+rung1257	Runga-Kibet	Maban	maba1274	2	glottolog_depth	Maban	True	0.4418	Kibet, Runga
+peni1240	Peninsular Eastern Saami	Uralic	ural1272	2	glottolog_depth	Saami			Kildin Saami, Ter Saami
+kima1245	Kimaama-Riantana	Kolopom	kolo1268	2	glottolog_depth	Kolopom			Kimaama, Riantana
+east2791	East Kipchak	Turkic	turk1311	2	glottolog_depth	Turkic			Kirghiz, Southern Altai
+kite1239	Kitemoka-Napeca	Chapacuran	chap1271	2	glottolog_depth				Kitemoka, Napeca
+omos1240	Omosan	Nuclear Trans New Guinea	nucl1709	2	glottolog_depth		True	0.1771	Kobol, Pal
+saur1250	Sauri-Kofei	Geelvink Bay	geel1240	2	glottolog_depth				Kofei, Sauri
+sawo1235	Sawosic	Ndu	nduu1242	2	glottolog_depth				Koiwat, Sengo
+norm1247	Norman Pama	Pama-Nyungan	pama1250	2	glottolog_depth				Kok-Nar, Walangama
+pesi1234	Pesisir	Austronesian	aust1307	2	glottolog_depth	Lampungic			Komering, Lampung Api
+twam1235	Komo-Uduk	Koman	koma1264	2	glottolog_depth	Koman	True	19.6545	Komo (Sudan-Ethiopia), Uduk
+kond1302	Konda-Yahadian	Konda-Yahadian	kond1302	2	glottolog_depth				Yaben (Konda), Yahadian
+momb1255	Mombum-Koneraw	Mombum-Koneraw	momb1255	2	glottolog_depth		True	6.7748	Koneraw, Mombum
+east2429	Eastern Heibanic	Heibanic	heib1242	2	glottolog_depth		True	2.8045	Ko, Warnang
+norr1244	Nor	Lower Sepik-Ramu	lowe1437	2	glottolog_depth	Lower Sepik	True	0.0195	Kopar, Murik (Papua New Guinea)
+sout3214	South Khoekhoe	Khoe-Kwadi	khoe1240	2	glottolog_depth	Khoe-Kwadi			Korana, Xiri
+kore1286	Koreguaje-Tama	Tucanoan	tuca1253	2	glottolog_depth	Tucanoan			Koreguaje, Tama (Colombia)
+koro1317	Koro-Holon	Sino-Tibetan	sino1245	2	glottolog_depth				Koro, Milang
+east2424	Krongo-Tumtum	Kadugli-Krongo	kadu1256	2	glottolog_depth	Kadugli	True	0.2639	Krongo, Tumtum
+nucl1656	Nuclear Kuikuroan	Cariban	cari1283	2	glottolog_depth	Cariban			Kuikúro-Kalapálo, Matipuhy
+malt1248	Malto	Dravidian	drav1251	2	glottolog_depth	Northern Dravidian			Kumarbhag Paharia, Sauria Paharia
+gumb1242	Gumbaynggiric	Pama-Nyungan	pama1250	2	glottolog_depth	Southeastern Pama-Nyungan	True	0.0703	Kumbainggar, Yaygir
+boaz1244	Boazi	Anim	anim1240	2	glottolog_depth	Marind			Kuni-Boazi, Zimakani
+wara1293	Eastern Tonda	Yam	more1255	2	glottolog_depth		True	0.5565	Kánchá, Anta-Komnzo-Wára-Wérè-Kémä
+elgo1240	Elgon-Mau Kalenjin	Nilotic	nilo1247	2	glottolog_depth	Nilotic	True	0.3209	Kupsabiny, Sabaot
+negi1246	Negidalic	Tungusic	tung1282	2	glottolog_depth	Tungusic			Kur-Urmi, Negidal
+teor1239	Teor-Kur	Austronesian	aust1307	2	glottolog_depth				Kur, Teor
+mund1329	Mundurukuic	Tupian	tupi1275	2	glottolog_depth	Munduruku	True	2.8885	Kuruáya, Mundurukú
+uppe1456	Upper Southwest Paman	Pama-Nyungan	pama1250	2	glottolog_depth	Northern Pama-Nyungan			Kuuk-Yak, Thayore
+pirr1239	Pirriya-Kungkari	Pama-Nyungan	pama1250	2	glottolog_depth				Kuungkari of Barcoo River, Pirriya
+kuys1235	Kuy-Souei	Austroasiatic	aust1305	2	glottolog_depth		True	0.1247	Kuy, Nyeu
+onee1245	One	Nuclear Torricelli	nucl1708	2	glottolog_depth				Kwamtim One, Southern One
+kwan1286	Kwanga-Mende	Sepik	sepi1257	2	glottolog_depth		True	0.155	Kwanga, Mende (Papua New Guinea)
+yuca1253	Yucatec-Lacandon	Mayan	maya1287	2	glottolog_depth	Mayan	True	0.0782	Lacandon, Yucatec Maya
+coas1321	Coastal Lamalamic	Pama-Nyungan	pama1250	2	glottolog_depth	Northern Pama-Nyungan	True	0.0272	Lamalama, Umbuygamu
+mwak1234	Mwakai-Pondi	Keram	kera1258	2	glottolog_depth				Pondi, Mwakai
+east2280	Eastern Baltic	Indo-European	indo1319	2	glottolog_depth	Baltic			Latvian, Lithuanian
+zann1245	Zan	Kartvelian	kart1248	2	glottolog_depth	Kartvelian	True	0.8808	Laz, Mingrelian
+lenc1239	Lencan	Lencan	lenc1239	2	glottolog_depth				Lenca-Honduras, Lenca-Salvador
+bale1255	Bale	Central Sudanic	cent2225	2	glottolog_depth	Lendu			Lendu, Ndrulo
+namo1249	Namo-Len	Yam	more1255	2	glottolog_depth				Len, Namo
+hima1249	Himalayish	Sino-Tibetan	sino1245	2	glottolog_depth	Lepcha			Lepcha, Lhokpu
+monu1249	Bogia	Bogia	monu1249	2	glottolog_depth				Lilau, Monumbo
+east2428	Eastern Dajuic	Dajuic	daju1249	2	glottolog_depth	Daju	True	0.4805	Logorik, Shatt
+long1422	Longjia-Luren	Sino-Tibetan	sino1245	2	glottolog_depth				Longjia, Luren
+coas1311	Coastal Tsamosan	Salishan	sali1255	2	glottolog_depth				Lower Chehalis, Quinault
+east2878	Eastern Tequistlatecan	Tequistlatecan	tequ1244	2	glottolog_depth	Tequistlatecan			Lowland Oaxaca Chontal, Tequistlateco Chontal
+lumu1240	Lumun-Torona	Narrow Talodi	narr1279	2	glottolog_depth				Lumun, Torona
+lush1251	Lushootseed-Puget	Salishan	sali1255	2	glottolog_depth	Central Salish	True	2.1419	Northern Lushootseed, Southern Puget Sound Salish
+mata1290	Mataguayo I	Matacoan	mata1289	2	glottolog_depth	Matacoan	True	0.2478	Maca, Nivaclé
+maco1238	Maco-Piaroa	Saliban	sali1297	2	glottolog_depth	Piaroa			Maco, Piaroa
+maxa1246	Maxakalian	Nuclear-Macro-Je	nucl1710	2	glottolog_depth				Malali, Pataxó Hã-Ha-Hãe
+west2945	Central Timor	Austronesian	aust1307	2	glottolog_depth				Mambae, Welaun
+mang1425	Mangbutu-Efe	Central Sudanic	cent2225	2	glottolog_depth	Mangbutu-Efe	False	0.5333	Mamvu, Mangbutu
+mana1303	Manambu-Yalaku	Ndu	nduu1242	2	glottolog_depth	Ndu	True	5.0911	Manambu, Yalaku
+manc1251	Manchu-Xibe	Tungusic	tung1282	2	glottolog_depth	Tungusic	True	0.3549	Manchu, Xibe
+maqu1239	Maquiritari-Wayumara	Cariban	cari1283	2	glottolog_depth	Cariban			Ye'kwana, Wayumara
+anti1247	Antillean Arawakan	Arawakan	araw1281	2	glottolog_depth				Maragua, Taino
+marr1257	Marrku-Wurrugu	Marrku-Wurrugu	marr1257	2	glottolog_depth				Margu, Wurrugu
+mari1418	Maringarr-Matige	Western Daly	west2434	2	glottolog_depth	Bringen			Maringarr, Marti Ke
+nort3239	Northern Kalenjin	Nilotic	nilo1247	2	glottolog_depth	Nilotic			Markweeta, Pökoot
+samo1298	Samoyedic	Uralic	ural1272	2	glottolog_depth	Samoyedic	True	1.447	Mator-Taigi-Karagas, Nganasan
+sumu1234	Sumuic	Misumalpan	misu1242	2	glottolog_depth	Misumalpan			Mayangna, Ulwa
+nucl1332	Nuclear Mayabic	Pama-Nyungan	pama1250	2	glottolog_depth	Northern Pama-Nyungan			Maykulan, Ngawun
+cahi1243	Cahitan	Uto-Aztecan	utoa1244	2	glottolog_depth	Cahita	True	0.3761	Mayo, Yaqui
+fina1240	Finasleigh Pama	Pama-Nyungan	pama1250	2	glottolog_depth	Northern Pama-Nyungan			Mbabaram, Wamin
+hurz1242	Hurza	Afro-Asiatic	afro1255	2	glottolog_depth				Mbuko, Vame
+mehe1244	Mehek-Pahi	Sepik	sepi1257	2	glottolog_depth	Tama Sepik	True	0.4816	Mehek, Pahi
+meax1236	Meax	East Bird's Head	east1459	2	glottolog_depth	East Bird's Head			Meyah, Moskona
+gema1234	Kman-Meyor	Sino-Tibetan	sino1245	2	glottolog_depth	Tani			Kman, Zakhring
+inla1267	Inland Min	Sino-Tibetan	sino1245	2	glottolog_depth		True	0.1142	Min Bei Chinese, Min Zhong Chinese
+mini1255	Minica-Murui	Huitotoan	huit1251	2	glottolog_depth	Huitoto	True	0.1617	Minica Huitoto, Murui Huitoto
+moha1257	Mohawk-Oneida	Iroquoian	iroq1247	2	glottolog_depth	Northern Iroquoian	True	1.1239	Mohawk, Oneida
+sege1236	Seget-Moi	West Bird's Head	west1493	2	glottolog_depth				Moi (Indonesia), Seget
+moke1241	Moken-Moklen	Austronesian	aust1307	2	glottolog_depth				Moken, Moklen
+soma1242	Somahai	Somahai	soma1242	2	glottolog_depth	Momuna			Momina, Momuna
+west2621	Western Numic	Uto-Aztecan	utoa1244	2	glottolog_depth	Numic	True	0.508	Mono (USA), Northern Paiute
+west2503	Western Heibanic	Heibanic	heib1242	2	glottolog_depth	Heiban	True	0.359	Moro, Tira
+okie1247	Okiek-Akie	Nilotic	nilo1247	2	glottolog_depth		True	0.0383	Akie, Okiek
+olla1234	Ollari-Gadaba	Dravidian	drav1251	2	glottolog_depth	Central Dravidian			Mudhili Gadaba, Pottangi Ollar Gadaba
+nort1547	Northern Daly	Northern Daly	nort1547	2	glottolog_depth	Northern Daly			Mullukmulluk, Tyaraity
+muon1245	Muongic	Austroasiatic	aust1305	2	glottolog_depth	Viet-Muong			Muong, Nguôn
+sout2772	Southern Daly	Southern Daly	sout2772	2	glottolog_depth	Murrinh-Patha			Murriny Patha, Nangikurrunggurr
+sent1262	Sentani-Nafri	Sentanic	sent1261	2	glottolog_depth				Nafri, Sentani
+kwom1263	Kwomtari-Nai	Kwomtari-Nai	kwom1263	2	glottolog_depth	Kwomtari			Nai, Kwomtari
+nimo1248	Nimo-Nakwi	Left May	left1242	2	glottolog_depth				Nakwi, Nimo
+bara1377	Barai-Namiae	Koiarian	koia1260	2	glottolog_depth				Namiae, Barai
+naml1239	Namla-Tofanma	Namla-Tofanma	naml1239	2	glottolog_depth				Namla, Tofanma
+ndin1246	Nding-Tasomi	Narrow Talodi	narr1279	2	glottolog_depth	Talodi	True	1.2372	Nding, Tasomi-Tata
+ngal1299	Ngalik-Nduga	Nuclear Trans New Guinea	nucl1709	2	glottolog_depth		True	0.0285	Nduga, Silimo
+palo1244	Palor-Ndut	Atlantic-Congo	atla1278	2	glottolog_depth	Cangin			Ndut, Palor
+jala1236	Jala	Gunwinyguan	gunw1250	2	glottolog_depth	Ngalakan	True	0.1027	Ngalakgan, Rembarrnga
+guda1245	Ngurlun	Mirndi	mirn1241	2	glottolog_depth	Wambayan	True	0.8252	Ngarnka, Wambayan
+dani1287	Dani	Nuclear Trans New Guinea	nucl1709	2	glottolog_depth				Nggem, Wano
+nobi1239	Nobiin Nubian	Nubian	nubi1251	2	glottolog_depth	Nubian	True	0.3538	Nobiin, Old Nubian
+nonu1240	Nonuya-Ocaina	Huitotoan	huit1251	2	glottolog_depth	Huitoto	True	0.5807	Nonuya, Ocaina
+taos1246	Taos-Picuris	Kiowa-Tanoan	kiow1265	2	glottolog_depth	Kiowa-Tanoan			Taos Northern Tiwa, Picuris Northern Tiwa
+kola1242	Kolami-Naiki	Dravidian	drav1251	2	glottolog_depth				Northwestern Kolami, Southeastern Kolami
+tuji1244	Tujia	Sino-Tibetan	sino1245	2	glottolog_depth				Northern Tujia, Southern Tujia
+yuka1259	Yukaghir	Yukaghir	yuka1259	2	glottolog_depth	Yukaghir			Northern Yukaghir, Malyj Anjuj Omok
+kiss1245	Kissi	Atlantic-Congo	atla1278	2	glottolog_depth	Mel			Northern Kissi, Southern Kisi
+adam1254	Adamawa Fali	Atlantic-Congo	atla1278	2	glottolog_depth				North Fali, South Fali
+haid1248	Haida	Haida	haid1248	2	glottolog_depth	Haida			Northern Haida, Southern Haida
+inup1234	Alaskan Inupiaq	Eskimo-Aleut	eski1264	2	glottolog_depth	Eskimo	True	0.254	North Alaskan Inupiatun, Seward Alaska Inupiatun
+pomo1273	Pomoan	Pomoan	pomo1273	2	glottolog_depth	Pomoan			Northeastern Russian River Pomo, Southeastern Pomo
+leng1262	Lengua	Lengua-Mascoy	leng1261	2	glottolog_depth		True	22.4921	Enlhet Norte, Enxet Sur
+west2205	Western Coastal Tasmanian	Western Tasmanian	west1503	2	glottolog_depth				Northwestern Tasmanian, Southwestern Tasmanian
+tusc1256	Tuscarora-Nottoway	Iroquoian	iroq1247	2	glottolog_depth	Northern Iroquoian			Nottoway, Tuscarora
+geor1253	Georgic	Kartvelian	kart1248	2	glottolog_depth	Kartvelian			Georgian, Old Georgian
+limi1242	Limilngan-Wulna	Limilngan-Wulna	limi1242	2	glottolog_depth	Limilngan			Limilngan, Wulna
+teme1251	Temeinic	Temeinic	teme1251	2	glottolog_depth	Temein	True	6.5597	Temein, Tese
+pais1239	Pai-Sinen-Walio	Walioic	wali1264	2	glottolog_depth		True	7.8994	Walio, Pei
+yawa1259	Yawa-Saweru	Yawa-Saweru	yawa1259	2	glottolog_depth				Yawa, Saweru
+japa1258	Japan-Taiwan Japanese	Japonic	japo1237	2	glottolog_depth				Japanese, Yilan Creole Japanese
+nuer1245	Nuer-Reel	Nilotic	nilo1247	2	glottolog_depth	Nilotic			Nuer, Reel
+ngan1305	Ngangea-So	Kuliak	kuli1252	2	glottolog_depth	Kuliak	True	1.0737	Nyang'i, Soo
+nyik1244	Nyikinic	Nyulnyulan	nyul1248	2	glottolog_depth	Nyulnyulan			Nyigina, Warrwa
+sout3134	South-West Pama-Nyungan	Pama-Nyungan	pama1250	2	glottolog_depth	Western Pama-Nyungan			Nyunga, Yinggarda
+nucl1814	Nuclear Shastan	Shastan	shas1238	2	glottolog_depth	Shasta			Okwanuchu, Shasta
+sini1245	Sinitic	Sino-Tibetan	sino1245	2	glottolog_depth				Old Chinese, Waxianghua
+oroc1249	Oroch-Udihe	Tungusic	tung1282	2	glottolog_depth	Tungusic	True	2.5347	Oroch, Udihe
+ulch1242	Ulchaic	Tungusic	tung1282	2	glottolog_depth	Tungusic	True	0.3925	Orok, Ulch
+otom1276	Otomaco-Taparita	Otomaco-Taparita	otom1276	2	glottolog_depth				Otomaco, Taparita
+cent2080	Central Luzon	Austronesian	aust1307	2	glottolog_depth	Central Luzon			Pampanga, Hatang Kayi
+guaj1257	Guajiro-Paraujano	Arawakan	araw1281	2	glottolog_depth	Caribbean Arawakan	True	0.15	Paraujano, Wayuu
+wint1258	Wintuan	Wintuan	wint1258	2	glottolog_depth	Wintuan			Patwin, Wintu
+peba1242	Peba-Yameo	Peba-Yagua	peba1241	2	glottolog_depth				Peba, Yameo
+pila1244	Pilaga-Toba	Guaicuruan	guai1249	2	glottolog_depth	South Guaicuruan	True	0.2569	Pilagá, Toba
+pima1249	Piman	Uto-Aztecan	utoa1244	2	glottolog_depth	Tepiman	True	0.2234	Pima Bajo, Tohono O'odham
+pitt1246	Pitta-Pitta	Pama-Nyungan	pama1250	2	glottolog_depth	Central Pama-Nyungan			Pitta Pitta, Wanggamala
+tara1323	Tarascan	Tarascan	tara1323	2	glottolog_depth	Tarascan			Purepecha, Western Highland Purepecha
+nort2933	North Bougainville	North Bougainville	nort2933	2	glottolog_depth	West Bougainville			Ramopa, Rapoisi
+rasa1242	Rasawa-Saponi	Lakes Plain	lake1255	2	glottolog_depth		True	0.4307	Rasawa, Saponi
+raut1240	Raute-Rawat	Sino-Tibetan	sino1245	2	glottolog_depth				Raute, Rawat
+rawo1243	Rawo-Main Serra	Sko	skoo1245	2	glottolog_depth	Serra Hills	True	0.3939	Rawo, Womo-Sumararu
+sand1283	San Dionisio-San Mateo Huave	Huavean	huav1256	2	glottolog_depth	Huavean			San Dionisio del Mar Huave, San Mateo del Mar Huave
+sanf1267	San Francisco-Santa María Huave	Huavean	huav1256	2	glottolog_depth				San Francisco del Mar Huave, Santa María del Mar Huave
+sout2684	Southern Chong	Austroasiatic	aust1305	2	glottolog_depth	Pearic			Sa'och, Suoy
+atha1247	Athabaskan	Athabaskan-Eyak-Tlingit	atha1245	2	glottolog_depth	Athapaskan			Sarsi, Tsetsaut
+sher1256	Sartang-Sherdukpen	Sino-Tibetan	sino1245	2	glottolog_depth	Western Arunachal			Sartang, Sherdukpen
+sawi1258	Sawila-Wersing	Timor-Alor-Pantar	timo1261	2	glottolog_depth	Kolana-Tanglapui	True	3.1149	Sawila, Wersing
+siwi1238	Libyan-Egyptian Oases Berber	Afro-Asiatic	afro1255	2	glottolog_depth	Berber	True	0.0501	Sawknah-Fogaha, Siwi
+serr1254	Serran	Uto-Aztecan	utoa1244	2	glottolog_depth	California Uto-Aztecan			Serrano, Tongva
+west2580	West Wapei	Nuclear Torricelli	nucl1708	2	glottolog_depth				Seta, Seti
+sgaw1244	Sgaw	Sino-Tibetan	sino1245	2	glottolog_depth	Karen			S'gaw Karen, Wewaw
+sout3150	Southwestern Saami	Uralic	ural1272	2	glottolog_depth	Saami			South Saami, Ume Saami
+wain1248	Waina-Punda	Border	bord1247	2	glottolog_depth				Sowanda, Umeda-Punda
+nort2909	North Binanderean	Nuclear Trans New Guinea	nucl1709	2	glottolog_depth	Binanderean	True	0.121	Suena, Zia
+puro1234	Puroikic	Sino-Tibetan	sino1245	2	glottolog_depth				Eastern Puroik, Western Puroik
+kara1498	Karawarian	Lower Sepik-Ramu	lowe1437	2	glottolog_depth	Lower Sepik	True	0.0562	Tabriak, Yimas
+rash1249	Rashad	Rashad	rash1249	2	glottolog_depth	Rashad			Tagoi, Tegali
+east2494	Eastern Eleman	Eleman	nucl1580	2	glottolog_depth	Eleman Proper	True	0.386	Tairuma, Toaripi
+trie1245	Triengic	Austroasiatic	aust1305	2	glottolog_depth				Talieng, Trieng
+cont1245	Continental Chonan	Chonan	chon1288	2	glottolog_depth	Chon Proper			Tehuelche, Teushen
+west2508	Western Plains Dogon	Dogon	dogo1299	2	glottolog_depth				Tengou-Togo Dogon, Tomo Kan Dogon
+sout1502	Southern Sahaptin	Sahaptian	saha1239	2	glottolog_depth	Sahaptian			Tenino, Umatilla
+buin1248	Buin	South Bougainville	sout2948	2	glottolog_depth	East Bougainville			Terei, Uisai
+tern1246	Ternatean	North Halmahera	nort2923	2	glottolog_depth	North Halmaheran	True	0.0809	Ternate, Tidore
+west2724	Western Berber	Afro-Asiatic	afro1255	2	glottolog_depth	Berber			Tetserret, Zenaga
+waya1272	Wayanaic	Cariban	cari1283	2	glottolog_depth	Cariban			Tiverighotto, Wayana
+tobe1251	Tobelo-Tugutil	North Halmahera	nort2923	2	glottolog_depth	North Halmaheran			Tobelo, Tugutil
+tokh1241	Tokharian	Indo-European	indo1319	2	glottolog_depth		True	0.0894	Tokharian A, Tokharian B
+jica1245	Jicaquean	Jicaquean	jica1245	2	glottolog_depth				Tol, Western Jicaque
+oaxa1241	Oaxaca Mixe	Mixe-Zoque	mixe1284	2	glottolog_depth	Mixe-Zoque			Totontepec Mixe, Ulterior-Mixe
+nimy1236	Nim Yokuts	Yokutsan	yoku1255	2	glottolog_depth	Yokuts			Tule-Kaweah Yokuts, Northern Yokuts
+wayo1240	Wayoro-Tupari	Tupian	tupi1275	2	glottolog_depth				Tuparí, Wayoró
+wali1264	Walioic	Walioic	wali1264	2	glottolog_depth				Tuwari, Yawiyo
+urup1244	Urupa-Yaru	Chapacuran	chap1271	2	glottolog_depth				Urupa, Yaru
+warr1259	Warrayic	Gunwinyguan	gunw1250	2	glottolog_depth	Warayic			Uwinymil, Warray
+ngar1291	Ngarru	Pama-Nyungan	pama1250	2	glottolog_depth				Wagaya, Yindjilandji
+nort1527	Northern Sahaptin	Sahaptian	saha1239	2	glottolog_depth				Northeast Sahaptin, Northwest Sahaptin
+jelm1234	Jelmek	Bulaka River	bula1259	2	glottolog_depth	Bulaka River			Wanam Yelmek, Southern Yelmek
+yuki1242	Yuki-Wappo	Yuki-Wappo	yuki1242	2	glottolog_depth	Wappo	True	5.5392	Wappo, Northern Yukian
+yaqa1245	Yaqayic	Anim	anim1240	2	glottolog_depth	Marind	True	2.6489	Warkay-Bipim, Yaqay
+ngar1289	Yapa	Pama-Nyungan	pama1250	2	glottolog_depth	Western Pama-Nyungan			Warlpiri, Warlmanpa
+nort2751	Northern Worrorran	Worrorran	worr1236	2	glottolog_depth				Wilawila, Wunambal
+algi1248	Algic	Algic	algi1248	2	glottolog_depth	Wiyot	True	2.9723	Wiyot, Yurok
+xinc1244	Xinca Shared Grammatical Traits	Xincan	xinc1237	2	glottolog_depth				Xinca-Chiquimulilla, Xinka-Jumaytepeque
+yupi1268	Yupiltepequic	Xincan	xinc1237	2	glottolog_depth				Xinca-Yupiltepeque, Xinca-Sinacantan
+macr1267	Macro-Yaeyama	Japonic	japo1237	2	glottolog_depth		True	0.4153	Yaeyama, Yonaguni
+yano1267	Yanomam-Yanimamo	Yanomamic	yano1268	2	glottolog_depth	Yanomam	True	0.1727	Yanomamö, Yanomám
+abin1243	Abinomn	Abinomn	abin1243	1	isolate				Abinomn
+guai1250	Guaicuru del Sur	Guaicuruan	guai1249	1	glottolog_depth	South Guaicuruan			Abipon
+abis1238	Aewa	Aewa	abis1238	1	isolate				Aewa
+tiri1259	Tirio	Anim	anim1240	1	glottolog_depth				Abom
+abun1252	Abun	Abun	abun1252	1	isolate	North-Central Bird's Head			Abun
+adai1235	Adai	Adai	adai1235	1	isolate				Adai
+jiva1245	Chicham	Chicham	jiva1245	1	glottolog_depth	Jivaroan			Aguaruna
+chut1252	Chutic	Austroasiatic	aust1305	1	glottolog_depth				Thavung
+aika1237	Aikanã	Aikanã	aika1237	1	isolate				Aikanã
+kres1240	Kresh-Aja	Kresh-Aja	kres1240	1	glottolog_depth	Kresh			Aja (South Sudan)
+nort3276	North Andamanese-Akakede	Great Andamanese	grea1241	1	glottolog_depth	Great Andamanese			Akakede
+kawe1237	Kawesqar	Kawesqar	kawe1237	1	glottolog_depth				Alacalufe-Austral
+alse1251	Alsea-Yaquina	Alsea-Yaquina	alse1251	1	isolate	Alsea			Alsea-Yaquina
+kory1247	Koryakic	Chukotko-Kamchatkan	chuk1271	1	glottolog_depth	Northern Chukotko-Kamchatkan			Alutor
+wari1265	Warisic	Border	bord1247	1	glottolog_depth	Border			Amanab
+nucl1244	Western Left May	Left May	left1242	1	glottolog_depth	Left May			Ama (Papua New Guinea)
+west2817	West Central Maluku	Austronesian	aust1307	1	glottolog_depth				Ambelau
+uncl1507	Unclassified Semitic	Afro-Asiatic	afro1255	1	glottolog_depth				Amorite
+anda1286	Andaqui	Andaqui	anda1286	1	isolate				Andaqui
+ando1256	Andoque	Andoque	ando1256	1	isolate				Andoque
+anem1249	Anem	Anem	anem1249	1	isolate				Anem
+anga1289	Angan	Angan	anga1289	1	glottolog_depth	Angan			Angaataha
+sout3130	Ankave-Tainae-Akoye	Angan	anga1289	1	glottolog_depth				Ankave
+unun9943	Unclassified Chibchan	Chibchan	chib1249	1	glottolog_depth				Antioquian
+cari1283	Cariban	Cariban	cari1283	1	glottolog_depth	Cariban			Apalaí
+lezg1248	Lezgic	Nakh-Daghestanian	nakh1245	1	glottolog_depth	Lezgic			Archi
+negr1239	Negro-Roraima	Arawakan	araw1281	1	glottolog_depth				Aruan
+uncl1528	Unclassified Antillean Arawakan	Arawakan	araw1281	1	glottolog_depth				Caquetio
+unun9968	Unclassified Kombio-Yambes	Nuclear Torricelli	nucl1708	1	glottolog_depth				Aruek
+arut1244	Arutani	Arutani	arut1244	1	isolate				Arutani
+atac1235	Atacame	Atacame	atac1235	1	isolate	Tacame			Atacame
+atak1252	Atakapa	Atakapa	atak1252	1	isolate				Atakapa
+kaya1327	Kayagaric	Kayagaric	kaya1327	1	glottolog_depth				Atohwaim
+avar1255	Avar-Andic-Tsezic	Nakh-Daghestanian	nakh1245	1	glottolog_depth	Avar-Andic-Tsezic			Avar
+farw1236	Far West Lakes Plain	Lakes Plain	lake1255	1	glottolog_depth				Awera
+awet1245	Aweti-Guarani	Tupian	tupi1275	1	glottolog_depth				Awetí
+cent2193	Agaw	Afro-Asiatic	afro1255	1	glottolog_depth	Central Cushitic			Awngi
+ramm1241	Ram	Sepik	sepi1257	1	glottolog_depth	Ram			Awtuw
+badj1246	Badjiri-Eastern Karnic	Pama-Nyungan	pama1250	1	glottolog_depth				Badjirri
+moro1282	Baka-Beli	Central Sudanic	cent2225	1	glottolog_depth	Bongo-Bagirmi			Baka (South Sudan)
+peko1235	Pekodian	Cariban	cari1283	1	glottolog_depth	Cariban			Bakairí
+maoo1243	Blue Nile Mao	Blue Nile Mao	maoo1243	1	glottolog_depth				Bambassi
+bang1363	Bangime	Bangime	bang1363	1	isolate				Bangime
+bara1399	Barapasi-Sauri-Kofei	Geelvink Bay	geel1240	1	glottolog_depth				Barapasi
+basa1291	Basap-Greater Barito	Austronesian	aust1307	1	glottolog_depth				Basap
+basq1248	Basque	Basque	basq1248	1	isolate	Basque			Basque
+nakh1246	Nakh	Nakh-Daghestanian	nakh1245	1	glottolog_depth	Nakh			Bats
+cush1243	Cushitic	Afro-Asiatic	afro1255	1	glottolog_depth	Beja			Beja
+sali1255	Salishan	Salishan	sali1255	1	glottolog_depth	Bella Coola			Bella Coola
+beot1247	Beothuk	Beothuk	beot1247	1	isolate				Beothuk
+bert1248	Berta	Berta	bert1248	1	isolate				Berta
+sout2686	South Aslian	Austroasiatic	aust1305	1	glottolog_depth	Aslian			Besisi
+beto1236	Betoi-Jirara	Betoi-Jirara	beto1236	1	isolate				Betoi-Jirara
+bilu1245	Bilua	Bilua	bilu1245	1	isolate	Bilua			Bilua
+bira1253	Ongota	Ongota	bira1253	1	isolate				Ongota
+uncl1501	Unclassified Membi-Mangbutu-Efe	Central Sudanic	cent2225	1	glottolog_depth	Bongo-Bagirmi			Birri
+bisa1265	Bisa-Busa	Mande	mand1469	1	glottolog_depth	Eastern Mande			Bissa
+boga1247	Bogaya	Bogaya	boga1247	1	isolate				Bogaya
+unun9873	Unclassified East Cushitic	Afro-Asiatic	afro1255	1	glottolog_depth				Boon
+nort2698	North Dravidian	Dravidian	drav1251	1	glottolog_depth	Northern Dravidian			Brahui
+gene1243	General Yokuts	Yokutsan	yoku1255	1	glottolog_depth				Buena Vista Yokuts
+khob1235	Kho-Bwa	Sino-Tibetan	sino1245	1	glottolog_depth	Western Arunachal			Bugun
+arap1279	Arapesh	Nuclear Torricelli	nucl1708	1	glottolog_depth				Bumbita Arapesh
+timo1261	Timor-Alor-Pantar	Timor-Alor-Pantar	timo1261	1	glottolog_depth				Bunak
+burm1264	Burmeso	Burmeso	burm1264	1	isolate				Burmeso
+buru1296	Burushaski	Burushaski	buru1296	1	isolate				Burushaski
+buru1328	Burun	Nilotic	nilo1247	1	glottolog_depth				Northern Burun
+cadd1255	Caddoan	Caddoan	cadd1255	1	glottolog_depth	Caddoan			Caddo
+tali1265	Ta-Li	Sino-Tibetan	sino1245	1	glottolog_depth				Caijia
+cams1241	Camsá	Camsá	cams1241	1	isolate				Camsá
+cand1248	Candoshi-Shapra	Candoshi-Shapra	cand1248	1	isolate				Candoshi-Shapra
+cani1243	Canichana	Canichana	cani1243	1	isolate				Canichana
+tara1324	Taranoan	Cariban	cari1283	1	glottolog_depth	Cariban			Carijona
+nico1262	Nicobaric	Austroasiatic	aust1305	1	glottolog_depth	Nicobarese			Car Nicobarese
+taca1255	Tacanan	Pano-Tacanan	pano1259	1	glottolog_depth	Tacanan			Cavineña
+cayu1241	Cayuse	Cayuse	cayu1241	1	isolate				Cayuse
+cayu1262	Cayubaba	Cayubaba	cayu1262	1	isolate				Cayubaba
+celt1248	Celtic	Indo-European	indo1319	1	glottolog_depth				Celtiberian
+cent2045	Jalaa	Jalaa	cent2045	1	isolate				Jalaa
+unun9960	Unclassified Brahmaputran	Sino-Tibetan	sino1245	1	glottolog_depth				Chairel
+zamu1243	Zamucoan	Zamucoan	zamu1243	1	glottolog_depth				Chamacoco
+tapa1264	Tapakuric	Chapacuran	chap1271	1	glottolog_depth				Chapakura
+omet1238	Ometo	Ta-Ne-Omotic	gong1255	1	glottolog_depth				Chara
+iroq1247	Iroquoian	Iroquoian	iroq1247	1	glottolog_depth	Southern Iroquoian			Cherokee
+zoqu1261	Zoque	Mixe-Zoque	mixe1284	1	glottolog_depth	Mixe-Zoque			Chimalapa Zoque
+chim1301	Chimariko	Chimariko	chim1301	1	isolate	Chimariko			Chimariko
+chit1248	Chitimacha	Chitimacha	chit1248	1	isolate				Chitimacha
+chon1248	Chono	Chono	chon1248	1	isolate				Chono
+chuk1272	Chukotian	Chukotko-Kamchatkan	chuk1271	1	glottolog_depth	Northern Chukotko-Kamchatkan			Chukchi
+arme1241	Armenic	Indo-European	indo1319	1	glottolog_depth				Classical-Middle Armenian
+coah1252	Coahuilteco	Coahuilteco	coah1252	1	isolate	Coahuiltecan			Coahuilteco
+coch1271	Cochimi-Yuman	Cochimi-Yuman	coch1271	1	glottolog_depth				Cochimi
+cofa1242	Cofán	Cofán	cofa1242	1	isolate				Cofán
+come1251	Comecrudan	Comecrudan	come1251	1	isolate	Comecrudan			Comecrudan
+unun9898	Unclassified Maxakalian	Nuclear-Macro-Je	nucl1710	1	glottolog_depth				Koropó
+coto1248	Cotoname	Cotoname	coto1248	1	isolate				Cotoname
+sout3132	Southern Chumashan	Chumashan	chum1262	1	glottolog_depth				Cruzeño
+bahn1264	Bahnaric	Austroasiatic	aust1305	1	glottolog_depth	Bahnaric			Cua
+guah1253	Central Guahibo	Guahiboan	guah1252	1	glottolog_depth	Guahiban			Cuiba
+cuit1236	Cuitlatec	Cuitlatec	cuit1236	1	isolate				Cuitlatec
+cull1235	Culli	Culli	cull1235	1	isolate				Culli
+east2699	East Cushitic	Afro-Asiatic	afro1255	1	glottolog_depth	Dahalo			Dahalo
+dama1272	Damal	Damal	dama1272	1	isolate				Damal
+pala1352	Palaungic	Austroasiatic	aust1305	1	glottolog_depth				Danau
+east2549	Eastern Naduhup	Naduhup	nada1235	1	glottolog_depth	Nadahup			Dâw
+ijoi1239	Ijoid	Ijoid	ijoi1239	1	glottolog_depth	Ijoid			Defaka
+demm1245	Dem	Dem	demm1245	1	isolate				Dem
+sent1261	Sentanic	Sentanic	sent1261	1	glottolog_depth				Demta
+dibi1240	Dibiyaso	Dibiyaso	dibi1240	1	isolate				Dibiyaso
+unun9992	Unclassified Northern Luzon	Austronesian	aust1307	1	glottolog_depth				Dicamay Agta
+sout2845	South Omotic	South Omotic	sout2845	1	glottolog_depth	South Omotic			Dime
+west2432	Western Gunwinyguan	Gunwinyguan	gunw1250	1	glottolog_depth				Jawoyn
+mani1293	Maningrida	Maningrida	mani1293	1	glottolog_depth	Ndjébbana			Djeebbana
+mirn1241	Mirndi	Mirndi	mirn1241	1	glottolog_depth	Djingili			Jingulu
+nort2824	North Plateau Dogon	Dogon	dogo1299	1	glottolog_depth				Dogul Dom Dogon
+duna1248	Duna	Duna	duna1248	1	isolate	Duna			Duna
+parj1243	Parji-Ollari-Gadaba	Dravidian	drav1251	1	glottolog_depth	Central Dravidian			Duruwa
+tari1255	Tariku	Lakes Plain	lake1255	1	glottolog_depth				Duvle
+sout2705	Southern Periphery Mongolic	Mongolic-Khitan	mong1349	1	glottolog_depth	Mongolic			East Yugur
+russ1265	Russian River and Eastern	Pomoan	pomo1273	1	glottolog_depth	Pomoan			Eastern Pomo
+volt1241	Volta-Congo	Atlantic-Congo	atla1278	1	glottolog_depth	Ega			Ega
+elam1244	Elamite	Elamite	elam1244	1	isolate				Elamite
+else1239	Elseng	Elseng	else1239	1	isolate	Morwap			Elseng
+atra1235	Atrato	Chocoan	choc1280	1	glottolog_depth	Choco			Emberá-Catío
+pemo1246	Pemong-Panare	Cariban	cari1283	1	glottolog_depth	Cariban			Panare
+sanj1278	San Juan	Chocoan	choc1280	1	glottolog_depth	Choco			Epena
+taka1267	Takanik-Chamik	Pano-Tacanan	pano1259	1	glottolog_depth	Tacanan			Ese Ejja
+esse1238	Esselen	Esselen	esse1238	1	isolate				Esselen
+etru1241	Etruscan	Etruscan	etru1241	1	isolate				Etruscan
+atha1246	Athabaskan-Eyak	Athabaskan-Eyak-Tlingit	atha1245	1	glottolog_depth	Eyak			Eyak
+fasu1242	Fasu	Fasu	fasu1242	1	isolate	Fasu			Fasu
+fuln1247	Fulniô	Fulniô	fuln1247	1	isolate	Yatê			Fulniô
+fuyu1242	Fuyug	Fuyug	fuyu1242	1	isolate				Fuyug
+east2386	Eastern Jebel	Eastern Jebel	east2386	1	glottolog_depth	Eastern Jebel			Gaam
+gaga1251	Gaagudju	Gaagudju	gaga1251	1	isolate				Gaagudju
+sout2758	Southern Tangkic	Tangkic	tang1340	1	glottolog_depth	Tangkic			Ganggalida
+west2445	West Mao	Blue Nile Mao	maoo1243	1	glottolog_depth				Ganza
+nort2829	Northwest Sumatra-Barrier Islands	Austronesian	aust1307	1	glottolog_depth	Northwest Sumatra-Barrier Islands			Gayo
+jeee1236	Je	Nuclear-Macro-Je	nucl1710	1	glottolog_depth				Geico
+goro1272	Goroka	Nuclear Trans New Guinea	nucl1709	1	glottolog_depth				Gende
+alba1267	Albanian	Indo-European	indo1319	1	glottolog_depth				Gheg Albanian
+unun9969	Unclassified Nuclear Torricelli	Nuclear Torricelli	nucl1708	1	glottolog_depth				Gnau
+gogo1264	Gogodalic	Suki-Gogodala	suki1244	1	glottolog_depth	Gogodala			Gogodala
+guac1239	Guachi	Guachi	guac1239	1	isolate				Guachi
+guai1237	Guaicurian	Guaicurian	guai1237	1	isolate				Guaicurian
+guam1236	Guamo	Guamo	guam1236	1	isolate				Guamo
+unun9880	Unclassified Berber	Afro-Asiatic	afro1255	1	glottolog_depth				Guanche
+guat1253	Guató	Guató	guat1253	1	isolate				Guató
+guah1252	Guahiboan	Guahiboan	guah1252	1	glottolog_depth	Guahiban			Guayabero
+yimi1234	Yimidhirr-Yalanji-Yidinic	Pama-Nyungan	pama1250	1	glottolog_depth	Northern Pama-Nyungan			Guugu Yimidhirr
+unun9964	Unclassified Pama-Nyungan	Pama-Nyungan	pama1250	1	glottolog_depth				Roth's Gugu Warra
+bina1276	Greater Binanderean	Nuclear Trans New Guinea	nucl1709	1	glottolog_depth	Binanderean			Guhu-Samane
+naqi1236	Na-Qiangic	Sino-Tibetan	sino1245	1	glottolog_depth				Guiqiong
+gule1241	Gule	Gule	gule1241	1	isolate				Gule
+gumu1250	Gumuz	Gumuz	gumu1250	1	glottolog_depth				Northern Gumuz
+guri1248	Guriaso	Guriaso	guri1248	1	isolate				Guriaso
+yuga1242	Yugambalic	Pama-Nyungan	pama1250	1	glottolog_depth				Guyambal
+japo1237	Japonic	Japonic	japo1237	1	glottolog_depth				Hachijo
+hadz1240	Hadza	Hadza	hadz1240	1	isolate				Hadza
+nort2964	Northern Wakashan	Wakashan	waka1280	1	glottolog_depth	Northern Wakashan			Haisla
+unun9942	Unclassified Central Nubian	Nubian	nubi1251	1	glottolog_depth				Haraza
+hatt1246	Hattic	Hattic	hatt1246	1	isolate				Hattic
+timo1265	Timor-Babar	Austronesian	aust1307	1	glottolog_depth				Helong
+tequ1244	Tequistlatecan	Tequistlatecan	tequ1244	1	glottolog_depth	Tequistlatecan			Highland Oaxaca Chontal
+anat1257	Anatolian	Indo-European	indo1319	1	glottolog_depth				Hittite
+kxaa1236	Kxa	Kxa	kxaa1236	1	glottolog_depth				Amkoe
+nort2953	Northern Uto-Aztecan	Uto-Aztecan	utoa1244	1	glottolog_depth	Hopi			Hopi
+hrus1242	Hruso	Hruso	hrus1242	1	isolate				Hruso
+tara1326	Tarahumara-Guarijio	Uto-Aztecan	utoa1244	1	glottolog_depth	Tarahumaran			Huarijio
+kewa1249	Kewa-Huli	Nuclear Trans New Guinea	nucl1709	1	glottolog_depth				Huli
+bata1315	Batanic	Austronesian	aust1307	1	glottolog_depth				Ibatan
+iber1250	Iberian	Iberian	iber1250	1	isolate				Iberian
+sahu1244	Sahuan	North Halmahera	nort2923	1	glottolog_depth				Ibu
+kuli1252	Kuliak	Kuliak	kuli1252	1	glottolog_depth	Kuliak			Ik
+inla1262	Inland Gulf of Papua	Anim	anim1240	1	glottolog_depth				Ipiko
+iran1263	Irántxe-Münkü	Irántxe-Münkü	iran1263	1	isolate				Irántxe-Münkü
+unun9977	Unclassified Goroka	Nuclear Trans New Guinea	nucl1709	1	glottolog_depth				Isabi
+kwer1242	Greater Kwerba	Greater Kwerba	kwer1242	1	glottolog_depth	Kwerba			Isirawa
+iton1250	Itonama	Itonama	iton1250	1	isolate				Itonama
+west2446	Western Ijo	Ijoid	ijoi1239	1	glottolog_depth	Ijoid			Izon
+cent1987	Central-Northern Aslian	Austroasiatic	aust1305	1	glottolog_depth				Jah Hut
+madi1262	Madi-Madiha	Arawan	araw1282	1	glottolog_depth	Arauan			Madi
+hlai1238	Hlaic	Tai-Kadai	taik1256	1	glottolog_depth				Jiamao
+unun9878	Unclassified Biu-Mandara	Afro-Asiatic	afro1255	1	glottolog_depth				Jilbe
+jira1235	Jirajaran	Jirajaran	jira1235	1	isolate				Jirajaran
+unun9947	Unclassified Southern Uto-Aztecan	Uto-Aztecan	utoa1244	1	glottolog_depth				Jova
+manc1250	Manchu-Jurchen	Tungusic	tung1282	1	glottolog_depth	Tungusic			Jurchen
+kaby1244	Kabyle-Atlas Berber	Afro-Asiatic	afro1255	1	glottolog_depth	Berber			Kabyle
+guai1249	Guaicuruan	Guaicuruan	guai1249	1	glottolog_depth	Kadiwéu			Kadiwéu
+nucl1821	Nuclear Alor-Pantar	Timor-Alor-Pantar	timo1261	1	glottolog_depth				Kafoa
+kaik1248	Kaike-Ghale-Tamangic	Sino-Tibetan	sino1245	1	glottolog_depth				Kaike
+icaa1241	Ica	Arawakan	araw1281	1	glottolog_depth				Kaishana
+kaki1249	Kaki Ae	Kaki Ae	kaki1249	1	isolate	Tate			Kaki Ae
+unun9975	Unclassified Kainantu	Nuclear Trans New Guinea	nucl1709	1	glottolog_depth				Kambaira
+nort3149	North Volta-Congo	Atlantic-Congo	atla1278	1	glottolog_depth				Kam
+kamu1264	Kamula-Elevala	Kamula-Elevala	kamu1264	1	glottolog_depth				Kamula
+kano1245	Kanoê	Kanoê	kano1245	1	isolate	Kapixana			Kanoê
+kapo1250	Kapori	Kapori	kapo1250	1	isolate				Kapori
+kara1289	Karankawa	Karankawa	kara1289	1	isolate				Karankawa
+kara1497	Karami	Karami	kara1497	1	isolate				Karami
+west2604	West Bomberai	West Bomberai	west2604	1	glottolog_depth				Kalamang
+kari1254	Kariri	Kariri	kari1254	1	isolate				Kariri
+karo1304	Karok	Karok	karo1304	1	isolate				Karok
+java1253	Javanesic	Austronesian	aust1307	1	glottolog_depth				Kawi
+paru1239	Parukotoan	Cariban	cari1283	1	glottolog_depth				Kaxuiâna
+nunu1252	Nunusaku	Austronesian	aust1307	1	glottolog_depth				Kayeli
+aran1267	Arandic	Pama-Nyungan	pama1250	1	glottolog_depth	Central Pama-Nyungan			Kaytetye
+kehu1238	Kehu	Kehu	kehu1238	1	isolate				Kehu
+kadu1256	Kadugli-Krongo	Kadugli-Krongo	kadu1256	1	glottolog_depth				Keiga
+kena1236	Kenaboi	Kenaboi	kena1236	1	isolate				Kenaboi
+unun9974	Unclassified Kainantu-Goroka	Nuclear Trans New Guinea	nucl1709	1	glottolog_depth				Kenati
+tupi1275	Tupian	Tupian	tupi1275	1	glottolog_depth				Kepkiriwát
+oira1260	Eastern Mongolic	Mongolic-Khitan	mong1349	1	glottolog_depth				Khamnigan Mongol
+unun9890	Unclassified Dravidian	Dravidian	drav1251	1	glottolog_depth				Khirwar
+kibi1239	Kibiri	Kibiri	kibi1239	1	isolate				Kibiri
+cent2235	Central-Eastern Tungusic	Tungusic	tung1282	1	glottolog_depth				Kilen
+yuma1250	Yuman	Cochimi-Yuman	coch1271	1	glottolog_depth	Yuman			Kiliwa
+kimk1238	Kimki	Kimki	kimk1238	1	isolate				Kimki
+mong1349	Mongolic-Khitan	Mongolic-Khitan	mong1349	1	glottolog_depth				Kitan
+pawn1252	Pawnee-Kitsai	Caddoan	cadd1255	1	glottolog_depth	Caddoan			Kitsai
+klam1254	Klamath-Modoc	Klamath-Modoc	klam1254	1	isolate	Klamath-Modoc			Klamath-Modoc
+cent2049	Central Heibanic	Heibanic	heib1242	1	glottolog_depth				Koalib-Rere
+unun9909	Unclassified Eastern Kru	Kru	krua1234	1	glottolog_depth				Kodia
+east1439	East South Bird's Head	South Bird's Head Family	sout1516	1	glottolog_depth				Kokoda
+kolp1236	Kol (Papua New Guinea)	Kol (Papua New Guinea)	kolp1236	1	isolate				Kol (Papua New Guinea)
+shas1238	Shastan	Shastan	shas1238	1	glottolog_depth				Konomihu
+nort3151	North Munda	Austroasiatic	aust1305	1	glottolog_depth	Munda			Korku
+sout2751	Southern Yeniseian	Yeniseian	yeni1252	1	glottolog_depth	Yeniseian			Kott-Assan
+nort2822	Northwest Songhay	Songhay	song1307	1	glottolog_depth	Songhay			Koyra Chiini Songhay
+maxa1249	Maxakali-Borum	Nuclear-Macro-Je	nucl1710	1	glottolog_depth	Botocudo			Borum
+skoo1245	Sko	Sko	skoo1245	1	glottolog_depth	Krisa			I'saka
+kuja1239	Kujarge	Kujarge	kuja1239	1	isolate				Kujarge
+kola1286	East Alor	Timor-Alor-Pantar	timo1261	1	glottolog_depth				Kula (Indonesia)
+kuna1268	Kunama	Kunama	kuna1268	1	isolate				Kunama
+marn1242	Marne	Gunwinyguan	gunw1250	1	glottolog_depth	Gunwinygic			Kunbarlang
+kung1259	Kungarakany	Kungarakany	kung1259	1	isolate				Kungarakany
+kunz1244	Kunza	Kunza	kunz1244	1	isolate	Kunza			Kunza
+kuot1243	Kuot	Kuot	kuot1243	1	isolate				Kuot
+kuru1300	Kurux-Malto	Dravidian	drav1251	1	glottolog_depth				Kurukh
+kusu1250	Kusunda	Kusunda	kusu1250	1	isolate				Kusunda
+kute1249	Kutenai	Kutenai	kute1249	1	isolate				Kutenai
+grea1300	Greater Western Kru	Kru	krua1234	1	glottolog_depth				Kuwaa
+khoe1240	Khoe-Kwadi	Khoe-Kwadi	khoe1240	1	glottolog_depth				Kwadi
+koma1264	Koman	Koman	koma1264	1	glottolog_depth				Gwama
+kwaz1243	Kwaza	Kwaza	kwaz1243	1	isolate				Kwaza
+sout2837	Southeast Surmic	Surmic	surm1244	1	glottolog_depth	Surmic			Kwegu
+nuku1256	Nukuma	Sepik	sepi1257	1	glottolog_depth	Nukuma			Kwoma
+miya1267	Miyak-Bun-Biwat	Yuat	yuat1252	1	glottolog_depth				Kyenele
+laal1242	Laal	Laal	laal1242	1	isolate				Laal
+lafo1243	Lafofa	Lafofa	lafo1243	1	isolate	Lafofa			Lafofa
+lakk1237	Lakkia-Biao	Tai-Kadai	taik1256	1	glottolog_depth	Kadai			Lakkia
+lamp1241	Lampungic	Austronesian	aust1307	1	glottolog_depth				Lampung Nyo
+lara1258	Laragia	Laragia	lara1258	1	isolate	Laragia			Laragia
+tang1340	Tangkic	Tangkic	tang1340	1	glottolog_depth	Tangkic			Lardil
+lavu1241	Lavukaleve	Lavukaleve	lavu1241	1	isolate	Lavukaleve			Lavukaleve
+leco1242	Leco	Leco	leco1242	1	isolate				Leco
+sout2923	South Sulawesi	Austronesian	aust1307	1	glottolog_depth				Lemolang
+clas1255	Classical-Middle-Modern Sinitic	Sino-Tibetan	sino1245	1	glottolog_depth				Classical Chinese
+coas1319	Coastal Finnic	Uralic	ural1272	1	glottolog_depth	Finnic			Liv
+mang1393	Mangbetu-Asua	Central Sudanic	cent2225	1	glottolog_depth				Lombi
+huaa1247	Hua	Tuu	tuuu1241	1	glottolog_depth				Lower-Nosop
+lule1238	Lule	Lule	lule1238	1	isolate				Lule
+uncl1536	Unclassified Italic	Indo-European	indo1319	1	glottolog_depth				Lusitanian
+luvo1234	Luvo-Lydian	Indo-European	indo1319	1	glottolog_depth				Lydian
+unun9984	Unclassified Tacanan	Pano-Tacanan	pano1259	1	glottolog_depth				Mabenaro
+nucl1828	Nuclear Guahiboan	Guahiboan	guah1252	1	glottolog_depth	Guahiban			Hitnu
+maib1239	Maybrat-Karon	Maybrat-Karon	maib1239	1	isolate	North-Central Bird's Head			Maybrat-Karon
+alto1249	Alto Orinoco	Arawakan	araw1281	1	glottolog_depth				Maipure-Avane
+surm1244	Surmic	Surmic	surm1244	1	glottolog_depth	Surmic			Majang
+east2520	East Timor	Timor-Alor-Pantar	timo1261	1	glottolog_depth	Makasae-Fataluku-Oirata			Makasae-Makalero
+bula1259	Bulaka River	Bulaka River	bula1259	1	glottolog_depth	Bulaka River			Maklew
+unun9989	Unclassified Baining	Baining	bain1263	1	glottolog_depth				Makolkol
+maku1246	Máku	Máku	maku1246	1	isolate				Máku
+tupa1251	Tuparic	Tupian	tupi1275	1	glottolog_depth				Makuráp
+nort3153	Northern Nambiquaran	Nambiquaran	namb1299	1	glottolog_depth				Mamaindé
+core1249	Core Siouan	Siouan	siou1252	1	glottolog_depth	Core Siouan			Mandan
+mang1377	Mangic	Austroasiatic	aust1305	1	glottolog_depth				Mang
+mang1423	Mangarrayi-Maran	Mangarrayi-Maran	mang1423	1	glottolog_depth	Mangarrayi			Mangarrayi
+giim1238	Giimbiyu	Giimbiyu	giim1238	1	glottolog_depth				Mangerr
+east1459	East Bird's Head	East Bird's Head	east1459	1	glottolog_depth	East Bird's Head			Sougb
+kuki1245	Kuki-Chin-Naga	Sino-Tibetan	sino1245	1	glottolog_depth	Kuki-Chin			Manipuri
+mapi1253	Pidjanan	Arawakan	araw1281	1	glottolog_depth				Mapidian-Mawayana
+mara1266	Maratino	Maratino	mara1266	1	isolate				Maratino
+waga1259	Maranunggu-Ame-Manda	Western Daly	west2434	1	glottolog_depth	Wagaydy			Maranunggu
+tama1329	Tamaic	Tamaic	tama1329	1	glottolog_depth				Mararit
+brin1245	Bringen	Western Daly	west2434	1	glottolog_depth				Marimanindji
+jimi1245	Jimi	Nuclear Trans New Guinea	nucl1709	1	glottolog_depth	Chimbu			Maring
+unun9935	Unclassified Yuruna	Tupian	tupi1275	1	glottolog_depth				Maritsauá
+kama1371	Kamakanan	Kamakanan	kama1371	1	glottolog_depth				Masacara
+mass1263	Massep	Massep	mass1263	1	isolate				Massep
+mata1275	Matanawí	Matanawí	mata1275	1	isolate				Matanawí
+mato1253	Mato Grosso Arára	Mato Grosso Arára	mato1253	1	isolate				Mato Grosso Arára
+mawe1251	Mawes	Mawes	mawe1251	1	isolate				Mawes
+maya1279	Mayabic	Pama-Nyungan	pama1250	1	glottolog_depth				Mayaguduna
+mayo1277	Mayoruna Branch	Pano-Tacanan	pano1259	1	glottolog_depth				Mayoruna-Tabatinga
+lama1273	Lamalamic	Pama-Nyungan	pama1250	1	glottolog_depth				Rimanggudhinma
+uncl1510	Unclassified Arafundi	Arafundi	araf1243	1	glottolog_depth				Meakambut
+oute1261	Outer Nimboranic	Nimboranic	nimb1257	1	glottolog_depth				Mekwei
+japu1236	Japura-Colombia	Arawakan	araw1281	1	glottolog_depth				Mepuri
+mero1237	Meroitic	Meroitic	mero1237	1	isolate				Meroitic
+west2781	West-Central Nubian	Nubian	nubi1251	1	glottolog_depth	Nubian			Midob
+tama1330	Tama-Sungor-Miisiirii	Tamaic	tama1329	1	glottolog_depth				Miisiirii
+mimi1240	Mimi-Gaudefroy	Mimi-Gaudefroy	mimi1240	1	isolate				Mimi-Gaudefroy
+maba1274	Maban	Maban	maba1274	1	glottolog_depth				Mimi-Nachtigal
+mink1237	Minkin	Minkin	mink1237	1	isolate				Minkin
+unun9987	Unclassified Tucanoan	Tucanoan	tuca1253	1	glottolog_depth				Miriti
+misu1242	Misumalpan	Misumalpan	misu1242	1	glottolog_depth	Misumalpan			Mískito
+ryuk1244	Southern Ryukyu	Japonic	japo1237	1	glottolog_depth				Miyako
+uncl1526	Unclassified North Volta-Congo	Atlantic-Congo	atla1278	1	glottolog_depth				Miyobe
+mlap1239	Mlap-Gresi-Kemtuik	Nimboranic	nimb1257	1	glottolog_depth				Mlap
+cent1999	Central Karen	Sino-Tibetan	sino1245	1	glottolog_depth				Mobwa Karen
+moch1259	Mochica	Mochica	moch1259	1	isolate	Chimúan			Mochica
+qomm1235	Qom	Guaicuruan	guai1249	1	glottolog_depth	South Guaicuruan			Mocoví
+mola1238	Molale	Molale	mola1238	1	isolate	Molala			Molale
+molo1262	Molof	Molof	molo1262	1	isolate				Molof
+pani1259	Paniai Lakes	Nuclear Trans New Guinea	nucl1709	1	glottolog_depth	Wissel Lakes-Kemandoga			Moni
+morb1239	Mor (Bomberai Peninsula)	Mor (Bomberai Peninsula)	morb1239	1	isolate				Mor (Bomberai Peninsula)
+moro1289	Marori	Marori	moro1289	1	isolate				Marori
+moru1252	Moru-Madi	Central Sudanic	cent2225	1	glottolog_depth	Moru-Ma'di			Moru
+mose1249	Mosetén-Chimané	Mosetén-Chimané	mose1249	1	isolate	Mosetenan			Mosetén-Chimané
+movi1243	Movima	Movima	movi1243	1	isolate				Movima
+mpur1239	Mpur	Mpur	mpur1239	1	isolate	Kebar			Mpur
+kwal1257	Kwalean	Kwalean	kwal1257	1	glottolog_depth				Mulaha
+muni1258	Muniche	Muniche	muni1258	1	isolate				Muniche
+mure1235	Mure	Mure	mure1235	1	isolate				Mure
+nada1235	Naduhup	Naduhup	nada1235	1	glottolog_depth	Nadahup			Nadëb
+bure1237	Burera-Nakara	Maningrida	mani1293	1	glottolog_depth	Nakkara			Nakara
+unun9951	Unclassified Sino-Tibetan	Sino-Tibetan	sino1245	1	glottolog_depth				Nam
+orok1264	Central-Western Tungusic	Tungusic	tung1282	1	glottolog_depth	Tungusic			Nanai
+nara1262	Nara	Nara	nara1262	1	isolate	Nara			Nara
+natc1249	Natchez	Natchez	natc1249	1	isolate				Natchez
+kolo1268	Kolopom	Kolopom	kolo1268	1	glottolog_depth				Ndom
+memb1239	Membi-Mangbutu-Efe	Central Sudanic	cent2225	1	glottolog_depth				Ndo
+uncl1531	Unclassified Shastan	Shastan	shas1238	1	glottolog_depth				New River Shasta
+dida1244	Neyo-Dida	Kru	krua1234	1	glottolog_depth	Kru			Neyo
+saha1239	Sahaptian	Sahaptian	saha1239	1	glottolog_depth	Sahaptian			Nez Perce
+east2701	Eastern Gunwinyguan	Gunwinyguan	gunw1250	1	glottolog_depth	Ngandi			Ngandi
+worr1236	Worrorran	Worrorran	worr1236	1	glottolog_depth	Worrorran			Ngarinyin
+taoi1247	Ta'oihic	Austroasiatic	aust1305	1	glottolog_depth				Kriang-Khlor
+lend1246	Lenduic	Central Sudanic	cent2225	1	glottolog_depth	Lendu			Ngiti
+unun9988	Unclassified Eastern Nyulnyulan	Nyulnyulan	nyul1248	1	glottolog_depth				Ngumbarl
+kart1249	Kartu-Nhanda	Pama-Nyungan	pama1250	1	glottolog_depth	Western Pama-Nyungan			Nhanda
+niha1238	Nihali	Nihali	niha1238	1	isolate				Nihali
+west2872	Western Nyulnyulan	Nyulnyulan	nyul1248	1	glottolog_depth				Nimanbur
+nina1239	Ninam-Yanomam-Yaroame	Yanomamic	yano1268	1	glottolog_depth	Yanomam			Ninam
+bewa1242	Bewani	Border	bord1247	1	glottolog_depth				Ningera
+baic1239	Baic	Sino-Tibetan	sino1245	1	glottolog_depth				Northern Bai
+nimb1257	Nimboranic	Nimboranic	nimb1257	1	glottolog_depth				Nimboran
+skou1239	Skouic	Sko	skoo1245	1	glottolog_depth	Western Skou			Skou
+tsim1258	Tsimshian	Tsimshian	tsim1258	1	glottolog_depth	Tsimshianic			Southern-Coastal Tsimshian
+nucl1659	Nuclear Witotoan	Huitotoan	huit1251	1	glottolog_depth	Huitoto			Nüpode Huitoto
+sout2981	Southern Wakashan	Wakashan	waka1280	1	glottolog_depth	Southern Wakashan			Nuu-chah-nulth
+chum1262	Chumashan	Chumashan	chum1262	1	glottolog_depth				Obispeño
+odia1239	Odiai	Odiai	odia1239	1	isolate				Odiai
+midd1323	Middle Great Andamanese	Great Andamanese	grea1241	1	glottolog_depth				Okojuwoi
+karl1243	Turkestan Turkic	Turkic	turk1311	1	glottolog_depth				Old Turkic
+unun9948	Unclassified Northern Uto-Aztecan	Uto-Aztecan	utoa1244	1	glottolog_depth				Omomil
+tato1241	Tatoga-Omotik	Nilotic	nilo1247	1	glottolog_depth				Omotik
+omur1241	Omurano	Omurano	omur1241	1	isolate				Omurano
+yukp1242	Opon-Yukpan	Cariban	cari1283	1	glottolog_depth				Opón-Carare
+napo1243	Napo Tucanoan	Tucanoan	tuca1253	1	glottolog_depth	Tucanoan			Maijiki
+toro1256	Tor-Orya	Tor-Orya	toro1256	1	glottolog_depth	Orya			Orya
+otii1244	Oti	Oti	otii1244	1	isolate				Oti
+left1242	Left May	Left May	left1242	1	glottolog_depth	Left May			Owiniga
+oyst1235	Oyster Bay-Big River-Little Swanport	Oyster Bay-Big River-Little Swanport	oyst1235	1	isolate				Oyster Bay-Big River-Little Swanport
+quec1386	Quechua I	Quechuan	quec1387	1	glottolog_depth				Pacaraos Quechua
+katu1271	Katuic	Austroasiatic	aust1305	1	glottolog_depth	Katuic			Pacoh
+paez1247	Páez	Páez	paez1247	1	isolate	Páezan			Páez
+unun9953	Unclassified Lolo-Burmese	Sino-Tibetan	sino1245	1	glottolog_depth				Pai-lang
+sout1554	Southern Karen	Sino-Tibetan	sino1245	1	glottolog_depth				Paku Karen
+yoku1255	Yokutsan	Yokutsan	yoku1255	1	glottolog_depth				Palewyami Yokuts
+cent2413	Central-Eastern Maipuran	Arawakan	araw1281	1	glottolog_depth	Eastern Arawakan			Palikúr
+jese1235	Je Setentrional	Nuclear-Macro-Je	nucl1710	1	glottolog_depth	Ge-Kaingang			Panará
+pank1250	Pankararú	Pankararú	pank1250	1	isolate				Pankararú
+peri1254	Peripheral Karen	Sino-Tibetan	sino1245	1	glottolog_depth				Pa'o Karen
+papi1255	Papi	Papi	papi1255	1	isolate				Papi
+sora1255	Sora-Juray-Gorum	Austroasiatic	aust1305	1	glottolog_depth				Gorum-Parenga
+pawa1255	Pawaia	Pawaia	pawa1255	1	isolate	Pawaian			Pawaia
+paya1236	Payagua	Payagua	paya1236	1	isolate				Payagua
+pear1246	Pearic	Austroasiatic	aust1305	1	glottolog_depth				Pear
+chib1249	Chibchan	Chibchan	chib1249	1	glottolog_depth	Paya			Pech
+unun9944	Unclassified Kipchak	Turkic	turk1311	1	glottolog_depth				Pecheneg
+pele1245	Pele-Ata	Pele-Ata	pele1245	1	isolate				Pele-Ata
+grae1234	Graeco-Phrygian	Indo-European	indo1319	1	glottolog_depth				Phrygian
+katu1272	Katu	Austroasiatic	aust1305	1	glottolog_depth				Phuong
+kuik1245	Kuikuroan	Cariban	cari1283	1	glottolog_depth				Pimenteira
+pira1253	Pirahã	Pirahã	pira1253	1	isolate	Mura			Pirahã
+tiwa1254	Tiwa-Piro	Kiowa-Tanoan	kiow1265	1	glottolog_depth				Piro
+west1503	Western Tasmanian	Western Tasmanian	west1503	1	glottolog_depth				Port Sorell
+balt1263	Balto-Slavic	Indo-European	indo1319	1	glottolog_depth				Old Prussian
+serr1253	Serra Hills	Sko	skoo1245	1	glottolog_depth				Puare
+puel1244	Puelche	Puelche	puel1244	1	isolate	Puelche			Puelche
+puin1248	Puinave	Puinave	puin1248	1	isolate				Puinave
+pume1238	Pumé	Pumé	pume1238	1	isolate				Pumé
+phay1242	Phay-Pram	Austroasiatic	aust1305	1	glottolog_depth	Khmuic			Ksingmul
+puqu1242	Puquina	Puquina	puqu1242	1	isolate				Puquina
+pura1257	Purari	Purari	pura1257	1	isolate				Purari
+puru1268	Purubora-Ramarama	Tupian	tupi1275	1	glottolog_depth				Puruborá
+pyuu1245	Pyu	Pyu	pyuu1245	1	isolate				Pyu
+east2365	Eastern Kra	Tai-Kadai	taik1256	1	glottolog_depth				Pubiao-Qabiao
+raji1239	Raji-Raute	Sino-Tibetan	sino1245	1	glottolog_depth	Raji-Raute			Raji
+rama1271	Ramanos	Ramanos	rama1271	1	isolate				Ramanos
+nung1293	Nungish	Sino-Tibetan	sino1245	1	glottolog_depth	Nungish			Rawang
+sout3142	Southern Yolngu	Pama-Nyungan	pama1250	1	glottolog_depth	Western Pama-Nyungan			Ritharrngu
+unun9892	Unclassified Chapakura	Chapacuran	chap1271	1	glottolog_depth				Rocorona
+tura1263	Turama-Kikori	Turama-Kikori	tura1263	1	glottolog_depth	Turama-Kikorian			Rumu
+namb1299	Nambiquaran	Nambiquaran	namb1299	1	glottolog_depth				Sabanê
+ainu1252	Ainu	Ainu	ainu1252	1	glottolog_depth				Sakhalin Ainu
+oghu1243	Oghuz	Turkic	turk1311	1	glottolog_depth	Turkic			Salar
+gavi1250	Gavianic	Tupian	tupi1275	1	glottolog_depth				Salamãi
+sali1253	Salinan	Salinan	sali1253	1	isolate				Salinan
+sali1297	Saliban	Saliban	sali1297	1	glottolog_depth	Sáliba			Sáliba
+sand1273	Sandawe	Sandawe	sand1273	1	isolate				Sandawe
+west2576	Western Sepik Hill	Sepik	sepi1257	1	glottolog_depth				Saniyo-Hiyewe
+yano1268	Yanomamic	Yanomamic	yano1268	1	glottolog_depth	Yanomam			Sanumá
+sape1238	Sapé	Sapé	sape1238	1	isolate				Sapé
+mawe1252	Maweti-Guarani	Tupian	tupi1275	1	glottolog_depth				Sateré-Mawé
+saus1247	Sause	Sause	saus1247	1	isolate				Sause
+savo1255	Savosavo	Savosavo	savo1255	1	isolate	Savosavo			Savosavo
+sech1236	Sechuran	Sechuran	sech1236	1	isolate				Sechuran
+peul1234	Fula-Sereer	Atlantic-Congo	atla1278	1	glottolog_depth				Sereer
+seri1257	Seri	Seri	seri1257	1	isolate	Seri			Seri
+shab1252	Shabo	Shabo	shab1252	1	isolate				Shabo
+shom1245	Shom Peng	Shom Peng	shom1245	1	isolate				Shom Peng
+west2502	West-Central Heibanic	Heibanic	heib1242	1	glottolog_depth				Shwai
+siam1242	Siamou	Siamou	siam1242	1	isolate	Kru			Siamou
+nasi1247	Nasioiic	South Bougainville	sout2948	1	glottolog_depth				Sibe (Nasioi)
+cent2326	Central Siberian Turkic	Turkic	turk1311	1	glottolog_depth				Siberian Tatar
+east2502	East Tariku	Lakes Plain	lake1255	1	glottolog_depth	Lakes Plain			Sikaritai
+algo1256	Algonquian-Blackfoot	Algic	algi1248	1	glottolog_depth	Algonquian			Siksika
+nucl1590	Nuclear Maimai	Nuclear Torricelli	nucl1708	1	glottolog_depth				Siliput
+east2493	East Formosan	Austronesian	aust1307	1	glottolog_depth	East Formosan			Sirayaic
+eski1265	Eskimo	Eskimo-Aleut	eski1264	1	glottolog_depth	Eskimo			Old Sirenik
+sius1254	Siuslaw	Siuslaw	sius1254	1	isolate	Siuslawan			Siuslaw
+buin1247	Buinic	South Bougainville	sout2948	1	glottolog_depth	East Bougainville			Siwai
+kanu1280	Kanum	Yam	more1255	1	glottolog_depth				Smärky Kanum
+ngkr1234	Ngkrn-Ngkantr	Yam	more1255	1	glottolog_depth				Sota Kanum
+finn1317	Finnic	Uralic	ural1272	1	glottolog_depth				South Estonian
+east2383	Eastern Ijo	Ijoid	ijoi1239	1	glottolog_depth				Southeast Ijo
+tiwa1255	Tiwa	Kiowa-Tanoan	kiow1265	1	glottolog_depth	Kiowa-Tanoan			Southern Tiwa
+namb1300	Nambikwara Complex	Nambiquaran	namb1299	1	glottolog_depth	Nambikuaran			Southern Nambikuára
+khan1279	Khantyic	Uralic	ural1272	1	glottolog_depth				Southern Khanty
+mans1269	Mansic	Uralic	ural1272	1	glottolog_depth				Southern Mansi
+suar1238	Asabano	Asabano	suar1238	1	isolate				Asabano
+suki1244	Suki-Gogodala	Suki-Gogodala	suki1244	1	glottolog_depth	Suki			Suki
+sulk1246	Sulka	Sulka	sulk1246	1	isolate				Sulka
+sume1241	Sumerian	Sumerian	sume1241	1	isolate				Sumerian
+mala1536	Malayo-Sumbawan	Austronesian	aust1307	1	glottolog_depth	Malayo-Sumbawan			Sundanese
+mond1266	Monde	Tupian	tupi1275	1	glottolog_depth				Suruí
+kart1248	Kartvelian	Kartvelian	kart1248	1	glottolog_depth	Kartvelian			Svan
+main1282	Mainland North Halmaheran	North Halmahera	nort2923	1	glottolog_depth	North Halmaheran			Tabaru
+nucl1631	Nuclear Sentanic	Sentanic	sent1261	1	glottolog_depth	Sentani			Tabla
+tabo1241	Tabo	Tabo	tabo1241	1	isolate				Tabo
+tuar1240	Tuareg	Afro-Asiatic	afro1255	1	glottolog_depth	Berber			Tahaggart Tamahaq
+taia1239	Taiap	Taiap	taia1239	1	isolate	Gapun			Taiap
+take1257	Takelma	Takelma	take1257	1	isolate				Takelma
+tall1235	Tallán	Tallán	tall1235	1	isolate				Tallán
+mapo1244	Mapoyo-Tamanaku	Cariban	cari1283	1	glottolog_depth				Tamanaku
+tamb1257	Tambora	Tambora	tamb1257	1	isolate				Tambora
+tana1288	Tanahmerah	Tanahmerah	tana1288	1	isolate				Tanahmerah
+taru1236	Taruma	Taruma	taru1236	1	isolate				Taruma
+taua1242	Tauade	Tauade	taua1242	1	isolate				Tauade
+west2582	West Tariku	Lakes Plain	lake1255	1	glottolog_depth				Tause
+taus1253	Taushiro	Taushiro	taus1253	1	isolate				Taushiro
+west2572	Western Plains Austronesian	Austronesian	aust1307	1	glottolog_depth	Western Plains Austronesian			Thao
+coas1325	Coast Salish	Salishan	sali1255	1	glottolog_depth	Tillamook			Tillamook
+katl1246	Katla-Tima	Katla-Tima	katl1246	1	glottolog_depth	Katla-Tima			Tima
+timo1237	Timote-Cuica	Timote-Cuica	timo1237	1	isolate	Timote-Cuica			Timote-Cuica
+timu1245	Timucua	Timucua	timu1245	1	isolate				Timucua
+tini1245	Tinigua	Tinigua	tini1245	1	isolate				Tinigua
+west2779	West Dogon	Dogon	dogo1299	1	glottolog_depth				Tiranige Diga Dogon
+tiwi1244	Tiwi	Tiwi	tiwi1244	1	isolate	Tiwian			Tiwi
+atha1245	Athabaskan-Eyak-Tlingit	Athabaskan-Eyak-Tlingit	atha1245	1	glottolog_depth	Tlingit			Tlingit
+tonk1249	Tonkawa	Tonkawa	tonk1249	1	isolate				Tonkawa
+mina1272	Minahasan	Austronesian	aust1307	1	glottolog_depth				Tonsawang
+more1264	Moreic	Chapacuran	chap1271	1	glottolog_depth				Torá
+touo1238	Touo	Touo	touo1238	1	isolate				Touo
+trum1247	Trumai	Trumai	trum1247	1	isolate				Trumai
+nonk1236	Non-Khoekhoe	Khoe-Kwadi	khoe1240	1	glottolog_depth				Ts'ixa
+tsou1250	Tsouic	Austronesian	aust1307	1	glottolog_depth	Tsou			Tsou
+cali1246	Californian Uto-Aztecan	Uto-Aztecan	utoa1244	1	glottolog_depth	California Uto-Aztecan			Tübatulabal
+sout3136	Southern Uto-Aztecan	Uto-Aztecan	utoa1244	1	glottolog_depth	Tubar			Tubar
+cent2229	Central-Western Kadugli-Krongo	Kadugli-Krongo	kadu1256	1	glottolog_depth				Tulishi
+tuni1252	Tunica	Tunica	tuni1252	1	isolate				Tunica
+comm1245	Common Turkic	Turkic	turk1311	1	glottolog_depth	Turkic			Turkic Khalaj
+ohio1234	Ohio Valley Siouan	Siouan	siou1252	1	glottolog_depth	Core Siouan			Tutelo
+tuxa1239	Tuxá	Tuxá	tuxa1239	1	isolate				Tuxá
+abkh1242	Abkhaz-Adyge	Abkhaz-Adyge	abkh1242	1	glottolog_depth	Northwest Caucasian			Ubykh
+perm1256	Permian	Uralic	ural1272	1	glottolog_depth	Permic			Udmurt
+lolo1265	Lolo-Burmese	Sino-Tibetan	sino1245	1	glottolog_depth				Ugong
+umbu1235	Umbugarla	Umbugarla	umbu1235	1	isolate				Umbugarla
+grea1284	Greater Central Philippine	Austronesian	aust1307	1	glottolog_depth				Umiray Dumaget Agta
+boro1281	Bororoan	Bororoan	boro1281	1	glottolog_depth				Umotína
+urar1246	Urarina	Urarina	urar1246	1	isolate				Urarina
+komb1276	Kombio-Arapesh-Urat	Nuclear Torricelli	nucl1708	1	glottolog_depth	Wapei-Palei			Urat
+usku1243	Usku	Usku	usku1243	1	isolate				Usku
+west2788	West Palai	Nuclear Torricelli	nucl1708	1	glottolog_depth	Wapei-Palei			Walman
+ital1284	Italic	Indo-European	indo1319	1	glottolog_depth				Venetic
+viet1251	Viet-Muong	Austroasiatic	aust1305	1	glottolog_depth	Viet-Muong			Vietnamese
+vile1241	Vilela	Vilela	vile1241	1	isolate				Vilela
+wadj1254	Wadjiginy	Wadjiginy	wadj1254	1	isolate	Anson Bay			Wadjiginy
+wage1238	Wageman	Wageman	wage1238	1	isolate				Wageman
+tend1239	Tenda	Atlantic-Congo	atla1278	1	glottolog_depth	Tenda			Wamey
+wape1249	Wapei-Palei	Nuclear Torricelli	nucl1708	1	glottolog_depth				Wanap
+waor1240	Waorani	Waorani	waor1240	1	isolate				Waorani
+wara1303	Warao	Warao	wara1303	1	isolate				Warao
+khas1268	Khasian	Austroasiatic	aust1305	1	glottolog_depth				War-Jaintia
+dese1234	Desert Nyungic	Pama-Nyungan	pama1250	1	glottolog_depth	Western Pama-Nyungan			Warumungu
+wash1253	Washo	Washo	wash1253	1	isolate				Washo
+cent2233	Central Dani	Nuclear Trans New Guinea	nucl1709	1	glottolog_depth				Western Dani
+nort2923	North Halmahera	North Halmahera	nort2923	1	glottolog_depth	North Halmaheran			West Makian
+nort2950	Northern Caddoan	Caddoan	cadd1255	1	glottolog_depth	Caddoan			Wichita
+comp1236	Compromise Middle Pama	Pama-Nyungan	pama1250	1	glottolog_depth				Wikngenchera
+thur1253	Thura-Yura	Pama-Nyungan	pama1250	1	glottolog_depth	Central Pama-Nyungan			Wirangu
+wiru1244	Wiru	Wiru	wiru1244	1	isolate				Wiru
+choc1280	Chocoan	Chocoan	choc1280	1	glottolog_depth	Choco			Woun Meu
+unun9891	Unclassified Warrayic	Gunwinyguan	gunw1250	1	glottolog_depth				Wulwulam
+kwii1241	!Ui	Tuu	tuuu1241	1	glottolog_depth	Tu			/Xam
+xinc1237	Xincan	Xincan	xinc1237	1	glottolog_depth				Xinca-Guazacapan
+bahu1238	Bahuanaic	Arawakan	araw1281	1	glottolog_depth	Bahuanic			Xiriâna
+xuku1239	Xukurú	Xukurú	xuku1239	1	isolate				Xukurú
+east2770	East Queensland Border Pama Nyungan	Pama-Nyungan	pama1250	1	glottolog_depth				Yagara-Jandai
+peba1241	Peba-Yagua	Peba-Yagua	peba1241	1	glottolog_depth	Peba-Yaguan			Yagua
+nucl1763	Nuclear Angan	Angan	anga1289	1	glottolog_depth				Yagwoia
+yale1246	Yale	Yale	yale1246	1	isolate	Yale			Yale
+yama1264	Yámana	Yámana	yama1264	1	isolate	Yámana			Yámana
+komb1271	Kombio-Yambes	Nuclear Torricelli	nucl1708	1	glottolog_depth				Yambes
+yana1271	Yana	Yana	yana1271	1	isolate	Yana			Yana
+kamp1244	Kampa-Amuesha	Arawakan	araw1281	1	glottolog_depth	Yanesha'			Yanesha'
+yuul1239	Yuulngu	Pama-Nyungan	pama1250	1	glottolog_depth				Nhangu
+uncl1519	Unclassified Yanomamic	Yanomamic	yano1268	1	glottolog_depth				Yãnoma
+ngar1290	Ngarna	Pama-Nyungan	pama1250	1	glottolog_depth	Western Pama-Nyungan			Yanyuwa
+uncl1520	Unclassified Guianan	Cariban	cari1283	1	glottolog_depth				Yaio
+yano1266	Yanomam-Yaroame	Yanomamic	yano1268	1	glottolog_depth				Yaroame
+mong1343	Ulmapo	Keram	kera1258	1	glottolog_depth				Ulwa (Papua New Guinea)
+toto1252	Totonac	Totonacan	toto1251	1	glottolog_depth	Totonacan			Yecuatla Totonac
+more1256	Morehead-Maro	Yam	more1255	1	glottolog_depth	Morehead and Upper Maro Rivers			Yei
+bina1279	Binanderean	Nuclear Trans New Guinea	nucl1709	1	glottolog_depth				Yekora
+yele1255	Yele	Yele	yele1255	1	isolate	Yele			Yele
+yera1243	Yerakai	Yerakai	yera1243	1	isolate				Yerakai
+mayo1278	Mayo-Pasi	Sepik	sepi1257	1	glottolog_depth	Tama Sepik			Yessan-Mayo
+yetf1238	Yetfa	Yetfa	yetf1238	1	isolate				Yetfa
+yuch1247	Yuchi	Yuchi	yuch1247	1	isolate				Yuchi
+sbbo1237	SBB Occidental	Central Sudanic	cent2225	1	glottolog_depth	Bongo-Bagirmi			Yulu-Binga
+yura1255	Yuracaré	Yuracaré	yura1255	1	isolate				Yuracaré
+yuru1243	Yurumanguí	Yurumanguí	yuru1243	1	isolate				Yurumanguí
+yuwa1244	Hoti	Hoti	yuwa1244	1	isolate				Hoti
+zuni1245	Zuni	Zuni	zuni1245	1	isolate				Zuni

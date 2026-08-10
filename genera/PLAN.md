@@ -23,32 +23,37 @@ The WALS/Dryer genera have two limitations we address here:
 
 ## What "scientific definition" means here
 
-> A **genus** is a maximal clade whose crown divergence does not exceed a fixed
-> threshold **T**, where T is calibrated so the induced partition best
-> reproduces (a) Indo-European's traditional subfamilies and (b) WALS genera on
-> the families for which we have both a phylogeny and WALS labels.
+> A **genus** is the Glottolog clade obtained by cutting a family's
+> classification at a calibrated taxonomic **depth d** below the family root,
+> where d is chosen to best reproduce WALS/Dryer genera (with Indo-European as
+> the yardstick).
 
-Because our phylogenies (GLED) carry **relative** divergence (accumulated
-lexical change), T is a calibrated *distance*, not an absolute age. We report it
-as such and record the Indo-European yardstick explicitly.
+**Note — method pivot (evidence-driven).** The project began intending to cut
+GLED phylogenies at a divergence threshold T (see `methods.md` §2). Calibration
+showed GLED branch lengths are not on a common scale across families
+(per-family optimal cut heights span ~3 orders of magnitude), so no single T
+reproduces genera — it tops out at ARI ≈ 0.48 vs WALS. A **scale-free Glottolog
+taxonomic-depth cut reaches ARI ≈ 0.87** and recovers Indo-European's genera
+almost exactly, so it is the primary criterion. GLED is retained for
+independent validation and phase-2 refinement. See `methods.md` for the full
+argument and numbers.
 
 ## Coverage strategy (hybrid)
 
-Only ~2,770 of 8,591 Glottolog language-level nodes sit in a GLED tree, so a
-single criterion cannot cover everything. We therefore combine, in decreasing
-confidence:
+The Glottolog taxonomic-depth cut covers **all** in-scope languages uniformly
+(it needs only the classification, which Glottolog has for everything). Each
+assignment carries a confidence tier recording how much independent evidence
+backs it:
 
-| method       | applies to                                   | confidence |
-|--------------|----------------------------------------------|------------|
-| `tree`       | families with a GLED tree, cut at T          | high       |
-| `asjp`       | GLED-less families with enough ASJP wordlists| medium     |
-| `glottolog`  | everything else, via a calibrated depth rule | lower      |
-| `isolate`    | Glottolog isolates                           | n/a (1 lang)|
+| confidence       | meaning                                             | phase-1 count |
+|------------------|-----------------------------------------------------|---------------|
+| `wals-anchored`  | genus contains WALS-labeled languages               | 6,502 |
+| `gled-supported` | no WALS, but the genus is monophyletic in GLED      | 277 |
+| `glottolog-only` | rests on Glottolog classification alone             | 687 |
+| `isolate`        | Glottolog isolate (one language)                    | 184 |
 
-The Glottolog-depth rule is itself *calibrated* against the tree-based genera:
-we measure where tree-based genus boundaries fall in Glottolog's nesting and
-learn the depth that best matches, so the fallback stays consistent with the
-scientific cut instead of being an independent guess.
+Phase 2 upgrades `glottolog-only` genera in large families using ASJP/GLED, and
+subdivides the few over-large genera (Bantoid, Oceanic, …).
 
 ## Units in scope
 

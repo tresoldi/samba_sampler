@@ -2,8 +2,5 @@
 # carry their own upstream licensing, so not vendored here).
 data/sources/
 
-# Generated pipeline outputs (rebuilt by the pipeline). The curated final
-# artifacts may be force-added later once stable.
-data/genera.tsv
-data/genera_summary.tsv
-data/calibration_report.md
+# The derived artifacts under data/ (genera.tsv, genera_summary.tsv,
+# params.json, *_report.md) ARE the deliverable and are committed.
