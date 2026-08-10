@@ -365,34 +365,6 @@ def build_table_from_file(
     return dict(result_dict)
 
 
-def load_genera(filename: Optional[Union[str, Path]] = None, with_names: bool = False):
-    """
-    Load the bundled glottocode -> genus mapping.
-
-    The mapping is produced by the ``genera`` side project: a calibrated
-    Glottolog taxonomic-depth cut, validated against WALS/Dryer genera and
-    independently supported by GLED phylogenies and ASJP wordlists. It assigns
-    every in-scope Glottolog language to a mid-level genealogical unit (a
-    "genus"), the level typologists use to control for genealogical bias.
-
-    @param filename: Optional path to a genera TSV; defaults to the bundled file.
-    @param with_names: If True, also return a {genus_id: genus_name} mapping.
-    @return: {glottocode: genus_id}, or (mapping, {genus_id: genus_name}) when
-        ``with_names`` is True.
-    """
-    path = Path(filename) if filename else ETC_PATH / "genera.tsv"
-    genus_of: dict = {}
-    names: dict = {}
-    with path.open(encoding="utf-8") as fh:
-        for row in csv.DictReader(fh, delimiter="\t"):
-            genus_of[row["glottocode"]] = row["genus_id"]
-            if with_names and row.get("genus_name"):
-                names[row["genus_id"]] = row["genus_name"]
-    if with_names:
-        return genus_of, names
-    return genus_of
-
-
 def filter_data(filter_string: str, data: List[dict]) -> List[dict]:
     """
     Apply filtering criteria to a list of dictionaries.

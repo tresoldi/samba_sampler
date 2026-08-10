@@ -1,6 +1,0 @@
-# Fetched external source caches (reproducible via pipeline/01_fetch_sources.py;
-# carry their own upstream licensing, so not vendored here).
-data/sources/
-
-# The derived artifacts under data/ (genera.tsv, genera_summary.tsv,
-# params.json, *_report.md) ARE the deliverable and are committed.
