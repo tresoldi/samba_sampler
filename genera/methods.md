@@ -92,3 +92,33 @@ cross-reference. No opaque `family-genus-NNN` placeholders are needed.
   level shallower or deeper. Per-family depth calibration is left to future work.
 - WALS genus agreement (ARI 0.87) is high but not perfect; ~40% of WALS genera
   are split across our (usually finer) genera.
+
+## 9. Phase 2 — ASJP support for `glottolog-only` genera
+
+Phase 1 leaves 687 languages in `glottolog-only` genera: groups with no WALS
+labels and no testable GLED monophyly. Phase 2 brings a second, independent
+source — **ASJP** 40-item wordlists — to bear on them.
+
+**Distance.** Language-pair distance is the mean, over shared concepts, of the
+normalized Levenshtein distance (LDN) between ASJP-transcribed forms (minimum
+over multiple forms per concept), requiring ≥10 shared concepts.
+
+**Criterion.** A `glottolog-only` genus is upgraded to `asjp-supported` when it
+is *lexically cohesive and separated*: its mean intra-genus ASJP distance is
+smaller than the mean distance from its members to their **nearest same-family
+relatives** (a positive silhouette-style separation). This is a *relative*
+criterion, so — like the depth cut, and unlike a global distance threshold — it
+does not assume ASJP divergences are on a common scale across families
+(the same objection that ruled out a global GLED threshold in §2).
+
+**Result.** Of the 394 `glottolog-only` genera, 70 have enough ASJP coverage to
+test (≥2 comparable wordlists inside the genus and ≥1 outside); **63 separate and
+are upgraded** (187 languages), leaving 500 `glottolog-only`. Examples span
+families: Chug-Lish (Sino-Tibetan), Kolami-Naiki (Dravidian), Subanen and
+Sambalic (Austronesian), Albanian-Tosk (Indo-European).
+
+**Over-large genera.** The uneven-depth genera flagged in §8 (Bantoid, Oceanic,
+Indo-Aryan, …) are clustered with average-linkage over their ASJP distances; the
+best-silhouette split (k and cluster sizes) is recorded in
+`data/asjp_subdivisions.tsv` as an **advisory** proposal — genus ids are left
+unchanged, since coining subgenera is a larger step left to future work.

@@ -23,7 +23,11 @@ import genlib as gl
 
 
 def load_assignment():
-    rows = list(csv.DictReader((gl.BASE / "data" / "genera.tsv").open(encoding="utf-8"), delimiter="\t"))
+    rows = list(
+        csv.DictReader(
+            (gl.BASE / "data" / "genera.tsv").open(encoding="utf-8"), delimiter="\t"
+        )
+    )
     return rows
 
 
@@ -65,28 +69,44 @@ def main() -> int:
     lines.append("## Coverage\n")
     lines.append(f"- **{n_lang} in-scope languages -> {n_genera} genera.**")
     lines.append(f"- Languages with a WALS genus (for validation): {len(shared)}.")
-    lines.append("- Confidence tiers: " + ", ".join(f"{k} {v}" for k, v in conf.most_common()) + ".")
-    lines.append("- Methods: " + ", ".join(f"{k} {v}" for k, v in method.most_common()) + ".\n")
+    lines.append(
+        "- Confidence tiers: "
+        + ", ".join(f"{k} {v}" for k, v in conf.most_common())
+        + "."
+    )
+    lines.append(
+        "- Methods: " + ", ".join(f"{k} {v}" for k, v in method.most_common()) + ".\n"
+    )
 
     lines.append("## Agreement with WALS/Dryer genera\n")
-    lines.append(f"- **Adjusted Rand index = {ari:.3f}**, V-measure = {vm:.3f} "
-                 f"(on {len(shared)} shared languages).")
-    lines.append(f"- **{clean} / {len(wals_to_ours)} ({clean/len(wals_to_ours):.1%}) "
-                 f"WALS genera map cleanly into a single one of our genera** "
-                 f"(no genus is split across WALS boundaries).\n")
+    lines.append(
+        f"- **Adjusted Rand index = {ari:.3f}**, V-measure = {vm:.3f} "
+        f"(on {len(shared)} shared languages)."
+    )
+    lines.append(
+        f"- **{clean} / {len(wals_to_ours)} ({clean/len(wals_to_ours):.1%}) "
+        f"WALS genera map cleanly into a single one of our genera** "
+        f"(no genus is split across WALS boundaries).\n"
+    )
 
     lines.append("## Genus-size distribution\n")
-    lines.append(f"- median {int(np.median(size_vals))}, mean {size_vals.mean():.1f}, "
-                 f"max {size_vals.max()}; singletons {int((size_vals==1).sum())} "
-                 f"({(size_vals==1).mean():.1%}).")
+    lines.append(
+        f"- median {int(np.median(size_vals))}, mean {size_vals.mean():.1f}, "
+        f"max {size_vals.max()}; singletons {int((size_vals==1).sum())} "
+        f"({(size_vals==1).mean():.1%})."
+    )
     buckets = Counter(min(int(s), 50) for s in size_vals)
-    hist = {"1": buckets.get(1, 0),
-            "2-4": sum(v for k, v in buckets.items() if 2 <= k <= 4),
-            "5-9": sum(v for k, v in buckets.items() if 5 <= k <= 9),
-            "10-24": sum(v for k, v in buckets.items() if 10 <= k <= 24),
-            "25-49": sum(v for k, v in buckets.items() if 25 <= k <= 49),
-            ">=50": sum(1 for s in size_vals if s >= 50)}
-    lines.append("- size buckets: " + ", ".join(f"{k}: {v}" for k, v in hist.items()) + ".\n")
+    hist = {
+        "1": buckets.get(1, 0),
+        "2-4": sum(v for k, v in buckets.items() if 2 <= k <= 4),
+        "5-9": sum(v for k, v in buckets.items() if 5 <= k <= 9),
+        "10-24": sum(v for k, v in buckets.items() if 10 <= k <= 24),
+        "25-49": sum(v for k, v in buckets.items() if 25 <= k <= 49),
+        ">=50": sum(1 for s in size_vals if s >= 50),
+    }
+    lines.append(
+        "- size buckets: " + ", ".join(f"{k}: {v}" for k, v in hist.items()) + ".\n"
+    )
 
     lines.append("## Largest genera (phase-2 subdivision candidates)\n")
     lines.append("| genus | family | languages |")
@@ -97,10 +117,14 @@ def main() -> int:
     lines.append("")
 
     lines.append("## Naming\n")
-    lines.append(f"- Every genus is a named Glottolog node (stable id = its glottocode).")
-    lines.append(f"- **{coined} / {n_genera} genera carry a name with no WALS "
-                 f"equivalent** — i.e. genera newly delimited or named here, using "
-                 f"the Glottolog subgroup name.\n")
+    lines.append(
+        f"- Every genus is a named Glottolog node (stable id = its glottocode)."
+    )
+    lines.append(
+        f"- **{coined} / {n_genera} genera carry a name with no WALS "
+        f"equivalent** — i.e. genera newly delimited or named here, using "
+        f"the Glottolog subgroup name.\n"
+    )
 
     (gl.BASE / "data" / "validation_report.md").write_text("\n".join(lines))
     print(f"ARI={ari:.3f} V={vm:.3f}; {n_genera} genera; {coined} coined names")

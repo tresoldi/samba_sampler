@@ -89,7 +89,12 @@ def propose_subdivision(members_gcs, asjp):
         if best is None or score > best[0]:
             best = (score, k, sorted(Counter(labels).values(), reverse=True))
     if best and best[0] > 0:
-        return {"k": best[1], "silhouette": round(best[0], 4), "sizes": best[2], "n_asjp": n}
+        return {
+            "k": best[1],
+            "silhouette": round(best[0], 4),
+            "sizes": best[2],
+            "n_asjp": n,
+        }
     return None
 
 
@@ -131,7 +136,9 @@ def main() -> int:
             r["asjp_n"] = s.get("n_asjp", "")
             r["asjp_score"] = s.get("score", "")
             if g in target_genera:
-                r["confidence"] = "asjp-supported" if g in upgraded else "glottolog-only"
+                r["confidence"] = (
+                    "asjp-supported" if g in upgraded else "glottolog-only"
+                )
             w.writerow(r)
     print(f"Wrote {lang_path}")
 
@@ -145,22 +152,51 @@ def main() -> int:
     with sub_path.open("w", newline="", encoding="utf-8") as fh:
         w = csv.writer(fh, delimiter="\t")
         w.writerow(
-            ["genus_id", "genus_name", "family", "n_languages", "n_asjp",
-             "proposed_k", "silhouette", "cluster_sizes"]
+            [
+                "genus_id",
+                "genus_name",
+                "family",
+                "n_languages",
+                "n_asjp",
+                "proposed_k",
+                "silhouette",
+                "cluster_sizes",
+            ]
         )
         for g, n in large:
             fam = glottolog.family_name(glottolog.family_gc(members[g][0]))
             prop = propose_subdivision(members[g], asjp)
             if prop:
                 proposals.append((g, n, fam, prop))
-                w.writerow([g, glottolog.name(g), fam, n, prop["n_asjp"],
-                            prop["k"], prop["silhouette"],
-                            ";".join(map(str, prop["sizes"]))])
+                w.writerow(
+                    [
+                        g,
+                        glottolog.name(g),
+                        fam,
+                        n,
+                        prop["n_asjp"],
+                        prop["k"],
+                        prop["silhouette"],
+                        ";".join(map(str, prop["sizes"])),
+                    ]
+                )
             else:
-                w.writerow([g, glottolog.name(g), fam, n,
-                            len(asjp.covered(members[g])), "", "", ""])
-    print(f"Wrote {sub_path} ({len(large)} over-large genera, "
-          f"{len(proposals)} with a proposed split)")
+                w.writerow(
+                    [
+                        g,
+                        glottolog.name(g),
+                        fam,
+                        n,
+                        len(asjp.covered(members[g])),
+                        "",
+                        "",
+                        "",
+                    ]
+                )
+    print(
+        f"Wrote {sub_path} ({len(large)} over-large genera, "
+        f"{len(proposals)} with a proposed split)"
+    )
 
     # ----- report -----
     n_tested = len(tested)
@@ -168,14 +204,20 @@ def main() -> int:
     lines = ["# ASJP refinement (phase 2)\n"]
     lines.append("## Upgrading `glottolog-only` genera\n")
     lines.append(f"- Target `glottolog-only` genera: **{len(target_genera)}**.")
-    lines.append(f"- Testable with ASJP (>=2 comparable wordlists inside the genus "
-                 f"and >=1 outside it): **{n_tested}**.")
-    lines.append(f"- **Upgraded to `asjp-supported`: {len(upgraded)}** — mean "
-                 f"intra-genus ASJP distance below the distance to nearest "
-                 f"same-family relatives.")
-    lines.append(f"- Not upgraded: {n_tested - len(upgraded)} tested but not "
-                 f"separated; {untestable} untestable (insufficient ASJP "
-                 f"coverage).\n")
+    lines.append(
+        f"- Testable with ASJP (>=2 comparable wordlists inside the genus "
+        f"and >=1 outside it): **{n_tested}**."
+    )
+    lines.append(
+        f"- **Upgraded to `asjp-supported`: {len(upgraded)}** — mean "
+        f"intra-genus ASJP distance below the distance to nearest "
+        f"same-family relatives."
+    )
+    lines.append(
+        f"- Not upgraded: {n_tested - len(upgraded)} tested but not "
+        f"separated; {untestable} untestable (insufficient ASJP "
+        f"coverage).\n"
+    )
 
     best_up = sorted(
         ((g, support[g]) for g in upgraded), key=lambda kv: -kv[1]["score"]
@@ -186,23 +228,35 @@ def main() -> int:
         lines.append("|-------|--------|---------|-------|-------|-------|")
         for g, s in best_up:
             fam = glottolog.family_name(glottolog.family_gc(members[g][0]))
-            lines.append(f"| {glottolog.name(g)} | {fam} | {s['n_asjp']} | "
-                         f"{s['intra']} | {s['inter']} | {s['score']} |")
+            lines.append(
+                f"| {glottolog.name(g)} | {fam} | {s['n_asjp']} | "
+                f"{s['intra']} | {s['inter']} | {s['score']} |"
+            )
         lines.append("")
 
     lines.append("## Over-large genus subdivision (advisory)\n")
-    lines.append(f"- Genera with >= {LARGE_GENUS} languages: **{len(large)}**; "
-                 f"ASJP proposes a subdivision (positive silhouette) for "
-                 f"**{len(proposals)}** of them.")
-    lines.append("- Proposals are advisory: `genus_id`s are unchanged in this "
-                 "release (subdividing would coin new genus nodes, left to future "
-                 "work). Full detail in `data/asjp_subdivisions.tsv`.\n")
+    lines.append(
+        f"- Genera with >= {LARGE_GENUS} languages: **{len(large)}**; "
+        f"ASJP proposes a subdivision (positive silhouette) for "
+        f"**{len(proposals)}** of them."
+    )
+    lines.append(
+        "- Proposals are advisory: `genus_id`s are unchanged in this "
+        "release (subdividing would coin new genus nodes, left to future "
+        "work). Full detail in `data/asjp_subdivisions.tsv`.\n"
+    )
     if proposals:
-        lines.append("| genus | family | languages | proposed k | silhouette | cluster sizes |")
-        lines.append("|-------|--------|-----------|-----------|-----------|---------------|")
+        lines.append(
+            "| genus | family | languages | proposed k | silhouette | cluster sizes |"
+        )
+        lines.append(
+            "|-------|--------|-----------|-----------|-----------|---------------|"
+        )
         for g, n, fam, prop in proposals[:15]:
-            lines.append(f"| {glottolog.name(g)} | {fam} | {n} | {prop['k']} | "
-                         f"{prop['silhouette']} | {';'.join(map(str, prop['sizes']))} |")
+            lines.append(
+                f"| {glottolog.name(g)} | {fam} | {n} | {prop['k']} | "
+                f"{prop['silhouette']} | {';'.join(map(str, prop['sizes']))} |"
+            )
         lines.append("")
 
     (gl.BASE / "data" / "asjp_report.md").write_text("\n".join(lines))

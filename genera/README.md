@@ -12,9 +12,10 @@ writes its own artifacts under `data/`.
 
 ```bash
 pip install -r requirements.txt
-python pipeline/01_fetch_sources.py     # cache WALS (+ ASJP in phase 2)
+python pipeline/01_fetch_sources.py     # cache WALS + ASJP wordlists
 python pipeline/02_calibrate.py         # calibrate cut depth d against WALS
 python pipeline/03_assign_genera.py     # build data/genera.tsv
+python pipeline/05_refine_asjp.py       # phase 2: ASJP-support glottolog-only genera
 python pipeline/04_validate.py          # agreement vs WALS, size dist, naming
 ```
 
@@ -31,6 +32,22 @@ GLED phylogenies validate the result and drive phase-2 refinement. See
   as 10 genera vs WALS's 11.
 - **95.5%** of GLED-testable genera are monophyletic.
 
+## Result (phase 2 — ASJP)
+
+- ASJP wordlists independently support **63** of the 70 testable
+  `glottolog-only` genera (each recovered as a tighter lexical cluster than its
+  nearest same-family relatives), moving **187 languages** from `glottolog-only`
+  to the new `asjp-supported` tier (`glottolog-only` 687 → 500).
+- Data-driven subdivision proposals for all 6 over-large genera
+  (`data/asjp_subdivisions.tsv`, advisory).
+
+## Wiring into samba_sampler
+
+The genus map is bundled into the package (`src/samba_sampler/etc/genera.tsv`)
+and exposed as genus-aware sampling — `samba.GenusSampler` and
+`samba.load_genera()` — so samples can be spread across genera to reduce
+genealogical autocorrelation. See the top-level README.
+
 ## Outputs
 
 | file | contents |
@@ -39,9 +56,12 @@ GLED phylogenies validate the result and drive phase-2 refinement. See
 | `data/genera_summary.tsv` | one row per genus |
 | `data/calibration_report.md` | depth sweep, IE yardstick, GLED validation |
 | `data/validation_report.md` | WALS agreement, size distribution, naming |
-| `data/params.json` | calibrated parameters |
+| `data/asjp_report.md` | phase-2 ASJP upgrades and subdivision proposals |
+| `data/asjp_subdivisions.tsv` | over-large genus subdivision proposals |
+| `data/params.json` | calibrated parameters (incl. a `phase2` block) |
 
 ## Status
 
 - Phase 1 (GLED + Glottolog + WALS) — **complete**.
-- Phase 2 (ASJP extension; subdivide over-large genera) — planned.
+- Phase 2 (ASJP extension; subdivide over-large genera) — **complete**.
+- Wiring into `samba_sampler` (genus-aware sampling) — **complete**.

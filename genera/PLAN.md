@@ -49,11 +49,12 @@ backs it:
 |------------------|-----------------------------------------------------|---------------|
 | `wals-anchored`  | genus contains WALS-labeled languages               | 6,502 |
 | `gled-supported` | no WALS, but the genus is monophyletic in GLED      | 277 |
-| `glottolog-only` | rests on Glottolog classification alone             | 687 |
+| `asjp-supported` | no WALS/GLED, but ASJP recovers it as a cluster (ph2)| 187 |
+| `glottolog-only` | rests on Glottolog classification alone             | 500 |
 | `isolate`        | Glottolog isolate (one language)                    | 184 |
 
-Phase 2 upgrades `glottolog-only` genera in large families using ASJP/GLED, and
-subdivides the few over-large genera (Bantoid, Oceanic, …).
+Phase 2 (done) upgrades `glottolog-only` genera using ASJP wordlists and proposes
+subdivisions for the few over-large genera (Bantoid, Oceanic, …).
 
 ## Units in scope
 
@@ -87,7 +88,9 @@ Every genus also carries a stable, name-independent `genus_id`.
   Glottolog-depth rule, assign genera to *all* in-scope languages via
   tree+glottolog+isolate, validate against WALS. Produces a complete artifact.
 - **Phase 2 (ASJP):** upgrade GLED-less families from `glottolog` to `asjp`
-  where wordlists allow; re-validate.
+  where wordlists allow; re-validate. **Done** — `pipeline/05_refine_asjp.py`
+  upgrades 63 genera (187 languages) to a new `asjp-supported` tier and proposes
+  ASJP-driven subdivisions for the over-large genera.
 
 ## Outputs
 
@@ -97,7 +100,10 @@ Every genus also carries a stable, name-independent `genus_id`.
 - `data/calibration_report.md` — chosen T, agreement metrics, IE case study.
 - `methods.md` — the definition, calibration, and caveats, prose form.
 
-## Explicitly out of scope (for now)
+## Wiring into samba_sampler
 
-No changes to the shipped `samba_sampler` package or its data. Wiring genera
-into the sampler (a genus-aware sampling mode) is a documented future step.
+The genus map is bundled into the package (`src/samba_sampler/etc/genera.tsv`)
+and exposed as a genus-aware sampling mode: `samba.GenusSampler` and an optional
+group-diversity term on the base `Sampler` reward samples that span distinct
+genera, directly targeting genealogical autocorrelation. `samba.load_genera()`
+returns the mapping for custom use.

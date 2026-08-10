@@ -81,7 +81,10 @@ def indo_european_case(glottolog, wals, depth):
     )
     clusters = defaultdict(list)
     for gc in wals:
-        if gc in glottolog.by_gc and glottolog.family_name(glottolog.family_gc(gc)) == "Indo-European":
+        if (
+            gc in glottolog.by_gc
+            and glottolog.family_name(glottolog.family_gc(gc)) == "Indo-European"
+        ):
             clusters[glottolog.genus_node(gc, depth)].append(gc)
     rows = []
     for node, members in sorted(clusters.items(), key=lambda kv: -len(kv[1])):
@@ -129,10 +132,13 @@ def main() -> int:
     lines = ["# Calibration report\n"]
     lines.append("## Primary criterion: Glottolog taxonomic-depth cut\n")
     lines.append(f"- **Selected depth d = {best_d}** levels below the family root.")
-    lines.append(f"- Agreement with WALS/Dryer genera: **ARI = {best_ari:.3f}**, "
-                 f"V-measure = {best_vm:.3f} (on {len(wl)} WALS-labeled languages).")
-    lines.append(f"- Yields **{n_genera} genera** over {len(genus_of)} in-scope "
-                 f"languages.\n")
+    lines.append(
+        f"- Agreement with WALS/Dryer genera: **ARI = {best_ari:.3f}**, "
+        f"V-measure = {best_vm:.3f} (on {len(wl)} WALS-labeled languages)."
+    )
+    lines.append(
+        f"- Yields **{n_genera} genera** over {len(genus_of)} in-scope " f"languages.\n"
+    )
 
     lines.append("### Depth sweep (agreement with WALS)\n")
     lines.append("| depth d | ARI | V-measure |")
@@ -143,8 +149,10 @@ def main() -> int:
     lines.append("")
 
     lines.append("## Indo-European yardstick\n")
-    lines.append(f"At d = {best_d}, Indo-European resolves into {len(ie_rows)} genera "
-                 f"(WALS has 11):\n")
+    lines.append(
+        f"At d = {best_d}, Indo-European resolves into {len(ie_rows)} genera "
+        f"(WALS has 11):\n"
+    )
     lines.append("| genus (Glottolog name) | size | WALS genera covered |")
     lines.append("|------------------------|------|---------------------|")
     for name, size, wals_genera in ie_rows:
@@ -153,30 +161,42 @@ def main() -> int:
 
     lines.append("## GLED validation\n")
     if testable:
-        lines.append(f"- Of {testable} genera testable in GLED trees (>=2 leaves), "
-                     f"**{mono} ({mono/testable:.1%}) are monophyletic**.")
+        lines.append(
+            f"- Of {testable} genera testable in GLED trees (>=2 leaves), "
+            f"**{mono} ({mono/testable:.1%}) are monophyletic**."
+        )
     if crown_vals.size:
-        lines.append(f"- Genus crown depth in GLED (relative divergence): median "
-                     f"{np.median(crown_vals):.3f}, IQR "
-                     f"[{np.percentile(crown_vals,25):.3f}, "
-                     f"{np.percentile(crown_vals,75):.3f}], max "
-                     f"{crown_vals.max():.3f}.")
-        lines.append("  The spread quantifies how *unequal* in depth the genera "
-                     "still are — the residual that phase-2 GLED/ASJP refinement "
-                     "targets (e.g. subdividing very deep genera).")
+        lines.append(
+            f"- Genus crown depth in GLED (relative divergence): median "
+            f"{np.median(crown_vals):.3f}, IQR "
+            f"[{np.percentile(crown_vals,25):.3f}, "
+            f"{np.percentile(crown_vals,75):.3f}], max "
+            f"{crown_vals.max():.3f}."
+        )
+        lines.append(
+            "  The spread quantifies how *unequal* in depth the genera "
+            "still are — the residual that phase-2 GLED/ASJP refinement "
+            "targets (e.g. subdividing very deep genera)."
+        )
     lines.append("")
 
     lines.append("## Why not a GLED branch-length threshold?\n")
-    lines.append("Each family's own ARI-optimal GLED cut height varies enormously, "
-                 "so no single distance threshold reproduces genera across "
-                 "families:\n")
-    lines.append(f"- Per-family optimal cut height (n={scale['families']} families): "
-                 f"median {scale['median']:.3f}, IQR [{scale['q25']:.3f}, "
-                 f"{scale['q75']:.3f}], range [{scale['min']:.3f}, "
-                 f"{scale['max']:.3f}].")
-    lines.append(f"- That ~{scale['max']/max(scale['min'],1e-6):.0f}x spread is why "
-                 "GLED divergences are used for validation and refinement, not as "
-                 "the primary cut.\n")
+    lines.append(
+        "Each family's own ARI-optimal GLED cut height varies enormously, "
+        "so no single distance threshold reproduces genera across "
+        "families:\n"
+    )
+    lines.append(
+        f"- Per-family optimal cut height (n={scale['families']} families): "
+        f"median {scale['median']:.3f}, IQR [{scale['q25']:.3f}, "
+        f"{scale['q75']:.3f}], range [{scale['min']:.3f}, "
+        f"{scale['max']:.3f}]."
+    )
+    lines.append(
+        f"- That ~{scale['max']/max(scale['min'],1e-6):.0f}x spread is why "
+        "GLED divergences are used for validation and refinement, not as "
+        "the primary cut.\n"
+    )
 
     (gl.BASE / "data" / "calibration_report.md").write_text("\n".join(lines))
     print("Wrote data/params.json and data/calibration_report.md")

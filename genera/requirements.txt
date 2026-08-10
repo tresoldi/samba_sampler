@@ -3,7 +3,10 @@
 # samba_sampler newick reader plus the standard library where possible.
 
 # Phase 1
-scikit-learn>=1.0    # agreement metrics (adjusted Rand, V-measure) for calibration
+scikit-learn>=1.0    # agreement metrics (ARI, V-measure); phase-2 clustering
+numpy>=1.20          # numeric arrays for calibration and clustering
 
-# Phase 2 (ASJP extension) — uncomment when phase 2 lands
-# lingpy>=2.6        # ASJP wordlist handling / distance computation
+# Phase 2 (ASJP extension)
+# ASJP wordlist handling and the normalized-Levenshtein (LDN) distance are
+# implemented directly in genlib.py with the standard library, so no extra
+# dependency (e.g. lingpy) is required.

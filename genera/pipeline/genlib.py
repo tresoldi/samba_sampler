@@ -162,7 +162,9 @@ class GledTree:
         ]
         self.leaf_gcs = [gc for _, gc in self.leaves]
         # Associate the tree with a Glottolog family via majority vote of leaves.
-        fams = [glottolog.family_gc(gc) for gc in self.leaf_gcs if gc in glottolog.by_gc]
+        fams = [
+            glottolog.family_gc(gc) for gc in self.leaf_gcs if gc in glottolog.by_gc
+        ]
         self.family_gc = max(set(fams), key=fams.count) if fams else None
 
     def node_heights(self) -> Dict[int, float]:
@@ -308,7 +310,9 @@ def gled_genus_support(
             by_genus.setdefault(genus_of[gc], []).append(lf)
         present_ids = {id(lf) for lf, _ in present}
         for genus, leaves in by_genus.items():
-            prev = status.get(genus, {"monophyletic": True, "n_leaves": 0, "crown_height": 0.0})
+            prev = status.get(
+                genus, {"monophyletic": True, "n_leaves": 0, "crown_height": 0.0}
+            )
             prev["n_leaves"] += len(leaves)
             if len(leaves) >= 2:
                 mrca = _mrca(leaves)
