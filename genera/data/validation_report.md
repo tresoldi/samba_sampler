@@ -4,7 +4,7 @@
 
 - **7650 in-scope languages -> 1551 genera.**
 - Languages with a WALS genus (for validation): 2261.
-- Confidence tiers: wals-anchored 6502, glottolog-only 687, gled-supported 277, isolate 184.
+- Confidence tiers: wals-anchored 6502, glottolog-only 500, gled-supported 277, asjp-supported 187, isolate 184.
 - Methods: glottolog_depth 7466, isolate 184.
 
 ## Agreement with WALS/Dryer genera

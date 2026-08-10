@@ -1,0 +1,7 @@
+genus_id	genus_name	family	n_languages	n_asjp	proposed_k	silhouette	cluster_sizes
+bant1294	Bantoid	Atlantic-Congo	730	250	2	0.1394	249;1
+ocea1241	Oceanic	Austronesian	521	250	2	0.1242	249;1
+indo1321	Indo-Aryan	Indo-European	220	150	2	0.4157	142;8
+came1255	Cameroun-Ubangian	Atlantic-Congo	118	108	2	0.1975	107;1
+nort3152	Northwest Germanic	Indo-European	104	67	2	0.3018	42;25
+lolo1267	Loloish	Sino-Tibetan	101	28	2	0.1506	27;1

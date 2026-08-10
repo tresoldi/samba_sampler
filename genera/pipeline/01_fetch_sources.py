@@ -3,7 +3,8 @@
 Fetch and cache external source data for the genera project.
 
 Phase 1 needs only WALS `languages.csv` (Dryer genera, used as calibration and
-validation ground truth). ASJP is fetched in phase 2.
+validation ground truth). Phase 2 adds ASJP wordlists (`languages.csv` and
+`forms.csv`), used to independently support GLED-less (`glottolog-only`) genera.
 
 Downloads are cached under ``data/sources/`` and skipped if already present
 (use ``--force`` to refetch). Network access goes through the environment's
@@ -25,10 +26,24 @@ SOURCES = BASE / "data" / "sources"
 
 # Pinned to a specific WALS CLDF commit for reproducibility. Bump deliberately.
 WALS_REF = "v2020.1"
+
+# ASJP (lexibank/asjp) has no CLDF-layout release tag exposing cldf/*.csv, so we
+# pin to a specific master commit for reproducibility. Bump deliberately.
+ASJP_REF = "012795349540ba0dabfdcf2be16f2e77622f62d6"
+
 SOURCES_SPEC = {
     "wals_languages.csv": (
         f"https://raw.githubusercontent.com/cldf-datasets/wals/{WALS_REF}"
         "/cldf/languages.csv"
+    ),
+    # Phase 2 — ASJP wordlists. languages.csv maps ASJP doculects to Glottocodes;
+    # forms.csv (~50 MB) holds the ASJP-transcribed word forms per concept.
+    "asjp_languages.csv": (
+        f"https://raw.githubusercontent.com/lexibank/asjp/{ASJP_REF}"
+        "/cldf/languages.csv"
+    ),
+    "asjp_forms.csv": (
+        f"https://raw.githubusercontent.com/lexibank/asjp/{ASJP_REF}/cldf/forms.csv"
     ),
 }
 

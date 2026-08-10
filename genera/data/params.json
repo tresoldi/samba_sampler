@@ -19,5 +19,14 @@
     "q75": 2.97615569332205,
     "min": 0.2271607373559322,
     "max": 8.798680959999997
+  },
+  "phase2": {
+    "asjp_ref": "012795349540ba0dabfdcf2be16f2e77622f62d6",
+    "asjp_languages_in_scope": 6024,
+    "glottolog_only_targets": 394,
+    "asjp_testable": 70,
+    "upgraded_to_asjp_supported": 63,
+    "large_genera": 6,
+    "subdivision_proposals": 6
   }
 }
