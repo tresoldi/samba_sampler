@@ -1,8 +1,8 @@
 # __init__.py for the `samba_sampler` package
-# Path: src\samba_sampler\__init__.py
 
-# Metadata
-__version__ = "0.3.2"  # Remember to update this in setup.py
+# Metadata. This is the single source of truth for the version; `setup.cfg`
+# reads it via `attr: samba_sampler.__version__`.
+__version__ = "0.3.3"
 __author__ = "Tiago Tresoldi"
 __email__ = "tiago@tresoldi.org"
 
@@ -14,25 +14,21 @@ from .common import (
     filter_glottolog,
     filter_data,
 )
-from .sampling import LanguageSampler, GenericSampler
+from .sampling import Sampler, LanguageSampler, GenericSampler
 from .newick import loads, dumps, load, dump
 
-# Expose the functions
-all = [
-    "filter_data",
-    "filter_glottolog",
-    "loads",
-    "load",
-    "dumps",
-    "dump",
-    "newick2matrix",
+# Expose the public API
+__all__ = [
+    "tree2matrix",
     "DistanceMatrix",
-    "read_matrix",
-    "read_default_matrix",
-    "read_triangle_matrix",
-    "GLED_Sampler",
-    "MyLanguageSampler",
+    "build_table_from_file",
+    "filter_glottolog",
+    "filter_data",
+    "Sampler",
+    "LanguageSampler",
     "GenericSampler",
-    "Language_Sampler",
-    "build_dict_from_file",
+    "loads",
+    "dumps",
+    "load",
+    "dump",
 ]
